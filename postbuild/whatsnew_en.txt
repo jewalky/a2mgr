@@ -1,0 +1,77 @@
+-----------------------------
+Rage of Mages II: Necromancer
+      Important Notes
+-----------------------------
+Version from May 26, 2012
+
+ATTENTION! This patch contains all previous updates.
+
+Update 23 (version 2.1.1)
+-------------------------
+1. Fixed bug that didn't allow players to log into accounts with big characters and also affected server list updating.
+2. Removed libCURL and all trailing dependencies on .NET 3.5 and VCR2010.
+
+Update 22 (version 2.1)
+-----------------------
+1. Added option to download new patch versions directly from the hat.
+2. Added automatic IP-address verification for playing online.
+
+Update 21 (version 2.0.4)
+-------------------------
+1. Fixed map updating.
+2. Fixed display of cast distance.
+3. Fixed client crash if unit's max. health was 0.
+
+Update 20 (version 2.0)
+-----------------------
+1. Added choice between four graphic formats to save screenshots as (PNG, BMP, GIF, JPEG).
+2. Added ability to save message log into separate directory.
+3. Added ability to download latest update directly from hat.
+4. Fixed some user interface bugs.
+5. Changed FPS/watches style.
+6. Added options into allods2.cfg to turn on and configure grid.
+7. Fixed message logging from multiple instances of Rage of Mages II.
+8. Fixed some more bugs in allods2.exe.
+9. Russian and English versions were merged into same patch with option in allods2.cfg to change language.
+10. Fixed bug in singleplayer, using --single to play singleplayer is not reqired anymore.
+
+Configuration file notes
+------------------------
+The configuration file is well-commented and includes every possible parameter. It must not be a problem to edit it.
+
+Language selection notes
+------------------------
+You can change game language in allods2.cfg; If the configuration option is not set, then default language is chosen as follows:
+If OS language (or, system INSTALL language) is NOT Russian, then default language is English. Otherwise, it's Russian.
+
+Update 14 (version 1.14)
+------------------------
+1. Added ability to save screenshots into PNG files with unique timestamps.
+2. Fixed some bugs in allods2.exe.
+
+Update 13 (version 1.13)
+------------------------
+1. Crash with '%s' in chat messages was fixed.
+2. Alternative chat mode with highlighting of private messages was added (see alt_chat in allods2.conf).
+3. Possibility of showing watches and fps was implemented (see show_watches / show_fps in allods2.conf).
+
+Update 12 (version 1.12)
+------------------------
+1. Crash with entry into Kaarg-city's shop was fixed (thanks to Kissk@ for testing).
+2. Fonts were corrected.
+3. Dependence on INSTALLDIR in the registry was removed.
+4. Errors of maplist in multiplayer mode were fixed.
+
+Update 11 (version 1.11)
+------------------------
+1. Some russian letters were repainted, tilda was added (thanks to Atacarme).
+2. Demons were added (be careful).
+3. Ability to enable RoM 2.5 graphics patch by separate file: "a25graph.res".
+4. Additional video modes were added: 1280x1024 (-1280), arbitrary (for example, --res:1024x600).
+5. A number of bugs and crashes was fixed.
+6. #show map mode was disabled.
+7. Chat history saves to allods2.log.
+8. Adjustable limit of scroll speed of the map was introduced (see scroll_interval in allods2.conf).
+9. Chat commands scrollback (Up/Down in console).
+10. Scroll of inventory by PgUp/PgDn (Ctrl+PgUp/Ctrl+PgDn for shop shelf).
+11. Single-player mode is separated from internet mode (use "--single" key for single-player).

@@ -1,0 +1,229 @@
+#
+===mission objective===
+#briefing 
+The Old Warrior
+
+Find the old warrior and learn the location of the Source.
+#
+==Hero dies====
+#failure2 
+The search brought your hero to his doom...
+#
+===Igles dies===
+#failure3
+Igles died!
+#
+===Dina dies==
+#failure4
+This was an unlucky day for Dina...
+# 
+====Headman dies====
+#failure5
+The headman was not your enemy!
+# 
+====Son dies====
+#failure6
+The warrior's son died. No one can help you now. 
+#
+====Girl dies====
+#failure7
+The warrior's son has lost his girlfriend!
+# 
+====Peasants attacked====
+#failure8
+Attacking peasants is a disgrace!
+#subobjective0
+
+#subobjective1
+Igles must rip the Control Amulet off of the headman's neck.
+#
+======Start
+#event1
+<npc=22, part=1>
+From what I managed to learn, Barross is supposed to live somewhere around here. I should mention that this wasn't easy to find out.
+<npc=22, part=2>
+I even had to bribe one of the scribes at the archives. I sincerely hope that he didn't mess anything up.
+<npc=23, part=3>
+Do you mean to say that we might have traveled all this way in vain, just because a scribe could have made a mistake?
+<npc=21, part=4>
+Well, he would deeply regret that if he did.
+#
+======Son talks to hero
+#event2
+<npc=21, part=1>
+Greetings, good man! I'm looking for old knight Barross. I was informed at the Kaarg archives that he lives near here. Could you help me find him?
+<npc=2024, part=2>
+Barross was my father, but he died a while ago. He was found dead on the road, and it was declared a robbery despite the fact that none of his things were missing.
+<npc=2024, part=3>
+I guess the important people in the city have never bothered to ascertain his condition.  You may go back and tell them what has happened!
+<npc=21, part=4>
+Listen, lad! I'm sorry for your loss, but what's wrong with you? Do you order around everyone you meet, or are you just that rude?
+<npc=2024, part=5>
+My problem is none of your business! And now I'm not in the mood for talking!
+#
+======Son talks to Igles
+#event3
+<npc=22, part=1>
+Greetings, good man! I'm looking for old knight Barross. I was informed at the Kaarg archives that he lives near here. Could you help me find him?
+<npc=2024, part=2>
+Barross was my father, but he died a while ago. He was found dead on the road, and it was declared a robbery despite the fact that none of his things were missing.
+<npc=2024, part=3>
+I guess the important people in the city have never bothered to ascertain his condition.  You may go back and tell them what has happened!
+<npc=22, part=4>
+Listen, lad! I'm sorry for your loss, but what's wrong with you? Do you order around everyone you meet, or are you just that rude?
+<npc=2024, part=5>
+My problem is none of your business! And now I'm not in the mood for talking!
+#
+======Son talks to Dina
+#event4
+<npc=23, part=1>
+Greetings, good man! I'm looking for old knight Barross. I was informed at the Kaarg archives that he lives near here. Could you help me find him?
+<npc=2024, part=2>
+Barross was my father, but he died a while ago. He was found dead on the road, and it was declared a robbery despite the fact that none of his things were missing.
+<npc=2024, part=3>
+I guess the important people in the city have never bothered to ascertain his condition.  You may go back and tell them what has happened!
+<npc=23, part=4>
+Please forgive me for bringing up memories with this question...But you seem to be troubled with something else. What's your problem?
+<npc=2024, part=5>
+My problem is none of your business! And now I'm not in the mood for talking!
+#
+======Headman talks to hero
+#event5
+<npc=21, part=1>
+Greetings, good man! I have some questions to ask you about old warrior Barross...
+<npc=2112, part=2>
+Well, he died quite a while ago, you know. His son lives east from here by the blacksmith. You can talk to him about this if you want.
+<npc=2112, part=3>
+Besides, tell him that his former girlfriend said hello, heh-heh...That might cheer him up.
+<npc=21, part=4>
+What is that strange amulet on your neck? 
+<npc=2112, part=5>
+Well, that's none of your business, friend. I'm not asking what kind of amulets or bracelets YOU are wearing, am I?
+#
+======headman talks to Igles
+#event6
+<npc=2112, part=1>
+Greetings, sir Knight! 
+<npc=22, part=2>
+Greetings to you, good man. I have some questions to ask you about old warrior Barross... 
+<npc=2112, part=3>
+Well, he died quite a while ago, you know. His son lives east from here by the blacksmith. You can talk to him about this if you want.
+<npc=2112, part=4>
+When you talk to him, tell him that his former girlfriend said hello, heh-heh...That might cheer him up. He-he-har-har!!!
+<npc=22, part=5>
+What is that strange amulet on your neck? 
+<npc=2112, part=6>
+Oh, it's nothing, good sir...It looks impressive, but I bought it really cheap. It's not of any interest to a Lord such as yourself.
+#
+======headman talks to Dina
+#event7
+<npc=23, part=1>
+Greetings, good man! I have some questions to ask you about old warrior Barross...
+<npc=2112, part=2>
+Well, he died quite a while ago, you know. His son lives east from here by the blacksmith. You can talk to him about this if you want.
+<npc=2112, part=3>
+Besides, tell him that his former girlfriend said hello, heh-heh...That might cheer him up.
+<npc=23, part=4>
+What is that strange amulet on your neck? Where did you get that?
+<npc=2112, iammale, part=5>
+This is my business. I'd ask you to mind yours!
+#
+======son talks to hero after the conversation with headman
+#event8
+<npc=21, part=1>
+Now I know why you're so angry! Your girlfriend left you for the silly old man who represents the authority in the village, am I right?
+<npc=2024, part=2>
+Yes, that's true. The headman enjoys torturing me. He ordered the guards not to let me approach my own girl! And I have no idea why she doesn't like me anymore.
+<npc=21, part=3>
+Well, I do. I noticed that the headman is wearing a strange amulet, which he refuses to talk about. But I know what it is anyway.
+<npc=21, part=4>
+The magic of this amulet allows its bearer to control other peoples minds. However, the bearer himself gradually becomes a servant of the creator of the amulet in return.
+<npc=2024, part=5>
+This amulet must be taken away from him! Then everything will become the same as it used to be...
+<npc=21, part=6>
+I could beat him up a little for you...I like that idea! That would teach him the proper conduct towards young girls!
+<npc=2024, part=7>
+No, no! There are a lot of guards in the village, they wouldn't allow the assault! Besides, he isn't going to be an easy man to catch...Perhaps, a noble Lord could approach him and rip the amulet off his neck!
+#
+======son talks to Igles after the conversation with headman
+#event9
+<npc=21, part=1>
+Now I know why you're so angry! Your girlfriend left you for the silly old man who represents the authority in the village, am I right?
+<npc=2024, part=2>
+Yes, that's true. The headman enjoys torturing me. He ordered the guards not to let me approach my own girl! And I have no idea why she doesn't like me anymore.
+<npc=22, part=3>
+Well, I do. I noticed that the headman is wearing a strange amulet, which he refuses to talk about. But I know what it is anyway.
+<npc=22, part=4>
+The magic of this amulet allows its bearer to control other peoples minds. However, the bearer himself gradually becomes a servant of the creator of the amulet in return.
+<npc=2024, part=5>
+This amulet must be taken away from him! Then everything will become the same as it used to be...
+<npc=22, part=6>
+Yes! I will rip this dangerous thing of his neck and destroy it!
+<npc=2024, part=7>
+That would be great! But please, don't attack the headman with weapons, good sir!
+<npc=2024, part=8>
+He is not guilty if he is indeed being controlled!
+#
+======son talks to Dina after the conversation with headman
+#event10
+<npc=23, part=1>
+Now I know why you're so angry! Your girlfriend left you for the silly old man who represents the authority in the village, am I right?
+<npc=2024, part=2>
+Yes, that's true. The headman enjoys torturing me. He ordered the guards not to let me approach my own girl! And I have no idea why she doesn't like me anymore.
+<npc=23,part=3>
+Well, I do. I noticed that the headman is wearing a strange amulet, which he refuses to talk about. But I know what it is anyway.
+<npc=23, part=4>
+The magic of this amulet allows its bearer to control other peoples minds. However, the bearer himself gradually becomes a servant of the creator of the amulet in return.
+<npc=2024, part=5>
+This amulet must be taken away from him! Then everything will become the same as it used to be...
+<npc=23, part=6>
+It's just wrong to abuse a girl in love that way! I'll fry that headman!
+<npc=2024, part=7>
+No, no! There are a lot of guards in the village, they wouldn't allow the assault! Besides, he isn't going to be an easy man to catch...Perhaps, a noble Lord could approach him and rip the amulet off his neck!
+#
+======Igles rips the amulet off
+#event11
+<npc=22, part=1>
+Hey, good man! I order you to come closer. Let me have that decoration of yours...
+<npc=2112, part=2>
+Guards! Help!
+<npc=22, part=3>
+Easy, you moron! I'm saving you!
+<npc=2112, part=4>
+A-a-a...E-e-e...H-r-r...Ouch...What was that? What happened to me? What did you do?
+<npc=22, part=5>
+I just took away and crushed the Amulet of Control that was around your neck. You could control other people by using it, but its maker could then control you!
+<npc=2112, part=6>
+Oh that's what it was...The Necromancers said that I could solve...er...a personal problem with it. I wasn't aware of its other properties!
+<npc=2112, part=7>
+Please don't punish me for raising my voice at you! I didn't know what I was doing!
+<npc=22, part=8>
+All right, I forgive you. But keep in mind that young girls aren't for old fools like you. Watch your step!
+#
+======Son talks to Igles after being helped
+#event12
+<npc=2024, part=1>
+Thank you! What can I do for you in return?
+<npc=22, part=2>
+If you really want to do me a favor, tell me what you know about your father's expedition to the Source of Magic?
+<npc=22, part=3>
+More accurately, I need to know where to find the Source.
+<npc=2024, part=4>
+Father said that this is a big secret...But I have no secrets from you. The Source is on the island in the Dragon Lake, which is located on the edge of the desert.
+<npc=2024, part=5>
+However, no one can use it. It's protected by some sort of a spell.
+<npc=22, part=6>
+Perhaps, another legend holds this secret. I wish someone knew it...
+<npc=2024, part=7>
+Father had a good friend who knew lots of tales and legends. You might want to check with him.
+<npc=22, part=8>
+Thank you! You are a worthy son of your father! Have a good day!
+#
+======Igles talks to the girl
+#event13
+<npc=2026, part=1>
+I feel as if I've just come out of the fog! What am I doing here? Why did I obey this ugly man?
+<npc=22, part=2>
+Take it easy, it's all right now. The headman will never again pay more attention to you than is appropriate for a man of his age and position.
+<npc=22, part=3>
+I shall now escort you to someone who can't wait to see you again!

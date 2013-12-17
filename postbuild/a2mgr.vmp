@@ -1,0 +1,63 @@
+[ProjectInfo]
+Count=14
+Options=216
+AddressSort=0
+VMCodeSectionName=.vmp
+RunParameters=
+
+[Procedures]
+NeedCompile0=1
+MapAddress0=crcmain(char *)
+ExtAddressCount0=0
+
+NeedCompile1=1
+MapAddress1=NETPROTO_loginToHat(void)
+ExtAddressCount1=0
+
+NeedCompile2=1
+MapAddress2=NETPROTO_sendAuthorizationPacket(void)
+ExtAddressCount2=0
+
+NeedCompile3=1
+MapAddress3=NET_cryptPacket(unsigned char *,int)
+ExtAddressCount3=0
+
+NeedCompile4=1
+MapAddress4=SOCK_Connect(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,unsigned short,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,unsigned short)
+ExtAddressCount4=0
+
+NeedCompile5=1
+MapAddress5=SOCK_Destroy(unsigned int)
+ExtAddressCount5=0
+
+NeedCompile6=1
+MapAddress6=SOCK_ReceivePacket(unsigned int,class Archive &,unsigned long)
+ExtAddressCount6=0
+
+NeedCompile7=1
+MapAddress7=SOCK_SendPacket(unsigned int,class Archive &,unsigned long)
+ExtAddressCount7=0
+
+NeedCompile8=1
+MapAddress8=PacketReceiver::Connect(unsigned int)
+ExtAddressCount8=0
+
+NeedCompile9=1
+MapAddress9=PacketReceiver::GetPacket(class Archive &)
+ExtAddressCount9=0
+
+NeedCompile10=1
+MapAddress10=PacketReceiver::Receive(unsigned int)
+ExtAddressCount10=0
+
+NeedCompile11=1
+MapAddress11=NETPROTO_createAuthorizationPacket(void)
+ExtAddressCount11=0
+
+NeedCompile12=1
+MapAddress12=DllMain_Init(struct HINSTANCE__ *,unsigned long,void *)
+ExtAddressCount12=0
+
+NeedCompile13=1
+MapAddress13=TestGraphics(char const *)
+ExtAddressCount13=0

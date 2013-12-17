@@ -1,0 +1,102 @@
+#
+===mission objective===
+#briefing 
+Minge the Shaman
+
+Find the shaman and learn the location of the Magic Source from him.
+#
+==Hero dies====
+#failure2 
+This was a bad day for your hero...
+#
+===Igles dies===
+#failure3 
+Igles died!
+#
+===Dina dies==
+#failure4
+Dina should have stayed away from this battle... 
+# 
+====Shaman dies====
+#failure5
+You need the shaman alive!
+#subobjective0
+
+#subobjective1
+Destroy the shaman's guards, but he must stay alive.
+#
+======Start
+#event1
+<npc=21, part=1>
+All orcs look the same to me. How am I supposed to find this Minge-Shaman among them? 
+<npc=22, part=2>
+That's a tough question. I think that this shaman must be very old. He probably wouldn't try to attack us.
+<npc=22, part=3>
+We should be careful not to kill him accidentally in the heat of the battle!
+#
+======Ogre talks
+#event2
+<npc=617, part=1>
+Wow! I lay here about to die, and humans cure me! I never hear anything like this...
+<npc=617, part=2>
+I healthy and strong again. It is good. Drop in if you get to our place. My family would be glad to see you.
+#
+======Ogre attacks
+#event3
+<npc=617, part=1>
+Here are the humans that cured me! Come in, we having dinner right now. You kind, and kind people always taste so goooood...
+#
+======Shaman surrenders to hero
+#event4
+<npc=656, part=1>
+Aahh, human, I old Minge-Shaman, very-very want to live!!! I very surrender! Stand silent and hands up!!!
+<npc=21, part=2>
+So you're a bright guy, shaman! Didn't take you long to realize that we aren't joking around here!
+<npc=21, part=3>
+Since you want to live, tell me where to find the Source of Magic? And don't try to pull any trick on me!
+<npc=656, part=4>
+I tell-tell all, no nonsense! Source on island, island in Dragon Lake, lake in far end of desert. But no-no way to reach Source.
+<npc=656, part=5>
+It need a puzzle to solve-solve, a ritual to do-do to pass.
+<npc=21, part=6>
+What puzzle? What ritual?
+<npc=656, part=7>
+Tekel knows what ritual. Minge-shaman old-old, ill, miserable, knows not more. Told you all I know-know!
+<npc=21, part=8>
+Well, that's not what I call information overload. I should return to the city and get Talena's advice.
+#
+======Shaman surrenders to Igles
+#event5
+<npc=656, part=1>
+Aahh, human, I old Minge-Shaman, very-very want to live!!! I very surrender! Stand silent and hands up!!!
+<npc=22, part=2>
+So you're a bright guy, shaman! Didn't take you long to realize that we aren't joking around here!
+<npc=22, part=3>
+Since you want to live, tell me where to find the Source of Magic? And don't try to pull any trick on me!
+<npc=656, part=4>
+I tell-tell all, no nonsense! Source on island, island in Dragon Lake, lake in far end of desert. But no-no way to reach Source.
+<npc=656, part=5>
+It needs a puzzle to solve-solve, a ritual to do-do to pass.
+<npc=22, part=6>
+What puzzle? What ritual?
+<npc=656, part=7>
+Tekel knows what ritual. Minge-shaman old-old, ill, miserable, knows not more. Told you all I know-know!
+<npc=22, part=8>
+Well, it turns out that the shaman didn't know much. I should return to the city and get Talena's advice.
+#
+====== Shaman surrenders to Dina 
+#event6
+<npc=656, part=1>
+Aahh, kind girl, I old Minge-Shaman, very-very want to live!!! I very surrender! Stand silent and hands up!!!
+<npc=23, part=2>
+I will not hurt you if you tell me about the Source of Magic.
+<npc=656, part=3>
+I tell-tell all, no nonsense! Source on island, island in Dragon Lake, lake in far end of desert. But no-no way to reach Source.
+<npc=656, part=4>
+It needs a puzzle to solve-solve, a ritual to do-do to pass.
+<npc=23, part=5>
+What puzzle? What ritual?
+<npc=656, part=6>
+Tekel knows what ritual. Minge-shaman old-old, ill, miserable, knows not more. Told you all I know-know!
+<npc=23, part=7>
+Uh...This doesn't make any sense. I should return to the city and get Talena's advice.

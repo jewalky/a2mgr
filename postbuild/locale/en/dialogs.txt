@@ -1,0 +1,176 @@
+Ok
+Cancel
+Abort
+Retry
+Ignore
+Exit
+Exit Game
+Sound Options
+Return to Game
+Random Order
+Select playing sequence
+Select track
+Play
+Play
+Stop
+Stop
+Music volume
+SFX volume
+Speech volume
+Music volume
+Sfx volume
+Speech volume
+Track
+Music is not available.
+Load Game
+Select Game to load
+Confirm selection
+Cancel
+ <<< Empty Slot >>>
+Save Game
+Enter a name for the saved game
+Saved Games
+Confirm selection
+Cancle
+~Save Game
+~Load Game
+Game ~Options
+Sou~nd Options
+~Quest Objectives
+~End Quest
+~Return to Game
+~Restart Quest
+Change Map
+~Victory!
+~Exit to Main Menu
+Exit to ~Windows
+Drop money
+Cancel drop
+How much gold do
+you want to drop ?
+Game Speed
+Game Speed
+Smoothing
+Smoothing
+Day/Night changes
+Day/Night changes
+Show Health
+Show Health
+Formation Mode
+Formation Mode
+Off
+Auto
+On
+Retreat Mode
+Retreat Mode
+Never
+Low Health
+Medium Health
+Quest Objectives and Hints:
+Enter your name
+Enter your name
+Select your sex
+Male
+Female
+Not available in demo version
+Music options are not available now
+Diplomacy
+Abort Game
+Display damage points
+    Player           enemy  alliance  visible  silent
+Select Connection
+Available protocols
+Available games
+Games
+Player list
+Players
+Create
+Join
+Single
+Refresh
+This is the list of recently used phone numbers. Press <Del> to remove an entry.
+Enter the phone number to dial.
+Your phone book.
+Select the modem#which you wish to use
+No Parity
+Odd Parity
+Even Parity
+Mark Parity
+1 bit
+1.5 bits
+2 bits
+RTS
+DTR
+None
+Xon/Xoff
+RTS/DTR
+COM port:
+Select baud rate:
+Select parity:
+Flow control:
+Stop bits:
+COM port
+Select baud rate
+Select parity
+Flow control
+Stop bits
+Enter the computer name or IP address, or leave it blank.
+Enter computer name#or IP address,#or leave this field#blank to search.
+Available maps
+Dialing now. Please wait...
+Dial
+Answer
+Join
+Create
+Game not started.
+ at
+Click here to dial
+Click here to start#the game and wait#for your opponent
+Click here to join
+Click here to start#the game and wait#for your opponent
+Reset settings
+This will reset#the settings to#their default values
+Messages sent by other players
+Type your message to other players here
+Map size
+Recommended number of players
+The difficulty level of the map.#Maps shown in gray are too strong#or too weak for your character.#You will not be able to enter these maps.
+Player list
+Select map to play
+  Map name                        Size     Level
+Chat
+Players
+Create or Join Game
+Tracks
+Saved Games
+Diplomacy Settings
+Select Connection for Multiplayer Game
+Modem Settings
+Serial Settings
+TCP/IP Settings
+Game Options
+Load Saved Game
+Enter Number & Name
+View Cutscenes
+Continue
+End Quest
+Tips
+Delete
+Delete selected#saved game
+AutoHealing
+No
+Normal
+Often
+Connecting...
+AutoHealing mode
+Acknowledgments
+AutoCast for units:
+Own
+Allies
+Neutral
+AutoCast mode:
+Minimum
+Average
+Maximum
+AutoCast mode#Minimum: Healing and Shield#Average: additionaly casts Bless and Haste#Maximum: additionaly casts Protections and Invisibility
+Names & Clans

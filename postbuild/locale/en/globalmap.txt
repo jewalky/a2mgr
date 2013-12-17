@@ -1,0 +1,184 @@
+#title21
+The Brigands Camp
+#briefing21
+Find the brigands treasure and claim it for yourself!
+#title30
+Lyrisha Village
+#briefing30
+You have to find what has happened in the village, and help the peasants if they require your assistance.
+#title31
+Adamantium Mines
+#briefing31
+The Adamantium ore shipments are no longer being delivered to Kaarg. Find out what has happened.
+#title32
+After the Sword
+#briefing32
+You need to pursue the sword carrier before he gets away!
+#title40
+The Astrologer
+#briefing40
+Seek the advice of the Astrologer. Perhaps he can direct you to the remaining Star locations.
+#title41
+The Besieged Tower
+#briefing41
+The Tower of a Mage is besieged by swarms of monsters. You have to clear the area of all evil.
+#title42
+Killer Dragon
+#briefing42
+A dark Dragon is terrorizing the residents of a nearby village. You must slay the Dragon and restore the peace.
+#title43
+Dirty Work
+#briefing43
+You are hired by the Necromancers Guild to put an end to a group of rebel Mages.
+#title50
+The Ancient Forest
+#briefing50
+You need to find the location of one of the three Falling Stars.
+#title51
+Rebel Battalion
+#briefing51
+A battalion of Knights has refused to participate in the scheming plans of the Necromancer Guild. Help them to escape the Guilds revenge!
+#title52
+The Hermit
+#briefing52
+You have to find a hermit Druid, and ensure his safety.
+#title53
+The Traveler
+#briefing53
+Help the traveler cross through the Ancient Forest.
+#title60
+The Desert Star
+#briefing60
+You need to find the location of one of the three Falling Stars.
+#title61
+Village Under Attack
+#briefing61
+The village is periodically terrorized by Orcish attacks. You must participate in the village's defense.
+#title62
+The Outlaws Camp
+#briefing62
+You have to find the Outlaw's camp and destroy them.
+#title63
+Talena's Request
+#briefing63
+Talena's village is under attack. Help her to protect it at all costs!
+#title70
+The Elf
+#briefing70
+Persuade the Elves to give you one of the three Stars.
+#title71
+Ill-Tempered Squirrels
+#briefing71
+You are hired to stop the rampaging squirrels before they destroy the nearby village.
+#title72
+The Disappearing Caravans
+#briefing72
+You must find the reason behind the disappearance of the caravans in the desert.
+#title73
+A Rebel Stronghold
+#briefing73
+You have to lay siege to a rebel stronghold in the area and defeat all enemies.
+#title74
+Minge the Shaman
+#briefing74
+You have to find Minge the Shaman and talk with him.
+#title75
+The Old Warrior
+#briefing75
+Find the old warrior, Sir Barros, and talk with him.
+#title76
+The Dangerous Forest
+#briefing76
+Find the Druid who knows about the "Magic Source".
+#title77
+A Mage's Spirit
+#briefing77
+You must find your answers from the dead.
+#title80
+The Scarab Wastes
+#briefing80
+Locate the Orc Shaman, E'lo, and retrieve from him one of the three Stars.
+#title81
+The Battle Mages
+#briefing81
+You have to destroy the training camp of a group of Battle Mages.
+#title82
+The Elite Knights
+#briefing82
+You have to destroy the training camp of a group of Elite Knights.
+#title83
+The Stone Web
+#briefing83
+Uncover the secret of the Stone Web!
+#title84
+Tekel Knows!
+#briefing84
+Find the Idol of Tekel.
+#title85
+The Storyteller
+#briefing85
+Find the location of the Storyteller who knows the "magic word".
+#title86
+The Swamp Mage
+#briefing86
+Find the location of the Swamp Mage.
+#title87
+The Dark Library
+#briefing87
+Find and use the Necromancer's library.
+#title90
+A Kings Request
+#briefing90
+You have to find the real cause of the Kings request.
+#title91
+The Orcologist
+#briefing91
+You need to find the Orcolog scientist and help him.
+#title92
+The Ancient Crypt
+#briefing92
+You must stop the Necromancers from re-animating a long-dead, genius General.
+#title93
+The Magic Source of Fire
+#briefing93
+You have found the Magic Source of Fire. Use it wisely!
+#title94
+The Magic Source of Earth
+#briefing94
+You have found the Magic Source of Earth. Use it wisely!
+#title95
+The Magic Source of Water
+#briefing95
+You have found the Magic Source of Water. Use it wisely!
+#title96
+The Magic Source of Air
+#briefing96
+You have found the Magic Source of Air. Use it wisely!
+#title100
+The King's Hunt
+#briefing100
+You must locate the King's hunting house and meet with the King himself.
+#title101
+Forest Madness
+#briefing101
+You have to find the cause of the forest animals madness, and stop it.
+#title102
+Mysterious Amulet
+#briefing102
+A village was cursed and is now plagued by the undead. You must remove the curse from the village and restore order.
+#title103
+The Desert Oracle
+#briefing103
+You have to find an ancient Oracle in the desert.
+#title110
+The Last Battle
+#briefing110
+You must destroy Urd, the Great Mage of Yases!
+#town2
+Kaarg
+#description2
+The capital of the Yases Allod. Here you can listen to the latest news and gossip in the Inn, and buy and sell your wares in the Shop.
+#town3
+The Druids Camp
+#description3
+The mysterious camp of the Druids. Stop by the Inn for the latest news or shop for rare goods with the local merchant.

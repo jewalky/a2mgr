@@ -1,0 +1,25 @@
+#
+===Mission objective===
+#briefing 
+After the Sword
+
+Recover the sword before the sword bearer escapes!
+#
+==Hero dies====
+#failure2 
+Chasing swords leads to grim consequences...
+#
+===Igles dies===
+#failure3 
+Igles was taking too many risks!
+# 
+====Swordholder escapes====
+#failure5
+The heroes failed to seize the sword bearer.
+#
+======Start
+#event1
+<npc=21, iammale, part=1>
+Damn! I haven't caught up with the sword bearer yet! He'll escape if I don't hurry!
+<npc=21, iamfemale, part=1>
+Damn! I haven't caught up with the sword bearer yet! He'll escape if I don't hurry!

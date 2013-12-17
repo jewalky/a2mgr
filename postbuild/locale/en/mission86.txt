@@ -1,0 +1,302 @@
+#
+===mission objective===
+#briefing 
+The Swamp Mage
+
+Talk to Wordock, the mage.
+#
+==Hero dies====
+#failure2 
+The swamp is dangerous!
+#
+===Igles dies===
+#failure3 
+Igles died!
+#
+===Dina dies==
+#failure4
+Dina's magic was powerless...
+#
+===mage dies==
+#failure5
+Mage Wordock died. He was the only one who knew the secret...
+#
+===mage attacked==
+#failure6
+You attacked Wordock! He can't share his secret with you now...
+#
+======Start
+#event1
+<npc=21, part=1>
+I smell the aroma of rotten soil! The swamp starts here!
+#
+======Fake mage talks to hero 
+#event2
+<npc=21, part=1>
+Greetings! I'm looking for a mage named Wordock. Can you help me with that?
+<npc=697, part=2>
+Don't you know what he looks like?
+<npc=21, part=3>
+No.
+<npc=697, part=4>
+Well, I'm Wordock! What can I do for you? And what can you do for me? 
+<npc=21, part=5>
+Hmm...But I was told that you were following the Druid way.
+<npc=697, part=6>
+It was my mistake. Later I realized that Necromancery is the only art that can make me happy!
+<npc=21, part=7>
+I wouldn't argue about that. I wanted to ask you to tell me the legend of the island of Raminan...
+<npc=697, part=8>
+Yes, yes, sure, certainly! But there is a condition: destroy all of the monsters on the hill north of here, and then you may hear any legend you want!
+#
+======Fake mage talks to Igles 
+#event3
+<npc=22, part=1>
+Greetings! I'm looking for a mage named Wordock. Can you help me with that?
+<npc=697, part=2>
+Don't you know what he looks like?
+<npc=22, part=3>
+No.
+<npc=697, part=4>
+Well, that's me! What can I do for you? And what can you do for me? 
+<npc=22, part=5>
+Hmm...But I was told that you were following the Druid way.
+<npc=697, part=6>
+It was my mistake. Later I realized that Necromancery is the only art that can make me happy!
+<npc=22, part=7>
+I wouldn't argue about that. I wanted to ask you to tell me the legend of the island of Raminan...
+<npc=697, part=8>
+Yes, yes, sure, certainly! But there is a condition: destroy all of the monsters on the hill north of here, and then you may hear any legend you want!
+#
+======Fake mage talks to Dina 
+#event4
+<npc=23, part=1>
+Greetings! I am looking for a mage named Wordock. Can you help me with that? 
+<npc=697, part=2>
+Don't you know what he looks like?
+<npc=23, part=3>
+No.
+<npc=697, part=4>
+Well, that's me! What can I do for you? And what can you do for me? 
+<npc=23, part=5>
+Hmm...But I was told that you were following the Druid way.
+<npc=697, part=6>
+It was my mistake. Later I realized that Necromancery is the only art that can make me happy!
+<npc=23, part=7>
+I wouldn't argue about that. I wanted to ask you to tell me the legend of the island of Raminan...
+<npc=697, part=8>
+Yes, yes, sure, certainly! But there is a condition: destroy all of the monsters on the hill north of here, and then you may hear any legend you want!
+#
+======Fake mage talks to hero part II
+#event5
+<npc=21, part=1>
+I have satisfied your request!
+<npc=697, part=2>
+Great. Now no one will prevent me from doing as I please! Thanks, and goodbye.
+<npc=21, part=3>
+Wait a second...You promised to tell me about the Treasure Island!
+<npc=697, part=4>
+The Treasure Island does not exist! End of tale. Now get lost while you can, fool! You should have been smarter, ha-ha-ha! You've got ten seconds to leave, or else!
+#
+======Fake mage talks to Igles part II
+#event6
+<npc=22, part=1>
+I have satisfied your request!
+<npc=697, part=2>
+Great. Now no one will prevent me from doing as I please! Thanks, and goodbye.
+<npc=22, part=3>
+Did I miss something? You promised to tell me about the Treasure Island!
+<npc=697, iammale, part=4>
+The Treasure Island does not exist! End of tale. Now get lost while you can, fool! A lord who believes in fairy tales, uwa-ha-ha! You've got ten seconds to leave, or else!
+#
+======Fake mage talks to Dinah part II
+#event7
+<npc=23, part=1>
+I have satisfied your request!
+<npc=697, part=2>
+Good girl. Take a pie from the shelf. Thanks, and goodbye. 
+<npc=23, part=3>
+Wait a second...You promised to tell me about the Treasure Island!
+<npc=697, part=4>
+The Treasure Island does not exist! End of tale. Now get lost while you can, silly girl! You'll be smarter next time, ha-ha-ha! You've got ten seconds to leave, or else!
+#
+======Mage talks to hero
+#event8
+<npc=21, part=1>
+I'm looking for a mage named Wordock...Unsuccessfully so far. Could you help me?
+<npc=685, part=2>
+Maybe I can, maybe I can't. Wordock doesn't trust everyone who asks. Who told you that he lives here?
+<npc=21, part=3>
+Talena. She also asked to say hello to him. 
+<npc=685, part=4>
+Talena? Well, she wouldn't open my secret to just any person...I am Wordock. What brings you here?
+<npc=21, part=5>
+My friends and I need to hear one of the legends about Raminan, the Treasure Island. 
+<npc=685, part=6>
+It doesn't take long to tell a legend...But since you are here, I would ask you for a favor. 
+<npc=685, part=7>
+Armed people have occupied the edge of the swamp. I don't know who they are, I just know that their chief goes under my name!
+<npc=685, part=8>
+I would very much like to get rid of their presence. The animals that obey me can't overcome those people on their own.
+<npc=685, part=9>
+But together you can destroy them!
+#
+======Mage talks to Igles
+#event9
+<npc=22 part=1>
+I'm looking for a mage named Wordock...Unsuccessfully so far. Could you help me?
+<npc=685, part=2>
+Maybe I can, maybe I can't. Wordock doesn't trust everyone who asks. Who told you that he lives here?
+<npc=22 part=3>
+Talena. She also asked to say hello to him. 
+<npc=685, part=4>
+Talena? Well, she wouldn't open my secret to just any person...I am Wordock. What brings you here?
+<npc=22 part=5>
+My friends and I need to hear one of the legends about Raminan, the Treasure Island. 
+<npc=685, part=6>
+It doesn't take long to tell a legend...But since you are here, I would ask you for a favor. 
+<npc=685, part=7>
+Armed people have occupied the edge of the swamp. I don't know who they are, I just know that their chief goes under my name!
+<npc=685, part=8>
+I would very much like to get rid of their presence. The animals that obey me can't overcome those people on their own.
+<npc=685, part=9>
+But together you can destroy them!
+#
+======Mage talks to Dina
+#event10
+<npc=23 part=1>
+I'm looking for a mage named Wordock...Unsuccessfully so far. Could you help me?
+<npc=685, part=2>
+Maybe I can, maybe I can't. Wordock doesn't trust everyone who asks. Who told you that he lives here?
+<npc=23 part=3>
+Talena. She also asked to say hello to him. 
+<npc=685, part=4>
+Talena? Well, she wouldn't open my secret to just any person...I am Wordock. What brings you here?
+<npc=23, part=5>
+My friends and I need to hear one of the legends about Raminan, the Treasure Island. 
+<npc=685, part=6>
+It doesn't take long to tell a legend...But since you are here, I would ask you for a favor. 
+<npc=685, part=7>
+Armed people have occupied the edge of the swamp. I don't know who they are, I just know that their chief goes under my name!
+<npc=685, part=8>
+I would very much like to get rid of their presence. The animals that obey me can't overcome those people on their own.
+<npc=685, part=9>
+But together you can destroy them!
+#
+======Mage talks to hero part II
+#event11
+<npc=21, part=1>
+The impostor is dead!
+<npc=685, part=2>
+Great! So, you wanted to hear a legend about the Raminan island, didn't you? Which one do you want?
+<npc=21, part=3>
+Hmm...I don't know the title. It should contain a magic phrase, one that sounds like a riddle.
+<npc=685, part=4>
+Yes, there is a riddle in one of them. Mind you, I don't know the answer to it. Here it is...
+<npc=685, part=5>
+Two idols are standing by the ring,
+They wanted to see each other's thing.
+The obstacle contains no issue.
+Your magic should destroy its tissue.
+<npc=21, part=6>
+Thank you, Wordock!
+#
+======Mage talks to Igles part II
+#event12
+<npc=22, part=1>
+The impostor is dead!
+<npc=685, part=2>
+Great! So, you wanted to hear something about the Raminan island, didn't you? Which legend do you want? 
+<npc=22, part=3>
+Hmm...I don't know the title. It should contain a magic phrase, one that sounds like a riddle. 
+<npc=685, part=4>
+Yes, there is a riddle in one of them. Mind you, I don't know the answer to it. Here it is... 
+<npc=685, part=5>
+Two idols are standing by the ring,
+They wanted to see each other's thing.
+The obstacle contains no issue.
+Your magic should destroy its tissue.
+<npc=22, part=6>
+Thank you, Wordock!
+#
+======Mage talks to Dina part II
+#event13
+<npc=23, part=1>
+The impostor is dead!
+<npc=685, part=2>
+Great! So, you wanted to hear something about the Raminan island, didn't you? Which legend do you want? 
+<npc=23, part=3>
+Hmm... I don't know the title. It should contain a magic phrase, one that sounds like a riddle.
+<npc=685, part=4>
+Yes, there is a riddle in one of them. Mind you, I don't know the answer to it. Here it is...
+<npc=685, part=5>
+Two idols are standing by the ring,
+They wanted to see each other's thing.
+The obstacle contains no issue.
+Your magic should destroy its tissue.
+<npc=23, part=6>
+Thank you, Wordock!
+#
+======Mage talks to hero
+#event14
+<npc=21, part=1>
+Greetings, respected Druid! I'm looking for a mage named Wordock. If you tell me how to find him...
+<npc=685, part=2>
+Very interesting. First, you kill my forest friends, and now you call me "respected Druid" and ask for help? I'm surprised by your insolence, and my own patience!
+<npc=21, part=3>
+I'm sorry! I thought they were wild beasts...Talena had warned me that this place is isolate and dangerous!
+<npc=685, part=4>
+Talena? Do you know her?
+<npc=21, part=5>
+Yes, she told me where to look for you, and she says hello. She said that you might know the legend about Raminan that I need to hear.
+<npc=685, part=6>
+Is this so? Frankly, with all due respect to Talena, I have no desire to do anything for you!
+<npc=21, part=7>
+Can I somehow make up for my mistake?
+<npc=685, part=8>
+All right. Armed people have occupied the edge of the swamp. I don't know who they are, I just know that their chief goes under my name! 
+<npc=685, part=9>
+I would very much like to get rid of their presence.
+#
+======Mage talks to Igles
+#event15
+<npc=22, part=1>
+Greetings, respected Druid! I'm looking for a mage named Wordock. If you tell me how to find him...
+<npc=685, part=2>
+Very interesting. First, you kill my forest friends, and now you call me "respected Druid" and ask for help? I'm surprised by your insolence, and my own patience!
+<npc=22, part=3>
+I'm sorry! I thought they were wild beasts...Talena had warned me that this place is isolate and dangerous!
+<npc=685, part=4>
+Talena? Do you know her?
+<npc=22, part=5>
+Yes, she told me where to look for you, and she says hello. She said that you might know the legend about Raminan that I need to hear.
+<npc=685, part=6>
+Is this so? Frankly, with all due respect to Talena, I have no desire to do anything for you!
+<npc=22, part=7>
+Can I somehow make up for my fault?
+<npc=685, part=8>
+All right. Armed people have occupied the edge of the swamp. I don't know who they are, I just know that their chief goes under my name!
+<npc=685, part=9>
+I would very much like to get rid of their presence.
+#
+======Mage talks to Dina, beasts attacked
+#event16
+<npc=23, part=1>
+Greetings, respected Druid! I'm looking for a mage named Wordock. If you tell me how to find him...
+<npc=685, part=2>
+Very interesting. First, you kill my forest friends, and now you call me "respected Druid" and ask for help? I'm surprised by your insolence, and my own patience!
+<npc=23, part=3>
+I'm sorry! I thought they were wild beasts...Talena had warned me that this place is isolate and dangerous!
+<npc=685, part=4>
+Talena? Do you know her?
+<npc=23, part=5>
+Yes, she told me where to look for you, and she says hello. She said that you might know the legend about Raminan that I need to hear.
+<npc=685, part=6>
+Is this so? Frankly, with all due respect to Talena, I have no desire to do anything for you!
+<npc=23, part=7>
+Can I somehow make up for my fault?
+<npc=685, part=8>
+All right. Armed people have occupied the edge of the swamp. I don't know who they are, I just know that their chief goes under my name!
+<npc=685, part=9>
+I would very much like to get rid of their presence.
+#

@@ -1,0 +1,173 @@
+#
+===mission objective ===
+#briefing 
+Mysterious Amulet
+
+You must save the village from the zombie curse!
+#
+==Hero dies ====
+#failure2 
+The village curse has caught up with your hero...
+#
+===Igles dies===
+#failure3 
+Igles failed to protect both the village and himself...
+#
+===Dina dies ==
+#failure4
+Dina has passed through all ordeals...Except this one. 
+# 
+====we attack peasants====
+#failure5
+Your task is to save the peasants, not to destroy them!
+# 
+====headman killed====
+#failure6
+Without a headman the peasants will scatter, and the village will soon cease to be...
+#
+======Headman welcomes heroes
+#event1
+<npc=21, iammale, iamfighter, part=1>
+This village looks cursed all right! If I were a peasant I'd run away from here before something gets me.
+<npc=21, iamfemale, iamfighter, part=1>
+What an ugly place! If I were a peasant, I'd run away from here screaming before the curse strikes.
+<npc=21, iammale, iammage, part=1>
+The view is particularly depressing. It is a miracle that people still live here!
+<npc=21, iamfemale, iammage, part=1>
+What a slum...If I were born here, I'd run away from this cesspool as soon as I learned to walk!
+<npc=2112, iammale, part=2>
+It wasn't always like this, good sir. But you're right. People are going to leave this place, and the village will soon disappear!
+<npc=2112, iamfemale, part=2>
+It wasn't always like this, good lady. But you're right. People are going to leave this place, and the village will soon disappear!
+<npc=22, part=3>
+Okay, take it easy now. We're here to try and remove the curse from the village.
+<npc=23, part=4>
+What do the people think is the cause of all this?
+<npc=2112, part=5>
+We don't know anything. There is an old hermit that lives northwest from us that might give you an idea. I wanted to talk to him myself, but I couldn't make the trip. The road is far too dangerous now.
+<npc=2112, part=6>
+Please, don't leave right away! More ghouls are coming our way even as we speak! They can be here any moment...
+#
+======Hero talks to mage
+#event2
+<npc=2016, iammale, iamfighter, part=1>
+I haven't met such a dumb-looking warrior around here for quite a while. To tell you the truth, I could live a long life without meeting another of your kind. What do you want from me?
+<npc=2016, iamfemale, iamfighter, part=1>
+I haven't met such a big, strong, and beautiful woman around here for quite a while. I'm afraid I'm not interested though. I'm doing pretty well without any women right now. What do you want?
+<npc=2016, iammale, iammage, part=1>
+I purposely moved to the middle of nowhere to avoid meeting other Mages, so I'm not particularly glad to see you. What do you want from me? 
+<npc=2016, iamfemale, iammage, part=1>
+I purposely moved to the middle of nowhere to avoid meeting other Mages, so I'm not particularly glad to see you. What do you want from me?
+<npc=21, iammale, iamfighter, part=2>
+Uhh...thanks...I think. Listen up old man. Tell me what you know about the village curse, and I'll leave you alone to rot up here by yourself.
+<npc=21, iamfemale, iamfighter, part=2>
+First of all, I should say that your looks show that you would never get a woman's attention, regardless of whether you want it or not. Now down to business. What happened to the nearby village?
+<npc=21, iammale, iammage, part=2>
+I have no need to compete with you, old man. Our skill levels are way too different. I just have one, simple question for you. What is the cause of the village curse?
+<npc=21, iamfemale, iammage, part=2>
+I will make every effort not to torture you with my presence. Now, what's wrong with the village? Answer, and I shall leave immediately!
+<npc=2016, iammale, part=3>
+A family of Dragons dwells in the Eastern Mountains. If you are as strong as self-confident as you appear to be, defeat them, and we shall talk about the village. Now, be-gone!
+<npc=2016, iamfemale, part=3>
+A family of Dragons dwells in the Eastern Mountains. If you are as strong as self-confident as you appear to be, defeat them, and we shall talk about the village. Now, be-gone!
+#
+======Igles talks to the mage
+#event3
+<npc=2016, part=1>
+Why does a Knight, of all people, need to come out here in the middle of nowhere? I was doing fine until you showed up. What do you want?
+<npc=22, part=2>
+I forgive your discourtesy, Mage, for the only reason that you must have forgotten your manners living in this godforsaken place. Tell me, what has happened to the nearby village? 
+<npc=2016, part=3>
+Huh, you need my help do you? A family of Dragons dwells in the Eastern Mountains. Defeat them, and then I will talk to you about what I know of the village. Now, be-gone!
+#
+======Dina talks to the mage 
+#event4
+<npc=2016, part=1>
+How dare you distract me, woman? What do you want?!
+<npc=23, part=2>
+I may be young, but don't you dare talk to me like that! I am an initiate into magic as well, and probably better than you are, old man. I need to know what's happened to the nearby village.
+<npc=2016, part=3>
+Your words are arrogant, child. If you really are initiated, then prove it! Kill the family of Dragons that live in the East, and then we shall talk of the village.
+#
+======The mage joins
+#event5
+<npc=2016, part=1>
+Are the Dragons dead yet? Then I shall keep my promise and tell you everything I know. There is a ghoul that has a grudge against the village. He lives by the cemetery located to the  northeast of here.
+<npc=2016, part=2>
+The curse will remain on the village as long as he is alive.
+<npc=2016, part=3>
+Kill him and then leave here already and return to where you belong! I'll even join you to help you get out of here faster.
+#
+======Hero talks to the dragon
+#event6
+<npc=21, iammale, iamfighter, part=1>
+Correct me if I'm wrong, but aren't Dragons supposed to attack people, especially those people who come to kill them? Hey, Dragon, what's wrong with you? Are you sick or something? 
+<npc=21, iamfemale, iamfighter, part=1>
+Hey, Dragon, are you disrespecting me? I came to fight you! You could at least spit some fire at me for starters! What's wrong with you?
+<npc=21, iammale, iammage, part=1>
+Dragon! Are you ok? I'm noticing that your behavior is rather atypical for a creature such as yourself. Why aren't you ripping me to shreds right now?
+<npc=21, iamfemale, iammage, part=1>
+The Dragon isn't attacking. Bizarre...I wish it was because I paralyzed it with fear, but I suspect that the reason is different. Hey Dragon, are you alright?
+<npc=651, iammale, iamfighter, part=2>
+Thank you for caring about my health, human, I am fine. I have just eaten a dozen sheep for a snack, which makes me stop and reflect on things. Why don't we chat for a while instead?
+<npc=651, iamfemale, iamfighter, part=2>
+Respect has nothing to do with it, human. I have just had lunch, which makes me reluctant to spit at anyone. Can't we just have a conversation instead?
+<npc=651, iammale, iammage, part=2>
+Actually, I just stuffed myself with two dozen sheep for my lunch. Digesting makes one lazy, you know. So I'm in a bit of a conversational mood instead. Can we talk about something?
+<npc=651, iamfemale, iammage, part=2>
+Oh, my belly...I would be happy to confirm your suspicions, but unfortunately I just had my dinner, which makes me reluctant to attack you. Couldn't we rather talk about something?
+<npc=21, part=3>
+Well, in that case, tell us how to save the cursed village? The headman says that the hermit knows what to do, but maybe you are better informed?
+<npc=651, part=4>
+Which hermit? The one that has stolen the sacred amulet from the graveyard? He is the one that has caused all of the problems. He made the cemetery ghost avenge all of the people in the town! 
+<npc=651, part=5>
+To save the village you have to kill the hermit and then take the sacred amulet from him and return it to its owner in the graveyard. Then the ghost will stop sending ghouls to attack the village.
+#
+======Igles talks to the dragon
+#event7
+<npc=22, part=1>
+Dragon! I, sir Igles, challenge you to a fight!
+<npc=651, part=2>
+Uh...can we do that sometime later? I have just had my dinner, so I have no intention to fight anything right now. Couldn't we talk about something instead?
+<npc=22, part=3>
+Well, in that case, tell us how to save the cursed village? The headman says that the hermit knows what to do, but maybe you are better informed?
+<npc=651, part=4>
+Which hermit? The one that has stolen the sacred amulet from the graveyard? He is the one that has caused all of the problems. He made the cemetery ghost avenge all of the people in the town!
+<npc=651, part=5>
+To save the village you have to kill the hermit and then take the sacred amulet from him and return it to its owner in the graveyard. Then the ghost will stop sending ghouls to attack the village.
+#
+====== Dina talks to the dragon 
+#event8
+<npc=23, part=1>
+Greetings, Dragon. This isn't personal or anything, but I must challenge you to a fight!
+<npc=651, part=2>
+Uh...can we do that sometime later? I have just had my dinner, so I have no intention to fight anything right now. Couldn't we talk about something instead?
+<npc=23, part=3>
+Well, in that case, would you please tell how to save the cursed village? The headman says that the hermit knows what to do, but maybe you are better informed?
+<npc=651, part=4>
+Which hermit? The one that has stolen the sacred amulet from the graveyard? He is the one that has caused all of the problems. He made the cemetery ghost avenge all of the people in the town!
+<npc=651, part=5>
+To save the village you have to kill the hermit and then take the sacred amulet from him and return it to its owner in the graveyard. Then the ghost will stop sending ghouls to attack the village.
+#
+======Dragon joins the party
+#event9
+<npc=651, part=1>
+So was I right? Did the hermit have the amulet? Now it must be returned to the ghost if you really want to bring peace to the village. He lives in a cemetery located to the northeast.
+<npc=651, part=2>
+Wait a second...I've managed to digest most of my dinner while you were away, so I'm in the mood to fight now...plus I have a vested interest in the survival of the village.
+<npc=651, part=3>
+You see, the peasants built their village here for a reason. This area makes great farmland.
+<npc=651, part=4>
+These particular peasants happen to excel at breeding sheep, my favorite snack, which is why I made my home here.
+<npc=651, part=5>
+If the village is destroyed, who will raise the sheep that I eat? I have no intention of going hungry just yet!
+#
+======Amulet returned
+#event10
+<npc=631, part=1>
+Here is my amulet...Now I can finally return to my grave and rest forever.
+#
+======Ghost killed
+#event11
+<npc=631, part=1>
+You may have won this battle, but don't think that you have defeated me! Ghosts always return! I'll be back, I'lllll beeee baacckk...

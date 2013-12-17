@@ -1,0 +1,15 @@
+[BeginXCK]
+редактор, обращения templates.bin -> templates11.bin
+[BeginCRK]
+This CRK-file was made via C2C/486, v0.06b, from Professor Nimnul
+
+Difference(s) between ROM2ME07.exe & rom2me11.exe
+ROM2ME.exe
+0007AFE5: 2E 31
+0007AFE6: 62 32
+0007AFE7: 69 2E
+0007AFE8: 6E 62
+0007AFE9: 00 69
+0007AFEA: 00 6E
+[EndCRK]
+[EndXCK]

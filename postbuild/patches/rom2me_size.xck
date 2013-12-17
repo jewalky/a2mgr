@@ -1,0 +1,13 @@
+[BeginXCK]
+Размер сегмента .text ++
+Необходим для того, чтобы vmprotect принял адрес функции, находящейся
+внутри align segment
+[BeginCRK]
+This CRK-file was made via C2C/486, v0.06b, from Professor Nimnul
+
+Difference(s) between ROM2ME07.exe & rom2me11.exe
+ROM2ME.exe
+000001E0: 5C 00
+000001E1: 69 6A
+[EndCRK]
+[EndXCK]

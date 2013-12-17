@@ -1,0 +1,151 @@
+// IMPORTANT: LAST: 95
+
+// resource_control.cpp
+0 1 004EBEDA		// : RES_loadFile
+0 48 004867E6		// : RES_loadDirectories
+//0 49 004EB723		// : RES_loadException // никто не знает что это и на ху€ нужно
+
+// resource_files_replace.cpp
+0 2 004867C5
+0 3 00486D09
+0 4 00502C6B
+0 5 00486DCD
+0 6 004F41F2
+0 7 00502CF4
+0 8 00572315
+0 9 0055E216
+0 10 0055D705
+0 11 0057F722
+0 12 004867D2
+0 13 00479704
+0 14 00479799
+
+// network_protocol.cpp
+0 15 0050E48B // : NETPROTO_createAuthorizationPacket
+0 16 00515D77 // : NETPROTO_sendAuthorizationPacket
+0 84 004949CD // : NETPROTO_loginToHat
+//0 92 0050A218 // test
+//0 150 005122D1
+//0 151 00512314
+
+// network_crypt.cpp
+0 18 0050FEED // : NET_cryptPacket
+
+// video_init.cpp
+0 17 00487679 // : VIDEO_checkVideoMode
+
+// map_location.cpp
+0 19 0040E2BA // : MAP_loadFromServer
+0 90 0040E0E3 // : MAP_CFileOpen1
+0 91 0040E0C9 // : MAP_CFileOpen2
+
+// misc.cpp
+1 20 0051259D // : SYSTEM_setThreadPriority
+
+// chat.cpp
+0 24 0043D64B // : CHAT_wmCharHandler
+0 21 0043D976 // : CHAT_tilde0
+0 22 0040270A // : CHAT_tilde1
+0 23 0040275E // : CHAT_tilde2
+0 25 0047A11E // : CHAT_convWinToDos
+0 26 00461DB6 // : CHAT_convDosToIdx
+0 29 004021FE // : CHAT_logStrings
+0 86 00413F86 // : CHAT_prependType_part1
+0 87 00413DF7 // : CHAT_prependType_part2
+
+// chat_history.cpp
+0 30 0043E1FB // : CHAT_keyDown
+0 31 0048F167 // : CHAT_getMessageLast
+
+// debug.cpp
+//0 27 00479BA3 // : DBG_logStrings
+//0 210 0042A71B
+//0 211 0042A740
+0 212 00403D47
+
+// gui_bugfix.cpp
+0 28 004DEAD4 // : GUI_textField_MeasurePosition
+0 92 0044DB8D // : GUI_gmEnter
+
+// crash.cpp
+0 33 00414994 // : CRASH_fix_414994 // от K@M (хот€ регул€рно случаетс€ у всех)
+0 34 0042353A // : CRASH_fix_42353A // фикс слЄта при отрицательном опыте
+0 35 00523295 // : CRASH_fix_523295 // фикс слЄта при отрицательном опыте
+0 36 0046AD10 // : CRASH_fix_46AD10 // фикс maxhp=0, фикс hp>maxhp
+0 37 00420450 // : CRASH_fix_420450 // from allods2.log
+//0 38 0045FC3B // : CRASH_fix_45FC3B // from allods2.log
+//0 39 00458CF9 // : CRASH_fix_458CF9 // from allods2.log
+//0 40 004657AD // : CRASH_fix_4657AD // from allods2.log
+//0 41 0046B685 // : CRASH_fix_46B685 // от \Under_Watrer/
+0 42 004BEE2D // : CRASH_fix_4BEE2D // shop_init из патча 11
+//0 46 004AAB7E // : CRASH_fix_4AAB7E // слЄт от вещей в паке с количеством 0
+0 57 0049C153 // : CRASH_fix_multiwindow_1 // слЄт из-за удалени€ одним окном временных файлов другого
+0 58 0049C661 // : CRASH_fix_multiwindow_2
+0 59 004B7B94 // : CRASH_fix_multiwindow_3
+0 60 0048723E // : CRASH_fix_multiwindow_4
+
+// network_hat_enter.cpp
+0 43 0043F738 // : HATENT_url_text
+0 44 00494AE4 // : HATENT_url_connect
+
+// screenshot.cpp
+0 45 00457973 // : SCREENSHOT_take
+
+// add_info.cpp
+0 47 0040AAF5 // : INFO_fps
+
+// language.cpp, text replacements
+0 50 0043EDEB // : LANG_change_43EDEB
+0 51 00474F27 // : LANG_change_474F27
+0 52 00486C39 // : LANG_change_48626D
+0 53 0048BA07 // : LANG_change_48BA07
+0 54 0048CA55 // : LANG_change_48CA55
+0 55 00491CDF // : LANG_change_491CDF
+0 56 004939A2 // : LANG_change_4939A2
+0 61 00493B23 // : LANG_change_493B23
+0 62 004B018F // : LANG_change_4B018F
+
+// language.cpp, main\\graphics replacements
+0 70 0042B3D5 // : LANG_change_42B3D5
+0 71 0043EEC3 // : LANG_change_43EEC3
+0 72 00460F9B // : LANG_change_460F9B
+0 73 00474375 // : LANG_change_474375
+0 74 004743C9 // : LANG_change_4743C9
+0 75 00496638 // : LANG_change_496638
+0 76 004AEE20 // : LANG_change_4AEE20
+0 77 004AEE6D // : LANG_change_4AEE6D
+0 78 004AEF2A // : LANG_change_4AEF2A
+0 79 004AEF9C // : LANG_change_4AEF9C
+0 80 004AF00E // : LANG_change_4AF00E
+
+// language.cpp, others
+0 81 00479D7A // : LANG_fix_codepage
+
+// scrolling.cpp
+0 63 004070F6 // : SCROLL_part1 (terrain)
+0 64 004073C9 // : SCROLL_part2 (objects)
+
+// grid.cpp
+0 65 0040529D // : GRID_part1
+0 66 00405D3F // : GRID_part2
+0 67 00406372 // : GRID_part3
+0 68 004058EF // : GRID_part4
+0 69 00405826 // : GRID_part5
+
+// a2mgr.cpp
+1 85 00486534 // : BASE_setCurrentDirectory1
+0 85 005A4988 // : BASE_setCurrentDirectory1 (import jump)
+0 89 00582007 // : _fix_launcher (allodslauncher.exe unpacker waiting)
+
+// administrat_fix.cpp
+0 88 0046B17E // : ADMINISTRAT
+
+// scanrange.cpp
+0 93 00403D47 // : CalcVisMapCLIENT
+
+// landscape_renderer.cpp
+//0 94 0047B899 // : TILES_loadTiles
+//0 95 00405189 // : TILES_displayTile1
+0 96 0041D158
+
+// TEMPORARY

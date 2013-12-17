@@ -1,0 +1,10 @@
+[ProjectInfo]
+Count=1
+Options=216
+AddressSort=0
+VMCodeSectionName=.vmp
+RunParameters=
+[Procedures]
+Address0=4618598
+NeedCompile0=1
+ExtAddressCount0=0

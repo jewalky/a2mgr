@@ -1,0 +1,161 @@
+#
+===mission objective===
+#briefing 
+The Storyteller
+
+Learn the magic phrase from the storyteller.
+#
+==Hero dies====
+#failure2
+Your hero died!
+#
+===Igles dies===
+#failure3 
+Igles has taken the blow... 
+#
+===Dina dies==
+#failure4
+Dina couldn't evade the terrible blow.
+# 
+===Peasants attacked==
+#failure5
+The peasants are innocent. It is a disgrace to attack them!
+#
+===Taleteller dies==
+#failure6
+Now there is no one to tell you the legend...
+#
+===the herds are not saved
+#failure7
+You couldn't comply with the headman's request. The peasants will perish from famine. 
+#subobjective0
+
+#subobjective1
+Protect the herds from the wolves.
+#
+======Start
+#event1
+<npc=21, part=1>
+Hmm...It's nice here. I'm glad that the storyteller lives here instead of somewhere in the sands, or in the barren Necromancer lands.
+<npc=21, part=2>
+Flowers, trees, sheep herds...I should seriously consider dropping Skrakan's quest and staying here to live out my life!
+<npc=22, part=3>
+This place is too peaceful and tranquil for you. If I know you at all, you wouldn't be able to stay here for more than a week, at the most!
+<npc=23, part=4>
+Well, I could live here...But I'm afraid that this peacefulness is deceitful!
+#
+======Headman talks to hero
+#event2
+<npc=21, part=1>
+Greetings, good man! I am looking for the old storyteller who lives in your village...
+<npc=2112, part=2>
+It is so good that you came here! Help us please! The wolves are devouring our sheep.
+<npc=2112, part=3>
+Our village will starve if we lose more than a third of the herd!
+<npc=21, part=4>
+Well, I was asking about the storyteller, not about your sheep...
+<npc=2112, part=5>
+Who cares about stories when famine is knocking on our door...
+<npc=21, part=6>
+Okay, I get it. But keep in mind, peasant, I'll be really disappointed if you continue to evade my questions after I get rid of these wolves!
+#
+======Headman talks to Igles
+#event3
+<npc=2112, part=1>
+Greetings, good sir! It is so good that you came here! Help us please! The wolves are devouring our sheep.
+<npc=2112, part=2>
+Our village will starve if we lose more than a third of the herd!
+<npc=22, part=3>
+Look, good man! I have no intention of fighting wolves. I came here looking for the old storyteller who lives in your village.
+<npc=2112, part=4>
+Who cares about stories when famine is knocking on our door, good sir? 
+<npc=22, part=3>
+Okay, alright! I'll take care of these wolves for you. But you keep in mind why I am here!
+#
+======Headman talks to Dina
+#event4
+<npc=23, part=1>
+Greetings, good man! I am looking for the old storyteller who lives in your village...
+<npc=2112, part=2>
+It is so good that you came here! Help us please! The wolves are devouring our sheep.
+<npc=2112, part=3>
+Our village will starve if we lose more than a third of the herd!
+<npc=23, part=4>
+Yes, of course I shall help you! I used to live in a village and I know how terrible it can be to lose your livelihood!
+<npc=23, part=5>
+But I actually came here looking for the old storyteller...
+<npc=2112, part=6>
+Oh, lass! Who cares about stories when famine is knocking on our door...
+#
+======Headman talks to hero part II
+#event5
+<npc=21, part=1>
+Well, the wolves are gone. It wasn't that hard to do.
+<npc=2112, part=3>
+Even so, we are so grateful to you.
+<npc=21, part=4>
+Oh, don't mention. Ok, so where does the storyteller live?
+<npc=2112, part=5>
+He died, I'm afraid. But maybe I can help you? I used to listen to the storyteller a lot, and I have a very good memory.
+<npc=21, part=6>
+I'm sorry to hear that, my friend.
+<npc=21, part=7>
+I wanted to hear the tale about the island of Raminan. It contains a magic phrase in the story somewhere. Actually, it's just the phrase that I need. Do you remember it?
+<npc=2112, part=8>
+Sure! It sounds strange though.
+<npc=2112, part=9>
+If you manage approaching the horrid and secret location,
+Build a wall at the sign, and another to follow the prime.
+Third one shall bind them together, across like a pillar,
+Thus be revealed an enigma forgotten of old.
+<npc=21, part=10>
+Great! Thank you very much!
+#
+======Headman talks to Igles part II
+#event6
+<npc=22, part=1>
+Well, the wolves are gone. It wasn't that hard to do.
+<npc=2112, part=3>
+Even so, we are so grateful to you.
+<npc=22, part=4>
+Oh, don't mention. So where does the storyteller live? 
+<npc=2112, part=5>
+He died, I'm afraid. But maybe I can help you? I used to listen to the storyteller a lot, and I have a very good memory.
+<npc=22, part=6>
+I'm sorry to hear that, my friend.
+<npc=22, part=7>
+I wanted to hear the tale about the island of Raminan. It contains a magic phrase in the story somewhere. Actually, it's just the phrase that I need. Do you remember it?
+<npc=2112, part=8>
+Sure! It sounds strange though. 
+<npc=2112, part=9>
+If you manage approaching the horrid and secret location,
+Build a wall at the sign, and another to follow the prime.
+Third one shall bind them together, across like a pillar,
+Thus be revealed an enigma forgotten of old.
+<npc=21, part=10>
+Great! Thank you very much!
+#
+======Headman talks to Dina part II
+#event7
+<npc=23, part=1>
+Well, the wolves are gone. It wasn't that hard to do.
+<npc=2112, part=3>
+Even so, we are so grateful to you.
+<npc=23, part=4>
+Oh, don't mention. So where does the storyteller live? 
+<npc=2112, part=5>
+He died, I'm afraid. But maybe I can help you? I used to listen to the storyteller a lot, and I have a very good memory.
+<npc=23, part=6>
+Oh, I'm so sorry...I sympathize with you!
+<npc=23 part=7>
+I wanted to hear the tale about the island of Raminan. It contains a magic phrase in the story somewhere. Actually, it's just the phrase that I need. Do you remember it?
+<npc=2112, part=8>
+Sure! It sounds strange though. 
+<npc=2112, part=9>
+If you manage approaching the horrid and secret location,
+Build a wall at the sign, and another to follow the prime.
+Third one shall bind them together, across like a pillar,
+Thus be revealed an enigma forgotten of old.
+<npc=21, part=10>
+Great! Thank you very much!
+#

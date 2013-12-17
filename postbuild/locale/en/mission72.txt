@@ -1,0 +1,110 @@
+#
+===Mission objective===
+#briefing 
+The Disappearing Caravans
+
+You must find out what has happened to the merchant caravans.
+#
+==Hero dies====
+#failure2 
+The desert has never been a safe place!
+#
+===Igles dies===
+#failure3 
+Your search for the caravan ended grievously...
+#
+===dina dies==
+#failure4
+Dina died!
+#subobjective0
+
+#subobjective1
+Turn off the tower of Air.
+#subobjective2
+Turn off the tower of Water.
+#subobjective3
+Turn off the tower of Earth.
+#subobjective4
+Turn off the tower of Fire.
+#
+=======Start
+#event1
+<npc=22, part=1>
+Well, the caravan route begins here. It's protected by a series of magic towers which are supposed to destroy anyone attempting to attack the caravans.
+<npc=22, part=2>
+However, we can not rely on this protection. The Caravans wouldn't have disappeared if the towers were functioning properly.
+<npc=23, part=3>
+I know something about the way magic towers work. Anyone in possession of the corresponding rune can control them.
+<npc=23, part=4>
+The towers can become hostile should the runes fall into evil hands!
+<npc=21, iammale, iamfighter, part=5>
+Frankly, I'm completely clueless when it comes to magic. I'd rather believe that the orcs managed to dismantle or burn those towers.
+<npc=21, iammale, iamfighter, part=6>
+However, we should certainly check into this idea.
+<npc=21, iamfemale, iamfighter, part=5>
+Well, for me, it would be much easier to just wipe out the local orcs. That should take care of the problem!
+<npc=21, iamfemale, iamfighter, part=6>
+But you're the mage here, so go ahead. If you think that the towers should be checked, tell us what to do!
+<npc=21, iammale, iammage, part=5>
+Yes, this is a possibility. Especially considering that the Trade Guild probably ordered the tower grid from the lowest bidder.
+<npc=21, iammale, iammage, part=6>
+I do not have much experience with magic towers myself, so you will have to guide us while we check your notion, Dina.
+<npc=21, iamfemale, iammage, part=5>
+This would be impossible if I were the one to build the tower grid! The Trade Guild must have saved a couple silver pieces by ordering it from some crook!
+<npc=21, iamfemale, iammage, part=6>
+Anyway...It was your idea, Dina, so you should be the one to direct the investigation.
+#
+=======Dina uses the rune of Air 
+#event2
+<npc=23, part=1>
+The towers of Air are no longer hostile!
+#
+=======Dina uses the rune of Earth
+#event3
+<npc=23, part=1>
+I have taken control of the towers of Earth!
+#
+=======Dina uses the rune of Fire 
+#event4
+<npc=23, part=1>
+The towers of Fire can no longer harm us!
+#
+=======Dina uses the rune of Water 
+#event5
+<npc=23, part=1>
+At last! The towers of Water are friendly again!
+#
+=======Hero about the rune of Air 
+#event6
+<npc=21, iammale, iamfighter, part=1>
+What kind of a contraption is this? It seems to be magical! I should give this to Dina and let her identify it.
+<npc=21, iamfemale, iamfighter, part=1>
+What kind of a useless item is this? I wonder if I should trash it. On second thought, I'd better give it to Dina. What if it's magic? Let her fiddle with it!
+<npc=21, iammale, iammage, part=1>
+This object has a very definite magical aura of the sphere of Air! I must pass it on to Dina for further examination.
+<npc=21, iamfemale, iammage, part=1>
+I can easily understand what the function is of this dingus. It...It looks...uh...I'll give it to Dina. She's young and needs as much experience as she can get. Let her identify it!
+#
+=======Igles about the rune of Air
+#event7
+<npc=22, part=1>
+This thing looks like a magic rune...Although I've never seen a magic rune before, I think this is what they're supposed to look like!
+<npc=22, part=2>
+I should give it to Dina for identification.
+#
+=======Dina about the rune of Air
+#event8
+<npc=23, part=1>
+My implication was correct! The orcs managed to obtain the runes that control the towers. 
+<npc=23, part=2>
+We will be able to restore the towers and complete the mission if we get the runes back and find the control panels.
+#
+=======Dina about the control panel 
+#event9
+<npc=23, part=1>
+This is the control panel! We can manipulate the towers using the runes now.
+#
+=======Dina about control panel no. 2
+#event10
+<npc=23, part=1>
+Why doesn't it work? The towers of Water must be controlled by another panel!

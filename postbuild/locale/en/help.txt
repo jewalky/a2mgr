@@ -1,0 +1,61 @@
+Hotkeys:
+
+ESC - menu
+F1 - help menu
+F2 - save game
+F3 - load game (single player) / diplomacy (multiplayer)
+<~~> or <I> - open/close inventory
+<Q> or <B> - open/close spellbook
+<W> - open/close quest log (multiplayer only)
+SPACE - open/close inventory & spellbook, return to game after death (multiplayer)
+TAB - stats/picture mode in info panel
+Ctrl+<O> - smoothing on/off
+Ctrl+<H> - show health on/off
+Ctrl+<L> - flying damage on/off
+Ctrl+<W> - change retreat mode
+Ctrl+<F> - change formation mode
+Ctrl+<N> - day/night changes on/off
+Ctrl+<U> - change autocasting mode
+Ctrl+<K> - show player names and clans on/off (multiplayer)
+Ctrl+<T> - network statistics on/off (multiplayer)
+Ctrl+<C> - toggle message color standard/alternative (multiplayer)
+Gray <+>,<-> - change game speed
+<M> - move
+<A> - attack
+<G> - guard
+<D> - defend
+<C> - cast
+<S> - swarm (move & attack)
+<T> - stand ground
+<R> - retreat
+<P> - pickup all sacks (for heroes only)
+<L> - stand still (do not attack anybody)
+<E> - select all of your mercenaries
+ALT - force move
+CTRL - force attack/swarm
+SHIFT - force add/remove unit to selection
+CTRL+<1..9> - save group selection
+CTRL+SHIFT+<1..9> - save group selection (multigroup mode)
+<1..9> - restore group selection
+ALT+<1..9> - restore group selection with   screen centering
+SHIFT+<1..9> - add group to selection
+Ctrl+F4..F12 - set spell shortcut
+Shift+F4..F12 - set inventory item shortcut
+F4..F12 - use spell/item shortcut
+Ctrl+A - select/deselect spell for autocasting
+Enter - send message (multiplayer)
+BACKSPACE - clear all messages
+ALT+F4 - quit game
+
+Entering messages:
+
+BACKSPACE - delete left character
+Ctrl+BACKSPACE - delete left word
+TAB - player name tab extension
+<UP ARROW> - return previous input
+[message] - message addressed to everyone in close proximity
+=[message] - message addressed to all players
+-[message] - message addressed to all allies
+-<player's name>[message] - message addressed to a particular player
+#kick <player's name> - remove player from the game
+#locate <player's name> - locate player

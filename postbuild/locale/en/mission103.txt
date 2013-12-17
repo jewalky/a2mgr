@@ -1,0 +1,232 @@
+#
+===mission objective===
+#briefing 
+The Desert Oracle
+
+Find and talk to the Desert Oracle.
+#
+==Hero dies====
+#failure2 
+The price of knowledge was unbearably high for the hero!
+#
+===Igles dies===
+#failure3 
+Igles died! This time the desert was stronger...
+#
+===Dina dies==
+#failure4
+The sand and the sun were the last things seen by Dina...
+# 
+====Shaman attacked====
+#failure5 
+You can not do anything without the Shaman.
+# 
+====Shaman dies====
+#failure6
+You can not do anything without the Shaman.
+#subobjective0
+
+#subobjective1
+Bring the Shaman a Stone from the abandoned mine.
+#subobjective2
+Bring the Shaman an ogre's head.
+#
+=======Start
+#event1
+<npc=21, iammale, iamfighter, part=1>
+This heat is making me delirious! Have we reached the place mentioned by the Orcologist or not?
+<npc=21, iamfemale, iamfighter, part=1>
+My brain is melting! Have we reached the place mentioned by the Orcologist or not?
+<npc=21, iammale, iammage, part=1>
+High temperature has a negative effect on my mental abilities...Simply put, I do not know where we are located. Are we going in the right direction?
+<npc=21, iamfemale, iamfighter, part=1>
+I swear this is the last time I go into the sands! Never again! The heat is melting my brain! Are we going in the right direction? 
+<npc=23, part=2>
+Yes, I think we're on the right path. At least I hope so!
+<npc=22, part=3>
+We should start thoroughly searching for the Oracle. I'd hate to walk right past it without knowing!
+<npc=23, part=4>
+I would rather look for this "Desert Witch" that we were told about!
+#
+=======Sand witch to hero
+#event2
+<npc=21, part=1>
+Greetings, you must be the Desert Witch!
+<npc=2102, part=2>
+How do you know who I am?
+<npc=21, part=3>
+It would be hard to mistake you for anyone else. Besides, the Orcologist told us about you. 
+<npc=2102, part=4>
+Oh, that strange man! I guess I seem strange to you too, don't I?
+<npc=21, part=5>
+A bit...But it suits you well!
+<npc=2102, part=6>
+Those are the first nice words I've heard in the many years of living here...Thank you. Now, what can I do for you?
+<npc=21, part=7>
+I need to talk to the Oracle!
+<npc=2102, part=8>
+It is not easy! The only one who can hear the Oracle is the shaman who serves it. But he is so old and frail, that he does not perform the ritual often.
+<npc=2102, part=9>
+However, you might be able to persuade him to do it for you...He lives far away from here, beyond the southern mountains.
+#
+=======Sand witch to Igles
+#event3
+<npc=22, part=1>
+Greetings, you must be the Desert Witch!
+<npc=2102, part=2>
+How do you know who I am? 
+<npc=22, part=3>
+It would be hard to mistake you for anyone else. Besides, the Orcologist told us about you. 
+<npc=2102, part=4>
+Oh, that strange man! I guess I seem strange to you too, don't I? 
+<npc=22, part=5>
+A bit... But it suits you well!
+<npc=2102, part=6>
+Those are the first nice words I've heard in the many years of living here...Thank you. Now, what can I do for you?
+<npc=22, part=7>
+I need to talk to the Oracle!
+<npc=2102, part=8>
+It is not easy! The only one who can hear the Oracle is the shaman who serves it. But he is so old and frail, that he does not perform the ritual often.
+<npc=2102, part=9>
+However, you might be able to persuade him to do it for you...He lives far away from here, beyond the southern mountains. 
+#
+=======Sand witch to Dina
+#event4
+<npc=23, part=1>
+Greetings, Desert Witch!
+<npc=2102, part=2>
+How do you know who I am? 
+<npc=23, part=3>
+It would be hard to mistake you for anyone else. Besides, the Orcologist told us about you. 
+<npc=2102, part=4>
+Oh, that strange man! I guess I seem strange to you too, don't I? 
+<npc=23, part=5>
+A bit... But it suits you well!
+<npc=2102, part=6>
+Those are the first nice words I've heard in the many years of living here...Thank you. Now, what can I do for you? 
+<npc=23, part=7>
+I need to talk to the Oracle!
+<npc=2102, part=8>
+It is not easy! The only one who can hear the Oracle is the shaman who serves it. But he is so old and frail, that he does not perform the ritual often.
+<npc=2102, part=9>
+However, you might be able to persuade him to do it for you...He lives far away from here, beyond the southern mountains. 
+#
+=======Shaman to hero 
+#event5
+<npc=21, iammale, part=1>
+Hey, shaman! I come in peace! I don't want to fight you! I want to talk!
+<npc=21, iamfemale, iamfighter, part=1>
+Hey, what are you doing?? Don't throw fire at me! I came to talk to you, not to fight!
+<npc=21, iamfemale, iammage, part=1>
+Stop that! I come in peace! Don't start throwing fire at me, I need to talk to you!
+<npc=656, part=2>
+Strange-strange. Humans always want-want to kill orcs.
+<npc=21, part=3>
+I don't have time to argue with you over who wants to kill whom...I need to talk to the Oracle that's supposed to be somewhere in these sands.
+<npc=21, iammale, iamfighter, part=4>
+Can you help me with that? I promise to pay you for your services.
+<npc=21, iamfemale, iamfighter, part=4>
+Be assured that I will pay you back if you help me!
+<npc=21, iammale, iammage, part=4>
+We could reach a mutually beneficial agreement if you agree to help me.
+<npc=21, iamfemale, iammage, part=4>
+You wouldn't regret helping me, that I can promise!
+<npc=656, part=5>
+I can talk-talk to the Oracle. But I need a stone-stone from the mines and an ogre's head.
+<npc=656, iammale, part=6>
+The mines are northwest from here, but you'll have to find-find the ogre on your own!
+<npc=656, iamfemale, part=6>
+The mines are northwest from here, and you'll have to find-find the ogre on your own!
+#
+=======Shaman to Igles
+#event6
+<npc=22, part=1>
+Hey, shaman! I come in peace! I don't want to fight you! I want to talk!
+<npc=656, part=2>
+Strange-strange. Humans always want-want to kill orcs.
+<npc=22, part=3>
+I don't have time to argue with you over who wants to kill whom...I need to talk to the Oracle that's supposed to be somewhere in these sands. 
+<npc=22, part=4>
+Can you help me with that? I will pay you back, I swear!
+<npc=656, part=5>
+I can-can talk to the Oracle. But I need a stone-stone from the mines and an ogre's head.
+<npc=656, part=6>
+The mines are northwest from here, but you'll have to find-find the ogre on your own!
+#
+=======Shaman to Dina
+#event7
+<npc=23, part=1>
+I come in peace! Don't start throwing fire at me! I don't want to fight you! I want to talk!
+<npc=656, part=2>
+Strange-strange. Humans always want-want to kill orcs.
+<npc=23 part=3>
+I never wanted to kill orcs! Not that I didn't have to...But I'm not going to argue about this now.
+<npc=23 part=4>
+I need to talk to the Oracle that is supposed to be somewhere in these sands.
+<npc=23, part=5>
+Can you help me with that? I will pay you back, honest.
+<npc=656, part=6>
+I can-can talk to the Oracle. But I need a stone-stone from the mines and an ogre's head.
+<npc=656, part=7>
+The mines are northwest from here, but you'll have to find-find the ogre on your own!
+#
+=======Hero finds stone
+#event8
+<npc=21, iammale, iamfighter, part=1>
+Nice stone! I hope I'll find some use for it...
+<npc=21, iamfemale, iamfighter, part=1>
+I should take this stone with me! It looks beautiful. Even an orc couldn't resist it!
+<npc=21, iammale, iammage, part=1>
+This stone looks very impressive. I hope that it's good for something.
+<npc=21, iamfemale, iammage, part=1>
+A pretty stone...I got so dirty searching for it that I'll really be disappointed if it's good for nothing.
+#
+=======Igles finds stone
+#event9
+<npc=22, part=1>
+This stone looks nice. I should take it with me.
+#
+=======Dina finds stone
+#event10
+<npc=22, part=1>
+This stone is so pretty! It can't possibly be useless.
+#
+=======Shaman to hero Œ 
+#event11
+<npc=21, part=1>
+Look, shaman! I have what you need.
+<npc=656, part=2>
+Well, let's go-go to the Oracle then. It will talk-talk well. 
+#
+=======Shaman to Igles Œ 
+#event12
+<npc=22, part=1>
+Look, shaman! I have what you need.
+<npc=656, part=2>
+Well, let's go-go to the Oracle then. It will talk-talk well. 
+#
+=======Shaman to Dina Œ 
+#event13
+<npc=23, part=1>
+I have everything that you've asked for!
+<npc=656, part=2>
+Well, let's go-go to the Oracle then.
+#
+=======Orc talks to Oracle
+#event14
+<npc=656, part=1>
+Move-move aside, rave-rave I will...
+<npc=656, part=2>
+A-a-a-a!!! 
+<npc=656, part=3>
+U-u-u-u!!!
+<npc=656, part=4>
+E-e-e-e!!! 
+<npc=656, part=5>
+Speak, Oracle, I hear-hear you!!!
+<npc=656, part=6>
+Strange things Oracle say. Speaks about our Great Mage Urd. Speaks about another Great Mage Skrakan.
+<npc=656, part=7>
+Says Skrakan will defeat Urd twice without fighting. Will send doom to Urd first, will save Allod next. Two victories, two great deeds will...
+<npc=656, part=8>
+Got no idea what this means. You think, I go home. Will boil the ogre's head, have good dinner!

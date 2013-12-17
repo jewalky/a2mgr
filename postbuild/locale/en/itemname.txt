@@ -1,0 +1,603 @@
+Necromancers Cloak
+Necromancers Dress
+Old Robe
+Beard
+Bronze Bracers
+Bronze Cuirass
+Bronze Helm
+Bronze Plate Boots
+Bronze Plate Bracers
+Bronze Plate Cuirass
+Bronze Plate Helm
+Bronze Scale Gauntlets
+Hard Leather Boots
+Hard Leather Bracers
+Hard Leather Gauntlets
+Hard Leather Helm
+Hard Leather Mail
+Magic Beard
+Iron Bracers
+Iron Cuirass
+Iron Helm
+Iron Plate Boots
+Iron Plate Bracers
+Iron Plate Cuirass
+Iron Plate Helm
+Iron Scale Gauntlets
+Leather Boots
+Leather Bracers
+Leather Gauntlets
+Leather Helm
+Leather Mail
+Mage's Cap
+Mage's Cape
+Mage's Cloak
+Mage's Dress
+Mage's Gloves
+Mage's Hat
+Mage's Low Hat
+Mage's Robe
+Mage's Shoes
+Adamantium Amulet
+Adamantium Chain Mail
+Adamantium Full Helm
+Adamantium Helm
+Adamantium Ring
+Gold Amulet
+Meteoric Amulet
+Meteoric Chain Mail
+Meteoric Full Helm
+Meteoric Helm
+Meteoric Ring
+Mithrill Amulet
+Mithrill Chain Mail
+Mithrill Full Helm
+Mithrill Helm
+Mithrill Ring
+Mage's Cap
+Mage's Cape
+Mage's Dress
+Mage's Gloves
+Mage's Hat
+Mage's Low Hat
+Mage's Shoes
+Gold Skeleton Full Helm
+Gold Crown
+Gold Skeleton Plate Cuirass
+Mithrill Skeleton Cuirass
+Mithrill Skeleton Full Helm
+Skeleton Crown
+Skeleton Cloak
+Skeleton Dress
+Adamantium Amulet
+Adamantium Bracers
+Adamantium Chain Boots
+Adamantium Chain Gauntlets
+Adamantium Chain Helm
+Adamantium Chain Mail
+Adamantium Cuirass
+Adamantium Full Helm
+Adamantium Helm
+Adamantium Plate Boots
+Adamantium Plate Bracers
+Adamantium Plate Cuirass
+Adamantium Plate Helm
+Adamantium Ring
+Adamantium Scale Gauntlets
+Adamantium Scale Mail
+Hard Leather Boots
+Mithrill Amulet
+Mithrill Bracers
+Mithrill Chain Boots
+Mithrill Chain Gauntlets
+Mithrill Chain Helm
+Mithrill Chain Mail
+Mithrill Cuirass
+Mithrill Full Helm
+Mithrill Helm
+Mithrill Plate Boots
+Mithrill Plate Bracers
+Mithrill Plate Cuirass
+Mithrill Plate Helm
+Mithrill Ring
+Mithrill Scale Gauntlets
+Mithrill Scale Mail
+Mage's Cap
+Mage's Cape
+Mage's Cloak
+Mage's Dress
+Mage's Gloves
+Mage's Hat
+Mage's Low Hat
+Mage's Robe
+Mage's Shoes
+Silver Amulet
+Silver Ring
+Bronze Bracers
+Bronze Cuirass
+Bronze Full Helm
+Bronze Helm
+Bronze Plate Boots
+Bronze Plate Bracers
+Bronze Plate Cuirass
+Bronze Plate Helm
+Bronze Scale Gauntlets
+Bronze Scale Mail
+Hard Leather Boots
+Hard Leather Bracers
+Hard Leather Gauntlets
+Hard Leather Helm
+Hard Leather Mail
+Leather Boots
+Leather Bracers
+Leather Gauntlets
+Leather Helm
+Leather Mail
+Mage's Cap
+Mage's Cape
+Mage's Cloak
+Mage's Dress
+Mage's Gloves
+Mage's Hat
+Mage's Low Hat
+Mage's Robe
+Mage's Shoes
+Silver Amulet
+Silver Ring
+Steel Bracers
+Steel Chain Boots
+Steel Chain Gauntlets
+Steel Chain Helm
+Steel Chain Mail
+Steel Cuirass
+Steel Full Helm
+Steel Helm
+Steel Plate Boots
+Steel Plate Bracers
+Steel Plate Cuirass
+Steel Plate Helm
+Steel Scale Gauntlets
+Steel Scale Mail
+Adamantium Amulet
+Adamantium Cuirass
+Adamantium Full Helm
+Adamantium Helm
+Adamantium Plate Boots
+Adamantium Plate Bracers
+Adamantium Plate Cuirass
+Adamantium Plate Helm
+Adamantium Ring
+Adamantium Scale Gauntlets
+Adamantium Scale Mail
+Crystal Amulet
+Crystal Cuirass
+Crystal Plate Boots
+Crystal Plate Bracers
+Crystal Plate Cuirass
+Crystal Plate Helm
+Crystal Ring
+Crystal Scale Gauntlets
+Dragon Leather Boots
+Dragon Leather Bracers
+Dragon Leather Gauntlets
+Dragon Leather Helm
+Dragon Leather Mail
+Gold Amulet
+Gold Ring
+Meteoric Amulet
+Meteoric Cuirass
+Meteoric Full Helm
+Meteoric Helm
+Meteoric Plate Boots
+Meteoric Plate Bracers
+Meteoric Plate Cuirass
+Meteoric Plate Helm
+Meteoric Ring
+Meteoric Scale Gauntlets
+Meteoric Scale Mail
+Mage's Cap
+Mage's Cape
+Mage's Dress
+Mage's Gloves
+Mage's Hat
+Mage's Low Hat
+Mage's Shoes
+Book
+Book
+Book
+Book
+Book
+Antipoison Potion
+Great Potion of Healing
+Great Potion of Mana
+Potion of Body
+Potion of Fighter Bonus
+Potion of Health Regeneration
+Potion of Mage Bonus
+Potion of Mana Regeneration
+Small Potion of Healing
+Small Potion of Mana
+Potion of Mind
+Potion of Reaction
+Potion of Spirit
+Amulet
+Banner of Rights
+Part of Crown
+Part of Crown
+Part of Crown
+Valuable Documents
+Ogre Head
+Cactus juice
+Star maps
+Empty flask
+Full flask
+Enchanted flask
+Potion of Metamorph Dragons
+Ring
+Rune of Air
+Rune of Earth
+Rune of Fire
+Rune of Water
+Gem
+Treasure
+Scroll
+Scroll
+Scroll
+Scroll
+Scroll
+Scroll
+Scroll
+Scroll
+Scroll
+Scroll
+Scroll
+Scroll
+Scroll
+Scroll
+Scroll
+Scroll
+Scroll
+Scroll
+Scroll
+Scroll
+Scroll
+Scroll
+Scroll
+Scroll
+Scroll
+Scroll
+Scroll
+Scroll
+Scroll
+Elven Scroll
+Elven Scroll
+Elven Scroll
+Elven Scroll
+Elven Scroll
+Elven Scroll
+Elven Scroll
+Elven Scroll
+Elven Scroll
+Elven Scroll
+Elven Scroll
+Elven Scroll
+Elven Scroll
+Elven Scroll
+Elven Scroll
+Elven Scroll
+Elven Scroll
+Elven Scroll
+Elven Scroll
+Elven Scroll
+Elven Scroll
+Elven Scroll
+Elven Scroll
+Elven Scroll
+Elven Scroll
+Elven Scroll
+Elven Scroll
+Elven Scroll
+Elven Scroll
+Steel Skeleton Shield
+Bronze Buckler
+Bronze Small Shield
+Hard Leather Large Shield
+Hard Leather Small Shield
+Iron Buckler
+Iron Small Shield
+Leather Large Shield
+Leather Small Shield
+Wood Large Shield
+Wood Small Shield
+Adamantium Large Shield
+Adamantium Tower Shield
+Magic Wood Large Shield
+Magic Wood Small Shield
+Magic Wood Tower Shield
+Mithrill Large Shield
+Mithrill Small Shield
+Mithrill Tower Shield
+Bronze Small Shield
+Bronze Tower Shield
+Hard Leather Large Shield
+Hard Leather Small Shield
+Leather Large Shield
+Leather Small Shield
+Magic Wood Large Shield
+Magic Wood Small Shield
+Magic Wood Tower Shield
+Steel Large Shield
+Steel Small Shield
+Steel Tower Shield
+Wood Large Shield
+Wood Small Shield
+Wood Tower Shield
+Adamantium Large Shield
+Dragon Leather Large Shield
+Dragon Leather Small Shield
+Iron Skeleton Axe
+Steel Skeleton Short Sword
+Wood Orcish Shaman Staff
+Bronze Axe
+Bronze Dagger
+Bronze Lance
+Bronze Long Sword
+Bronze Mace
+Bronze Morning Star
+Bronze Pick Hammer
+Bronze Pike
+Bronze Short Sword
+Bronze Spiked Club
+Bronze Two Handed Axe
+Bronze Two Handed Sword
+Bronze War Hammer
+Iron Axe
+Iron Dagger
+Iron Lance
+Iron Long Sword
+Iron Mace
+Iron Morning Star
+Iron Pick Hammer
+Iron Pike
+Iron Short Sword
+Iron Spiked Club
+Iron Two Handed Axe
+Iron Two Handed Sword
+Iron War Hammer
+Wood Club
+Wood Crossbow
+Wood Long Bow
+Wood Shaman Staff
+Wood Short Bow
+Wood Staff
+Adamantium Dagger
+Adamantium Long Sword
+Adamantium Short Sword
+Adamantium Two Handed Sword
+Magic Wood Long Bow
+Magic Wood Short Bow
+Magic Wood Staff
+Meteoric Dagger
+Meteoric Long Sword
+Meteoric Short Sword
+Meteoric Two Handed Sword
+Mithrill Dagger
+Mithrill Long Sword
+Mithrill Short Sword
+Mithrill Two Handed Sword
+Magic Wood Skeleton Long Bow
+Magic Wood Skeleton Staff
+Silver Skeleton Two Handed Sword
+Steel Skeleton Long Sword
+Wood Necromancers Staff
+Adamantium Axe
+Adamantium Bastard Sword
+Adamantium Crossbow
+Adamantium Dagger
+Adamantium Halberd
+Adamantium Long Sword
+Adamantium Mace
+Adamantium Morning Star
+Adamantium Pike
+Adamantium Short Sword
+Adamantium Two Handed Axe
+Adamantium Two Handed Sword
+Adamantium War Hammer
+Magic Wood Long Bow
+Magic Wood Shaman Staff
+Magic Wood Short Bow
+Mithrill Axe
+Mithrill Bastard Sword
+Mithrill Crossbow
+Mithrill Dagger
+Mithrill Halberd
+Mithrill Long Sword
+Mithrill Mace
+Mithrill Morning Star
+Mithrill Pike
+Mithrill Short Sword
+Mithrill Two Handed Axe
+Mithrill Two Handed Sword
+Mithrill War Hammer
+Silver Dagger
+Bronze Axe
+Bronze Dagger
+Bronze Long Sword
+Bronze Mace
+Bronze Morning Star
+Bronze Pick Hammer
+Bronze Pike
+Bronze Short Sword
+Bronze Spiked Club
+Bronze Two Handed Axe
+Bronze Two Handed Sword
+Bronze War Hammer
+Magic Wood Club
+Magic Wood Long Bow
+Magic Wood Shaman Staff
+Magic Wood Short Bow
+Magic Wood Staff
+Steel Axe
+Steel Bastard Sword
+Steel Crossbow
+Steel Dagger
+Steel Halberd
+Steel Long Sword
+Steel Mace
+Steel Morning Star
+Steel Pick Hammer
+Steel Pike
+Steel Short Sword
+Steel Spiked Club
+Steel Two Handed Axe
+Steel Two Handed Sword
+Steel War Hammer
+Wood Club
+Wood Long Bow
+Wood Shaman Staff
+Wood Short Bow
+Wood Staff
+Adamantium Axe
+Adamantium Crossbow
+Adamantium Dagger
+Adamantium Halberd
+Adamantium Long Sword
+Adamantium Pike
+Adamantium Short Sword
+Adamantium Two Handed Axe
+Adamantium Two Handed Sword
+Crystal Axe
+Crystal Long Sword
+Crystal Mace
+Crystal Morning Star
+Crystal Pike
+Crystal Two Handed Axe
+Crystal Two Handed Sword
+Crystal War Hammer
+Gold Dagger
+Magic Wood Shaman Staff
+Magic Wood Staff
+Meteoric Axe
+Meteoric Crossbow
+Meteoric Dagger
+Meteoric Halberd
+Meteoric Long Sword
+Meteoric Mace
+Meteoric Morning Star
+Meteoric Pike
+Meteoric Short Sword
+Meteoric Two Handed Axe
+Meteoric Two Handed Sword
+Meteoric War Hammer
+Sanctuary Red Ring
+Sanctuary Red Amulet
+Sanctuary Red Hood
+Sanctuary Red Dress
+Sanctuary Red Cloak
+Sanctuary Red Gloves
+Sanctuary Red Magic Shoes
+Light Fantastic Ring
+Light Fantastic Amulet
+Light Fantastic Crown
+Light Fantastic Dress
+Light Fantastic Cloak
+Light Fantastic Gloves
+Light Fantastic Magic Shoes
+Golden Wrath Pike
+Golden Wrath Large Shield
+Golden Wrath Ring
+Golden Wrath Amulet
+Golden Wrath Chain Helm
+Golden Wrath Scale Mail
+Golden Wrath Plate Cuirass
+Golden Wrath Plate Bracers
+Golden Wrath Scale Gauntlets
+Golden Wrath Plate Boots
+Shaman Ring
+Shaman Amulet
+Shaman Hat
+Shaman Dress
+Shaman Cloak
+Shaman Gloves
+Shaman Shoes
+Sea Witch Ring
+Sea Witcher Amulet
+Sea Witcher Crown
+Sea Witcher Dress
+Sea Witcher Cloak
+Sea Witcher Gloves
+Sea Witcher Magic Shoes
+Black Widow Pike
+Flamer Pike
+Black Pearl Pike
+Valkyr Pike
+Crimson Red Crystal Pike
+Black Widow Small Shield
+Flamer Small Shield
+Black Pearl Large Shield
+Valkyr Small Shield
+Crimson Red Crystal Large Shield
+Black Widow Ring
+Flamer Ring
+Black Pearl Ring
+Vampic Ring
+Elf Ring
+Valkyr Ring
+Crimson Red Crystal Ring
+Black Widow Amulet
+Flamer Amulet
+Black Pearl Amulet
+Vampic Amulet
+Elf Amulet
+Valkyr Amulet
+Crimson Red Crystal Amulet
+Black Widow Helm
+Flamer Crown
+Black Pearl Chain Helm
+Vampic Crown
+Elf Brooch
+Valkyr Helm
+Crimson Red Crystal Helm
+Black Widow Mail
+Flamer Mail
+Black Pearl Scale Mail
+Vampic Dress
+Elf Dress
+Valkyr Mail
+Crimson Red Dragon Mail
+Black Widow Cuirass
+Flamer Cuirass
+Black Pearl Plate Cuirass
+Vampic Cloak
+Elf Wings
+Valkyr Cuirass
+Crimson Red Crystal Plate Cuirass
+Black Widow Plate Bracers
+Flamer Plate Bracers
+Black Pearl Plate Bracers
+Valkyr Plate Bracers
+Crimson Red Crystal Plate Bracers
+Black Widow Gauntlets
+Flamer Gauntlets
+Black Pearl Scale Gauntlets
+Vampic Gloves
+Elf Gloves
+Valkyr Gauntlets
+Crimson Red Crystal Gauntlets
+Black Widow Boots
+Flamer Boots
+Black Pearl Plate Boots
+Vampic Shoes
+Elf Shoes
+Valkyr Boots
+Crimson Red Crystal Plate Boots
+BFG9000
+Neo Ring
+Neo Suit
+Neo Cape
+Neo Shoes
+Assassin's Crystal Halberd
+Blood Elf Meteoric Halberd
+Elven Scaled Dragon Shield
+Crystal Shield Of Death
+Dark Steel Large Shield

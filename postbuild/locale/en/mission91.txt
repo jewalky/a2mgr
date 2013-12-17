@@ -1,0 +1,153 @@
+#
+======mission objective===
+#briefing 
+The Orcologist
+
+You must satisfy the orcologist's request.
+#subobjective0
+
+#subobjective1
+Find the Orcologist and ascertain his needs.
+#subobjective2
+Find the juice of the Giant Cactus.
+#subobjective3
+Take the item to the Orcologist.
+#
+======Hero dies=======
+#failure2 
+Your hero has foreseen danger in these sands! 
+#
+======Igles dies======
+#failure3 
+Igles was too carried away with the battle! 
+#
+======Dina dies======
+#failure4
+This was Dina's last voyage to the desert... 
+# 
+======We attack the ocologist=======
+#failure5 
+The man you attacked was the one who asked for your services. Very inappropriate... 
+# 
+====The orcologist dies all by himself====
+#failure6 
+Poor old orcologist! He lived all these years in this desert just to die today... 
+#
+=====Start message
+#event1
+<npc=21, iammale, iamfighter, part=1>
+This Druid scientist must have hit his head falling from his oak tree, or whatever he lived on, when he was a child. It's the only reason I can imagine for living in the desert among the orcs.
+<npc=21, iamfemale, iamfighter, part=1>
+Let the earth swallow the sands, and all their inhabitants! This scientist must be brain damaged to live here at his own will!
+<npc=21, iammale, iammage, part=1>
+I certainly respect the scientific enthusiasm of my colleague. Yet purposely living in the sands with the orcs as neighbors...This is not devotion, this is derangement!
+<npc=21, iamfemale, iammage, part=1>
+I don't understand this scientist. If someone wants to study orcs, they can catch a couple, put them in a cage and work in comfort. But this one has to live in the desert!
+<npc=23, iammale, part=2>
+You are wrong! A man willing to endure hardship and discomfort for the sake of knowledge deserves respect rather than sneers. 
+<npc=23, iamfemale, part=2>
+You are wrong! A man willing to endure hardship and discomfort for the sake of knowledge deserves respect rather than sneers.
+<npc=22, part=3>
+Dina is right. Besides, nobody forced us to come here. We all agreed to do it. Even if the old man is mad as a hatter, I'm going to keep my word!
+<npc=21, iammale, iamfighter, part=4>
+I'm not saying anything. We'll do what we promised. But the place is still nasty.
+<npc=21, iamfemale, iamfighter, part=4>
+I'm not backing off. We'll do what we promised. It doesn't make the sands nicer though!
+<npc=21, iammale, iammage, part=4>
+I am not arguing against fulfilling our promise. However, I am not going to enjoy it either.
+<npc=21, iamfemale, iammage, part=4>
+We'll do what we promised. But that still won't make the wind cool or the orcs smell nice!
+#
+=====Hero talks to the orcologist for the first time (the thing missing) 
+#event2
+<npc=2108, part=1>
+Frankly, I thought that no one would come. People tend to dislike traveling in orcish sands...
+<npc=21, iammale, iamfighter, part=2>
+You're right, good man. I don't like it here as well...Anyway, I wanted to talk to your master, not to you. What is his need?
+<npc=21, iamfemale, iamfighter, part=2>
+You're absolutely right! I don't like it here at all...Anyway, I need to talk to your master. What does he want?
+<npc=21, iammale, iammage, part=2>
+That is a correct statement. I do not enjoy being here as well. However, I would like to talk to your master. What does he want us to do?
+<npc=21, iamfemale, iammage, part=2>
+You're pretty observant, good man! Traveling here isn't something I would call a pleasure.  But let's get down to business. What does your master want?
+<npc=2005, part=3>
+As you know, I study the life of the Orcs, but I also do a lot of experiments. I need the juice of a giant cactus for one of them.
+<npc=2005, part=4>
+I can't obtain it because I don't know where this sort of cactus grows, but I do know that the Orcish shamans use it in their rituals.
+<npc=2005, part=5>
+Whoever brings me the juice will be generously rewarded!
+#
+===== Igles talks to the orcologist for the first time (the thing missing)
+#event3
+<npc=2108, part=1>
+Frankly, I thought that no one would come. People tend to dislike traveling in orcish sands...
+<npc=22, part=2>
+You are right, good man. I also dislike wandering in the sands. But let's get down to business. What does your master want?
+<npc=2005, part=3>
+As you know, I study the life of the Orcs, but I also do a lot of experiments. I need the juice of a giant cactus for one of them.
+<npc=2005, part=4>
+I can't obtain it because I don't know where this sort of cactus grows, but I do know that the Orcish shamans use it in their rituals.
+<npc=2005, part=5>
+Whoever brings me the juice will be generously rewarded!
+#
+===== Dina talks to the orcologist for the first time (the thing missing)
+#event4
+<npc=2108, part=1>
+Frankly, I thought that no one would come. People tend to dislike traveling in orcish sands...
+<npc=23, part=2>
+It is indeed unpleasant here...But shall we talk about business instead? What does your master need? Maybe he can tell us?
+<npc=2005, part=3>
+As you know, I study the life of the Orcs, but I also do a lot of experiments. I need the juice of a giant cactus for one of them.
+<npc=2005, part=4>
+I can't obtain it because I don't know where this sort of cactus grows, but I do know that the Orcish shamans use it in their rituals.
+<npc=2005, part=5>
+Whoever brings me the juice will be generously rewarded!
+#
+=====Hero talks to the orcologist (he has the thing) 
+#event5
+<npc=2005, part=1>
+It is nice to know that there are people who treat my words seriously! I thought everyone considers me a mad scientist...a loon. 
+<npc=21, iammale, iamfighter, part=2>
+Come on, no one has ever thought anything like that! Why don't we talk about something else? Look what I have for you. 
+<npc=21, iamfemale, iamfighter, part=2>
+Well, frankly, I had a faint impression...Why don't we talk about something else? Take a look at the thing I have for you. 
+<npc=21, iammale, iammage, part=2>
+Uh...No, you are all right. Well, almost all right...As a matter of fact, I was going to show you something.
+<npc=21, iamfemale, iammage, part=2>
+Well, maybe there's someone who doesn't think so...anything's possible. Anyway, I was going to show you something. What do you think?
+<npc=2005, part=3>
+This...This is it! The juice of the giant cactus is finally in my grasp! I will shower you with gold...In reasonable amounts, of course. I am a loon all right, but that doesn't make me stupid.
+#
+===== Igles talks to the orcologist (he has the thing)
+#event6
+<npc=2005, part=1>
+It is nice to know that there are people who treat my words seriously! I thought everyone considers me a mad scientist, a loon.
+<npc=22, part=2>
+Maybe someone thinks that, but it's none of my business. Anyway, I was going to show you something. What do you think? 
+<npc=2005, part=3>
+This...This is it! The juice of the giant cactus is finally in my grasp! I will shower you with gold...In reasonable amounts, of course. I am a loon all right, but that doesn't make me stupid.
+#
+===== Dina talks to the orcologist (she has the thing)
+#event7
+<npc=2005, part=1>
+It is nice to know that there are people who treat my words seriously! I thought everyone considers me a mad scientist, a loon.
+<npc=23, part=2>
+Those who say so are idiots themselves. I don't listen to them. Here, look at what I have for you...
+<npc=2005, part=3>
+This...This is it! The juice of the giant cactus is finally in my grasp! I will shower you with gold...In reasonable amounts, of course. I am a loon all right, but that doesn't make me stupid.
+#
+=====Hero picks the thing up======
+#event8
+<npc=21, part=1>
+This looks like the foul liquid that the Orcish shamans drink before their rituals...We should show this flask to a knowledgeable man!
+#
+===== Igles picks the thing up======
+#event9
+<npc=22, part=1>
+This looks like the foul liquid that the Orcish shamans drink before their rituals...We should show this flask to a knowledgeable man!
+#
+===== Dina picks the thing up======
+#event10
+<npc=23, part=1>
+This looks like the foul liquid that the Orcish shamans drink before their rituals...We should show this flask to a knowledgeable man!
+#

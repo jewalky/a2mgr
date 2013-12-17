@@ -1,0 +1,198 @@
+#
+===mission objective ===
+#briefing 
+Killer Dragon
+
+Protect the village from the raids of the evil Dragon.
+#
+==hero dies====
+#failure2
+Your hero has died!
+#
+===Igles dies===
+#failure3 
+Igles took the blow... 
+#
+===Dina dies==
+#failure4
+Dina failed to evade the horrid blow.
+# 
+====one of the mages dies====
+#failure5 
+A mage was killed! You can not defeat the Dragon without her.
+#
+====Mages attacked====
+#failure6
+You attacked the mages and became their enemy. They were the only ones who could help you to defeat the Dragon...
+#
+====Peasants attacked====
+#failure7
+You must protect the peasants rather than destroy them! 
+#subobjective0
+
+#subobjective1
+Fill the flask with spring water from the southwest.
+#subobjective2
+Find the hermit mage's sister on the other side of the river and have her make a transformation potion from the spring water.
+#subobjective3
+Finish making the potion at the hermit mage's island.
+#
+=======Start
+#event1
+<npc=21, part=1>
+There is a village in front of us! Could this be the one we're looking for? 
+<npc=22, part=2>
+Well...If it's the one, the tales of the Dragon's might are exaggerated. I can see no traces of fire anywhere.
+<npc=22, part=3>
+We should just ask to talk to the headman of the village. He'll be able to give us the information we need.
+#
+=======Headman-1 to hero
+#event2
+<npc=21, part=1>
+Greetings to you, good man. I was told that an enormous Dragon is raiding your village...
+<npc=2112, part=2>
+Well...there is a Dragon around, but it usually goes to another village, just east from here. It doesn't come around this village though.
+<npc=2112, part=3>
+Even so, we're still a little afraid. The Dragon will certainly come here when there's no more people left in that other village!
+<npc=21, iammale, iamfighter, part=4>
+So you don't care about your neighbors here, huh? You're more concerned with your own safety. Well, relax then. I'm about to get rid of this beast for you.
+<npc=21, iamfemale, iamfighter, part=4>
+So you care only about your own skin instead of helping your neighbors, eh? Well, tell your people to stop shaking, I'm about to rid you of this Dragon. 
+<npc=21, iammale, iammage, part=4>
+It sounds like you prefer caring about only yourselves, no matter what happens to your neighbors. Well, knowing that I have an intention of destroying this Dragon may relieve you of your fears.
+<npc=21, iamfemale, iammage, part=4>
+It doesn't really matter that your neighbors are dying, does it? I'm going to exterminate the Dragon for you, but I doubt I'd lift a finger for you again!
+#
+=======Headman-1 to Igles 
+#event3
+<npc=2112, part=1>
+Good day to you, sir Knight. What brings you here? 
+<npc=22, part=2>
+I was told that an enormous Dragon is raiding your village...
+<npc=2112, part=3>
+Well...there is a Dragon around, but it usually goes to another village, just east from here. It doesn't come around this village much.
+<npc=2112, part=4>
+Even so, we're still a little afraid. The Dragon will certainly come here when there's no more people left in that other village!
+<npc=22, part=5>
+I understand. You only care about yourselves here! Well, be relieved. I'm going to fight this beast, although I doubt I'd lift a finger for you again!
+#
+=======Headman-2 to hero
+#event4
+<npc=2112, part=1>
+I was afraid that you wouldn't come here after all. Talking about defeating a Dragon is easy, but doing it is another thing...
+<npc=21, iammale, iamfighter, part=2>
+Do I look like a liar to you? I could get offended, turn around and walk right out of here, you know.
+<npc=21, iamfemale, iamfighter, part=2>
+Did you actually think that I was lying about defeating the Dragon? I wonder what would happen if I get offended and walk away from here?
+<npc=21, iammale, iammage, part=2>
+Do I look like a man who speaks in vain? Your words offend me, sir!
+<npc=21, iamfemale, iammage, part=2>
+Really? Well, I'm leaving then. I don't need this.
+<npc=2112, iammale, part=3>
+No, please don't, good sir! I didn't mean to offend you!
+<npc=2112, iamfemale, part=3>
+No, please, good lady, don't leave! I apologize! I didn't mean to offend anyone!
+<npc=2112, part=4>
+It's just happened before that a really strong-looking Knight or a Mage would come here, take one look at the Dragon, and run away screaming! You aren't like that, are you?
+<npc=21, part=5>
+No I'm not. Okay, I'll forget about this. You'd better tell us what you know about the Dragon so we can get started.
+<npc=2112, part=6>
+We are simple people. We only know that it is huge and nasty. The mage hermit could tell you more. She lives southwest from here on an island in the middle of a lake.
+#
+=======Headman-2 to Igles
+#event5
+<npc=2112, part=1>
+Greetings to you, good sir! Aren't you the one who agreed to try to exterminate the Dragon? 
+<npc=22, part=2>
+That's me. Although I have no intention to try. I intend to kill the beast! 
+<npc=2112, part=3>
+Oh, that's not going to be easy, good sir! The Dragon is huge and nasty...You should first talk to the mage hermit.
+<npc=2112, part=4>
+She might give you some good advice regarding the Dragon. She lives southwest from here on an island in the middle of a lake.
+<npc=2112, part=5>
+The only problem is that she has an attitude towards all Knights from the town. If someone else could talk on your behalf...
+#
+=======mage1 to hero
+#event6
+<npc=21, part=1>
+Greetings, mage! I'm here on important business. I have promised the villagers that I will rid them of the killer Dragon in the area. Do you know a way to do it?
+<npc=2023, part=2>
+I can make a potion that would take the strength from the monster...But I need some water from a mountain spring to do it.
+<npc=2023, part=3>
+You should talk to my sister at the spring southwest of my lake. Take the water from her to my other sister who lives on the far side of the river. She'll put a spell on it, and then I can make the potion.
+<npc=21, part=4>
+Thank you, wise mage! I shall do as you say.
+#
+=======mage-1 to Igles
+#event7
+<npc=22, part=1>
+Greetings, respected mage...
+<npc=2023, part=2>
+Greetings to you, sir Knight. And farewell. Since the Lord of this land has abandoned his people, I do not want anything to do with Lords!
+<npc=22, part=3>
+But I came here to save these people from the killer Dragon!
+<npc=2023, part=4>
+I said leave, Knight! I will not talk to you or your kind.
+<npc=22, part=5>
+Maybe someone else should talk to her. I'm not getting anywhere, here!
+#
+=======mage-2 to hero
+#event8
+<npc=21, part=1>
+Your sister by the spring told me that you could put a spell on the spring water to...
+<npc=2121, part=2>
+Yes, I know. To defeat the Dragon. Frankly, I would enjoy watching it for a few more years. It's a rather unique specimen, as far as Dragons go.
+<npc=2121, part=3>
+But since it HAS been bothering people so much, I suppose the time has come to get rid of it. Here is your enchanted water. Go and see my sister by the lake now. She can help you further.
+#
+=======Hero transforms the dragon 
+#event9
+<npc=651, part=1>
+Huh! Normally, I have to fly somewhere for my fun, but today fun walks right in!
+<npc=651, part=2>
+So, humans, are you prepared to die by the claw of the most mighty and dreadful Dragon in the land?
+<npc=21, part=3>
+It's easy to be dreadful when you're stronger than everybody. Today you shall learn the meaning of a fair fight!
+#
+=======hero finds the spring
+#event10
+<npc=21, part=1>
+Ahh! This looks like a mountain spring. This is such a pleasant area. I'm glad I can do my part to protect it from that foul Dragon.
+#
+=======mage-2 to hero
+#event11
+<npc=21, part=1>
+Your sister told me that I should come here to acquire some spring water so that I can...
+<npc=2121, part=2>
+Yes, I know. You want to defeat the Dragon. I hate to see such a creature be destroyed, but I suppose it's necessary.
+<npc=2121, part=3>
+Here is your spring water. Go and see my sister on the other side of the river so that she may enchant the water for you.
+#
+=======mage-1 to hero
+#event12
+<npc=21, part=1>
+Here is the enchanted water. Can you make me your potion now? I'd like to take care of this Dragon as soon as possible.
+<npc=2023, part=2>
+Just a moment...here is your potion. Use this potion when you see the Dragon, and his strength will be altered to a more manageable level. You shouldn't have any trouble with the Dragon after that.
+#
+=======Dragon is full 
+#event13
+<npc=651, part=1>
+What? Humans? I have eaten too much to chase you now. Wait until I become hungry again and then we shall play our little game!
+#
+=======Dragon transforms
+#event14
+<npc=21, part=1>
+Here's goes the potion. I hope this stuff works!
+<npc=651, part=2>
+What has happened to me? My strength has left me! It was you who did that! Never mind, I still have enough strength left for my revenge!!!
+#
+=======Headman-1 thanks
+#event15
+<npc=2112, part=1>
+Although you think I'm selfish, I'm still grateful to you! Our land is finally free from the monster!
+#
+=======headma-2 thanks 
+#event16
+<npc=2112, part=1>
+We are finally free of this monster! Thank you! Our village is not wealthy, but please take this gift, and don't think about refusing it!

@@ -1,0 +1,369 @@
+Attack <A>
+Move <M>
+Guard <G>
+Defend <D>
+Cast <C>
+Swarm <S>
+Stand Ground <T>
+Retreat <R>
+Open Spellbook <Q>,<B>
+Close Spellbook <Q>,<B>
+Open Inventory <~~>,<I>
+Close Inventory <~~>,<I>
+Switch to Picture <TAB>
+Switch to Stats <TAB>
+Main Menu <ESC>
+Body
+Agility
+Mind
+Spirit
+Health
+Mana
+Sight
+Speed
+Dmg
+Absorb
+Attack
+Defense
+Skills
+Resistance
+Fighting
+Blade
+Axe
+Bludgeon
+Pike
+Shooting
+Weight
+Fire
+Water
+Air
+Earth
+Astral
+Fire
+Water
+Air
+Earth
+Astral
+XP
+No units
+selected
+Units
+selected:
+No hero selected
+Previous hero
+Next hero
+Scroll left
+Scroll right
+Scroll up
+Scroll down
+Your hero's inventory
+Put items here to buy/sell
+Shop Shelf
+Shopkeeper
+Armor
+Weapons
+Magic Items
+Scrolls, Books & Potions
+Buy all items placed on the table
+Sell all items placed on the table
+Clear table
+Exit shop
+Buy
+Sell
+Undo
+Exit
+Money
+Yes
+No
+Ok
+Cancel
+Do you want to identify this item
+for %d gold coins?
+How much gold
+you want to drop?
+Enemy
+Mercenary
+Picked up
+now
+pieces
+Picked up
+gold
+of
+
+casts
+
+Retreat mode Off
+Retreat mode Low
+Retreat mode High
+Formation is Off
+Formation set to Auto
+Formation is On
+Show Health Off
+Show Health On
+Flying damage is Off
+Flying damage is On
+Day/Night changes are Off
+Day/Night changes are On
+Smoothing is Off
+Smoothing is On
+Game Speed is slower than syrup!
+Game Speed is Very Slow
+Game Speed is Slow
+Game Speed is Below Normal
+Game Speed is Normal
+Game Speed is Above Normal
+Game Speed is Fast
+Game Speed is Very Fast
+Game Speed is so fast, it hurts! 
+Mana cost
+Damage
+Game paused. Click OK to continue.
+New Character
+Previous portrait
+Next portrait
+Range
+Duration
+Character name:
+Caster Only
+Close
+Show tips next time
+No way
+Blade skill improved
+Axe skill improved
+Bludgeon skill improved
+Pike skill improved
+Shooting skill improved
+Fire skill improved
+Water skill improved
+Air skill improved
+Earth skill improved
+Astral skill improved
+Mission Completed
+Mission Failed
+Player
+is now in alliance with you
+Player
+is no longer in alliance with you
+Player
+is no longer in war with you
+Player
+is now in war with you
+Rage of Mages 2: Necromancer
+Incorrect CD or no CD detected. Click Cancel, insert CD and start game again, or click OK for multiplayer "join game" mode.
+DirectPlay3 not detected. Please install DirectX 6.1.
+Connection lost or server down. Close?
+Unknown Error.
+Build and muscle power.#The higher the body level, the stronger#a character is, the better health condition #he/she has and the more damage he/she can inflict.
+Agility, or reaction level.#The better the reaction of a character,#the faster he/she will move,#the better he/she will avoid blows,#carry out precise attacks, and the#bigger the sight range he/she will have.
+The ability of logical thinking and decision-making.#Mind power affects the learning ability of the character,#the rate at which new skills are acquired,#and the power of magical spells when cast.
+Magic ability and magic resistance.#The higher the spirit, the greater#the amount of Mana a Mage can accumulate.#For a Warrior, it affects magic resistance only.
+Health is the vitality of the character.#The higher the health level,#the more damage a character#may sustain before passing out.
+Mana is the amount of magical power#a character possesses. The larger the#amount of Mana a character has accumulated,#the more complicated and powerful are#the spells he/she can cast.
+Damage is the amount of injury which#a character can inflict upon an enemy#by one hit. This attribute depends upon the body#of a character and its armament.
+The precision of a character's attack. The higher it is,#the higher the probability of a successful attack.#The probability of hitting unprotected body parts increases as well.
+Absorption will reduce the total number#of damage points being received by the#character from an enemy/friendly attack.
+The ability to avoid receiving damage.#Defense level depends on agility,#armor, weapons and magic.
+The total weight of the items worn#and owned by a character.#It affects the speed of the character.
+Sight. It is a radius around the#character, within which that character#is able to see the surrounding terrain,#buildings and other characters.
+The speed of movement of the character on#the terrain. The character's speed depends upon#the character's agility rating#and can be increased by magic items or spells.
+The skill of wielding various types of#weapons or magic spheres. The skills#increase in proportion to their use.#The higher the skill the#more difficult it will be to increase it.
+Resistance to a certain magic sphere shows#the percentage of the magical effects of this#particular sphere which will not affect the character.
+Experience is the sum total of all the knowledge, abilities and#skills that a character has acquired throughout the game.#The growth of the experience is mainly due to#victories over enemies and monsters.
+Daggers, Short Swords, Long Swords,#Bastard Swords, and Two-handed Swords.##Their advantage is in high precision of attack#and a short interval between attacks.
+Axes and Two-handed Axes.##The interval between axe attacks#is quite long and depends on the weapon weight,#but it inflicts the most damage.
+Clubs, Spiked Clubs,#Maces, Cudgels, and Morningstars.##Clubs are considerably cheaper#than the other weapons but still #inflict a substantial amount of damage.
+Spears and Halberds.##They possess good battle attributes,#plus they provide a bonus #to the defense of the wielder.
+Bows and Crossbows.##Shooting weapons that enable #distant attacks. Flying enemies #can only be hurt by these weapons.
+The Fire Sphere##All of the heat damage spells belong to the Fire Sphere:#Fire Arrow, Fire Ball, Wall of Fire and Protection from Fire.
+The Water Sphere##Water transformations prevail in the Water Sphere:#Ice Missile, Poison Fog, Blizzard and Protection from Water.
+The Air Sphere##The Air Sphere draws its effects out of thin air:#Lightning, Prismatic Spray, Invisibility and Protection from Air.
+The Earth Sphere##The Earth Sphere uses the power of earth and stone:#Stone Missile, Wall of Stone, Stone Curse and Protection from Earth.
+The Astral Sphere##The magic of Astral is the most complicated#and least studied of the magics. There is#characteristically no protection#against Astral magic. Its spells are:#Bless, Haste, Heal, Drain Life, Shield,#Summon, Animate Dead and Teleport.
+4å
+Speed
+Resistance
+Sight
+Maximum Damage Probability
+rays
+Minimum Damage Probability
+The resistance of the monster to a weapon#type shows the damage percentage,#done by a certain type of weapon that will not be inflicted.
+Magic:
+spellcaster
+Armor piercing
+Spells: 
+Empty character names are not allowed.
+Your character name is in the forbidden list.
+There is already a player with such a name in the game.
+You do not have the current map file.
+Driver error. GM_SwitchMap packet has not arrived during 15 seconds.
+Not enough CDs. 1 CD is enough for up to 3 players, 2 CDs for up to 6 players, 3 CDs for up to 10 players, 4 CDs for up to 16 players.
+Server sent no player list.
+Server sent no confirmation of character logging in.
+Server does not respond.
+There is no Rage of Mages 2 CD inserted in this computer. Switching to "multiplayer client only" mode.
+Your character is saved
+New player
+has joined the game
+Player
+returned to the game
+Welcome back,
+!
+Your former character is still available for play. Would you like to continue the game?
+YOU HAVE NOT SAVED
+YOUR CHARACTER !
+YOU HAVE NOT SAVED
+YOUR CHARACTER FOR
+
+MINUTES ALREADY!
+Absorption
+Autohealing off
+Occasional autohealing on
+Frequent autohealing on
+Player
+has decided to become super-lame and cheat!
+Player
+is grasping at straws! This is not a code...try again.
+Player
+has succesfully entered a cheat code!
+Heroes
+Mercenaries
+Fighters %d
+Wizards  %d
+Train
+Exit
+Shop
+School of Magic and Martial Arts
+Click to bring up the Main Menu
+Inn
+Start Mission
+Accept
+Reset
+Delete
+Rename
+Talk
+Hire/Fire
+Monsters Killed
+Players Killed
+Died
+Easy
+Medium
+Hard
+Male fighter
+Male mage
+Female fighter
+Female mage
+Continue
+Return to main menu
+Type character name here
+HIRED
+Hire
+Fire
+Back
+Return to town
+Payment
+Diamond
+Glazz
+Gella
+GreatAlex
+Oberic
+Renn
+Violett
+Rex
+Monk
+Nick
+Free pool
+Armors and weapons
+Magic items
+Scrolls, spellbooks and potions
+Elven goods
+Armors
+Magic items
+Scrolls, spellbooks and potions
+Weapons
+Oh no, the main hero is dead!
+Second hero was biten and eaten by monsterous beasts.
+Third hero dies in the worst possible way.
+Kill enemy. Name: %s. Region: %s. Landmark: %s.
+Kill %d monsters. Name: %s.
+Kill enemy group. Region: %s. Landmark: %s.
+Escort men to inn. Region: %s.
+Deliver item to inn. Region: %s.
+Deliver important message to inn, in  %d min %02d sec. Region: %s.
+Find an item.
+Raise and bring here %d zombies.
+Raise and bring here %d skeletons.
+Raise and bring here %d ghosts.
+Intercept an incoming enemy. Name: %s.
+Intercept an incoming enemy group.
+Destroy inn's guards. Region: %s.
+Quest 14
+Quest 15
+Quest 16
+Quest 17
+Quest 18
+Quest 19
+Quest 20
+Quest 21
+Quest 22
+Quest 23
+Quest 24
+Quest 25
+Quest 26
+Quest 27
+Quest 28
+Quest 29
+Quest 30
+Quest 31
+Quest 32
+N-W
+N-N-W
+N
+N-N-E
+N-E
+W-N-W
+C-N-W
+C-N
+C-N-E
+E-N-E
+W
+C-W
+C
+C-E
+E
+W-S-W
+C-S-W
+C-S
+C-S-E
+E-S-E
+S-E
+S-S-E
+S
+S-S-W
+S-W
+Quests:
+No quests
+Given
+Goal
+quests
+Region
+quests
+Customer
+quests
+Get
+About quest
+Upgrade
+magic
+Selected
+Select
+About award
+Ally
+Girl
+Girl
+Guard
+Sleeping man
+Updating file
+%d%% complete
+Name:
+Clan:
+Don't show names and clans
+Show names and clans

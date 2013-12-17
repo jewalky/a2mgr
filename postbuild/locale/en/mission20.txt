@@ -1,0 +1,223 @@
+#
+#briefing
+The Road to Kaarg
+
+You must find the way to Kaarg, the capital of the Allod of Yases.
+#subobjective0
+
+#subobjective1
+Destroy the outlaws!
+#subobjective2
+Reach the guarded bridge. The road to Kaarg begins there.
+#
+===hero dies
+#failure2
+Your hero died in an unfair battle. The Allod of Yases does not welcome strangers!
+#
+===peasants attacked
+#failure5
+You've attacked innocent peasants! You have no friends on Yases anymore...
+#
+====Situation: the hero is contemplating surroundings after teleport ======
+#event1
+<npc=21, iammale, iamfighter, part=1 >
+This Allod feels different. The air is hot, the trees are unusual, and even the birds sound peculiar.
+<npc=21, iammale, iamfighter, part=2 >
+I guess I'd better look into those papers Skrakan gave me...
+<npc=21, iamfemale, iamfighter, part=1 >
+Ouch! Teleporting isn't that pleasant. I'm still seeing those purple circles...Looks like I'm on another Allod though. The air is hot, the trees are unusual, and even the birds sound peculiar...
+<npc=21, iamfemale, iamfighter, part=2 >
+I'd better look into those papers Skrakan gave me...Moreover, get rid of them, just in case I'm searched by someone.
+<npc=21, iammale, iammage, part=1 >
+At first glance, Yases is similar to Uimoir. But...the air is a lot hotter, the trees are unusual, and even the birds sound peculiar. I must prepare to face unknown dangers.
+<npc=21, iammale, iammage, part=2 >
+I'd better look into those papers Skrakan gave me...
+<npc=21, iamfemale, iammage, part=1 >
+Oh, it's so peaceful here! Where are all those horrors that Skrakan was babbling about? Well, the air is pretty hot, and the trees are slightly different. The birds sound weird too, but that doesn't seem dangerous.
+<npc=21, iamfemale, iammage, part=2 >
+I'd better look into those papers Skrakan gave me...I hope he knows what he's doing. What if I'm searched by someone?
+#
+=====Situation: the hero comes to a nondamaged village========
+#event2
+<npc=21, iammale, iamfighter, part=1 >
+Good day to you, good people! Could you please show me the way to the capital?
+<npc=21, iamfemale, iamfighter, part=1 >
+Hey fellow, good day to you. Tell me, what's the fastest route to the capital?
+<npc=21, iammale, iammage, part=1 >
+Good day. Could you please show me the way to the capital?
+<npc=21, iamfemale, iammage, part=1 >
+Good day. I would like someone to show me the way to the capital.
+<npc=2110, part=2>
+The "good days" left with the Three Stars. If you're going to Kaarg, then get on your way. You're standing on the path you need to follow!
+<npc=21, iammale, iamfighter, part=3 >
+I do appreciate your courtesy, pal. Did I do something wrong to you?
+<npc=21, iamfemale, iamfighter, part=3 >
+Wow, that's quite a mouth you have! What if I'm not just a traveler? Are you sure that you want to risk upsetting me?
+<npc=21, iammale, iammage, part=3 >
+Tell me, peasant, do you disrespect everybody? Or just honest men and innocent travelers?
+<npc=21, iamfemale, iammage, part=3 >
+How dare you say that! Can't you see whom you're talking to?
+<npc=2110, part=4>
+I...uh...people are odd these days. It was all so clear in the old times. The peasants worked, the King ruled. The guards kept peace, and the robbers ran from them.
+<npc=2110, part=5>
+The Mages cast spells and kept the monsters restrained. These days it's all messed up. Guards burn down villages, peasants do the fighting. The Mages have their own agendas now and the King...
+<npc=21, iammale, iamfighter, part=6 > 
+What about the King? Did you forget what you were saying?
+<npc=21, iamfemale, iamfighter, part=6 >
+What was that about the King? Did you stop or choke? Should I slap you on the back?
+<npc=21, iammale, iammage, part=6 >
+What was that about the King? Why did you stop?
+<npc=21, iamfemale, iammage, part=6 >
+What was that about the King? Did you swallow your tongue?
+<npc=2110, part=7>
+Nothing. Just nothing. There was a village not far from here where people enjoyed talking.  Go look there for your answers. I won't speak anymore.
+#
+======Situation: The hero leaves the nondamaged village and meets Another Peasant=======
+#event3
+<npc=2108, iammale, part=1>
+You shouldn't go any further, sir. Evil dwells over there.
+<npc=2108, iamfemale, part=1>
+You shouldn't go any further, ma'am. Evil dwells over there. 
+<npc=21, part=2>
+Really? What evil? Like ogres sitting on the road or the undead walking with their sickles?
+<npc=2108, part=3>
+Ogres are a misfortune. We've got one living nearby, but he leaves you alone if you grease him with a bit of coin. But that doesn't work with the undead!
+<npc=21, iammale, iamfighter, part=4 >
+Whoops! I was actually making a joke. What kind of undead are you talking about?
+<npc=21, iamfemale, iamfighter, part=4 >
+Uh, I was joking, but you seem to be taking this seriously. What was that about those undead?
+<npc=21, iammale, iammage, part=4 >
+Looks like my little joke came true. Would you give me some more details?
+<npc=21, iamfemale, iammage, part=4 >
+Wait a second here! I was joking about the undead. Are you kidding with me, too?!
+<npc=2108, iammale, part=5>
+This is no joke, sir. I tell you, they rise from their graves and assault people. We used to only fear the cemetery at night, but now you can't walk by it even during the daylight!
+<npc=2108, iamfemale, part=5>
+This is no joke, ma'am. I tell you, they rise from their graves and assault people. We used to only fear the cemetery at night, but now you can't walk by it even during the daylight! 
+<npc=2108, part=6>
+The road to the capital has become very dangerous indeed. Watch your back!
+#
+========Situation: the hero comes to the destroyed village after he visits the nondamaged one==========
+#event4
+<npc=21, iammale, iamfighter, part=1 >
+Is this the village where the people enjoyed talking? If so, they paid a dear price for it.
+<npc=21, iamfemale, iamfighter, part=1 >
+This looks like the town that miserable peasant mentioned earlier. I don't know what they were talking about here, but I doubt that they deserved this.
+<npc=21, iammale, iammage, part=1 >
+If this is the punishment for just talking on this Allod, I wonder what sort of action is taken for more serious crimes!
+<npc=21, iamfemale, iammage, part=1 >
+That old hick we met earlier spoke about this place. It looks like they were punished for their talking. Even if they were as rude as he was, this is just too brutal.
+#
+======== Situation: the hero comes to the destroyed village before he visits the nondamaged one.=========
+#event5
+<npc=21, iammale, iamfighter, part=1>
+What a merry place! I wonder what they did to deserve this.
+<npc=21, iamfemale, iamfighter, part=1 >
+Ouch! There was some serious action here. What for, I wonder?
+<npc=21, iammale, iammage, part=1 >
+There is not much left of this charred village...What did those peasants do anyway?
+<npc=21, iamfemale, iammage, part=1 >
+Phew! It stinks here! This must have been an outlaws' camp. Why would it be destroyed otherwise?
+#
+======Situation:  the hero meets an outlaw, a former resident of the destroyed village, before the fight with the Chief Outlaw and his men=======
+#event6
+<npc=2100, part=1>
+Hey you...uh...stay where you are! Prepare to die of terror! I am a violent outlaw, and I am going to...uh...to...rob you! Yeah, that's it!
+<npc=21, iammale, iamfighter, part=2 >
+You look too innocent to be a violent outlaw. Look into my eyes and tell me who is more scared, you or me?
+<npc=21, iamfemale, iamfighter, part=2 >
+Wow! I really AM about to die...from laughter that is! And next time you'd better button your fly before using a public road, tiny.
+<npc=21, iammale, iammage, part=2 >
+Well, you can try if you want. However, I doubt that you would be successful.
+<npc=21, iamfemale, iammage, part=2 >
+You're going to become deliciously crispy if you aren't good at running. An outlaw, huh?...
+<npc=2100, iammale, part=3>
+Uh...damn! It didn't work again. You're right, I'm no good at robbing. But there's nothing else I can do!
+<npc=2100, iamfemale, part=3>
+Uh...damn! It didn't work again. You're right, ma'am, I'm no good at robbing. But there's nothing else I can do!
+<npc=2100, part=4>
+The King's army destroyed our village. "For threatening the King", they said. All we did was petition the King, telling him that we couldn't live like this any longer.
+<npc=2100, part=5>
+I joined a gang to make ends meet, but I just don't know how to rob people. The gang-chief beats me up and threatens to cut my throat, but I can't get any better.
+<npc=21, iammale, part=6>
+Well, frankly, I was going to teach you a lesson, but you're already miserable enough. I'd watch out in this line of work you're in. You may anger the wrong person one of these days.
+<npc=21, iamfemale, part=6>
+Well, frankly, I was going to teach you a lesson, but you're already miserable enough. I'd watch out in this line of work you're in. You may anger the wrong person one of these days.
+<NPC=2100, part=7>
+Wait! Before saying goodbye, I must tell you something important!
+<NPC=21, part=8>
+Well...hurry up. You look like you're going to wet your pants or something.
+<NPC=2100, iammale, part=9>
+Not exactly, sir, but you can help me out of this mess I'm in and gain some gold to boot. I know where the Chief of our gang keeps his fortune. You can kill him and take his gold, then I'd be free!
+<NPC=2100, iamfemale, part=9>
+Not exactly, ma'am, but you can help me out of this mess I'm in and gain some gold to boot. I know where the Chief of our gang keeps his fortune. You can kill him and take his gold, then I'd be free!
+<NPC=2100, part=10>
+However, there is just one small problem...
+<NPC=21, IAMMALE, IAMFIGHTER, part=11 >
+I'm sure there is. These things are never simple. What is it?
+<NPC=21, IAMFEMALE, IAMFIGHTER, part=11 >
+Go on, there's no lock without a key. What's the problem?
+<NPC=21, IAMMALE, IAMMAGE, part=11>
+And what would that be, pray tell?
+<NPC=21, IAMFEMALE, IAMMAGE, part=11>
+Oh really?! I was hoping I could just walk up and take it.
+<NPC=2100, part=12>
+The gold is guarded by the Chief's guerillas. You'll have to hack your way through them to get at the treasure. Be careful though...they're strong!
+<NPC=21, part=13>
+Thanks for the story pal, I'll remember it. I'll be sure to pay a visit there sometime...
+#
+=========Situation:  the hero approaches guard tower at the road to capital crossing (end of mission)======
+#event10
+<npc=2113, part=1>
+Halt! Who are you? Where are you going? Answer now!
+<npc=21, iammale, iamfighter, part=2 >
+I'm going to Kaarg to...to enlist in the Guard! I want to become a brave soldier like you.
+<npc=21, iamfemale, iamfighter, part=2 >
+I'm going to Kaarg to...to see my bridegroom. He is with the Guard, and is a brave soldier just like you.
+<npc=21, iammale, iammage, part=2 >
+I'm going to Kaarg to...well, I'm going to abandon my magic abilities and become a brave soldier like you.
+<npc=21, iamfemale, iammage, part=2 >
+I'm going to Kaarg to...to see my bridegroom. He is with the Guard, and is a brave soldier just like you.
+<npc=2117, iammale, iamfighter part=3 >
+We have orders not to let anyone pass. But since you're going to join the guard, you may go!
+<npc=2117,iamfemale, part=3 >
+We have orders not to let anyone pass. But since you're a guard's woman, you may go.
+<npc=2117,iammale, iammage, part=3 >
+We have orders not to let anyone pass. But since you're going to abandon your stupid magic and do something real with your life, you may go!
+<npc=2113, part=4>
+The big road to Kaarg starts right behind our station. Don't tell anyone that we allowed you to pass!
+#
+======= the hero finds the road.  Victory =========
+#event11
+<NPC=21, part=1>
+The road to Kaarg, at last! I hope there won't be any more incidents.
+#
+======= the hero meets zombies=========
+#event8
+<npc=21, iammale, iamfighter, part=1 >
+What repulsive creatures these undead are! I doubt that it was their own initiative to leave their graves. I wonder who summoned them and for what reason?
+<npc=21, iamfemale, iamfighter, part=1 >
+Yuck, zombies are so revolting! I wonder who made them leave their graves and why?
+<npc=21, iammale, iammage, part=1 >
+How distasteful! Someone spent quite a bit of time and effort to rise them from their graves, but what's the purpose of doing that?
+<npc=21, iamfemale, iammage, part=1 >
+These zombies are so disgusting that I almost lost my lunch! I wouldn't raise the dead if I were the most powerful mage in the world. Who would need such a thing and why?
+#
+=======roadsign=======
+#event11
+<part=1>
+Yellobrik Road
+=======good village sign=======
+#event12
+<part=1>
+Quaint Village
+#
+=======bad village sign=======
+#event13
+<part=1>
+Ruins
+#
+=======Kaarg sign======
+#event14
+<part=1>
+The Road to Kaarg

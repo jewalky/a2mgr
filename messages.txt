@@ -1,0 +1,58 @@
+#4DC8D9
+
+      switch ( a2 )
+      {
+        case 0x200u:
+          v6 = (*(int (__thiscall **)(_DWORD, _DWORD))(*(_DWORD *)v5 + 76))(v5, a3);
+          break;
+        case 0x100u:
+          v6 = (*(int (__thiscall **)(_DWORD, _DWORD))(*(_DWORD *)v5 + 108))(v5, a3);
+          break;
+        case 0x101u:
+          v6 = (*(int (__thiscall **)(_DWORD, _DWORD))(*(_DWORD *)v5 + 112))(v5, a3);
+          break;
+        case 0x102u:
+          v6 = (*(int (__thiscall **)(_DWORD, _DWORD))(*(_DWORD *)v5 + 116))(v5, a3);
+          break;
+      }
+
+  if ( !v6 )
+
+    v6 = sub_4DC77B(a2, a3, a4);
+LABEL_17:
+  if ( !v6 )
+  {
+    unknown_libname_15((unsigned __int16)a4, a4 >> 16);
+    if ( a2 > 0x200 )
+    {
+      if ( a2 <= 0x400 )
+      {
+        if ( a2 == 1024 )
+        {
+          v6 = (*(int (__thiscall **)(_DWORD, _DWORD))(*(_DWORD *)v5 + 80))(v5, a3);
+        }
+        else
+        {
+          switch ( a2 )
+          {
+            case 0x201u:
+              v6 = (*(int (__thiscall **)(_DWORD, _DWORD))(*(_DWORD *)v5 + 84))(v5, a3);
+              break;
+            case 0x202u:
+              v6 = (*(int (__thiscall **)(_DWORD, _DWORD))(*(_DWORD *)v5 + 88))(v5, a3);
+              break;
+            case 0x203u:
+              v6 = (*(int (__thiscall **)(_DWORD, _DWORD))(*(_DWORD *)v5 + 92))(v5, a3);
+              break;
+            case 0x204u:
+              v6 = (*(int (__thiscall **)(_DWORD, _DWORD))(*(_DWORD *)v5 + 96))(v5, a3);
+              break;
+            case 0x205u:
+              v6 = (*(int (__thiscall **)(_DWORD, _DWORD))(*(_DWORD *)v5 + 100))(v5, a3);
+              break;
+            case 0x206u:
+              v6 = (*(int (__thiscall **)(_DWORD, _DWORD))(*(_DWORD *)v5 + 104))(v5, a3);
+              break;
+            default:
+              return v6;
+          }

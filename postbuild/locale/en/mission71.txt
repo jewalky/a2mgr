@@ -1,0 +1,176 @@
+#
+===mission objective===
+#briefing 
+Ill-Tempered Squirrels
+
+You must prevent further attacks of the carnivorous squirrels on the village.
+#subobjective0
+
+#subobjective1
+You must find the Queen squirrel and learn why the village was attacked.
+#subobjective2
+The Ogres are keeping the squirrels from moving to the other side of the river. You must wipe the Ogres out!
+#subobjective3
+You must find the hunters hiding from the squirrels and let them know they are in the clear.
+#
+==Hero dies ====
+#failure2 
+Your hero has died. No one will save the village from the disaster now! 
+#
+===Igles dies ===
+#failure3 
+Noble Igles perished trying to protect the lives of peons... 
+#
+===Dina dies ==
+#failure4
+Luck turned away from Dina this time...
+# 
+====we attack the squirrel====
+#failure5 
+You have attacked the Queen Squirrel. It loathes humans even more now! 
+# 
+====we attack the peasants ====
+#failure6 
+This is the wrong day for becoming an outlaw and harassing peasants!
+#
+==Squirrels die==
+#failure7
+The Queen's Squirrels must survive!
+#
+=====Talking to the headman in the beginning ======
+#event1
+<npc=2112, part=1>
+Thank you, good people, for your willingness to help! We were about to abandon the village because of those damn squirrels. We've given up on the fields, and our supplies are running low...
+<npc=2112, part=2>
+Our men were so desperate that they picked up their pitchforks and tried to get rid of the squirrels themselves. There's no one left in the village now! The squirrels took them away!
+<npc=21, iammale, iamfighter, part=3>
+So where in the hell should we look for your people?!
+<npc=21, iamfemale, iamfighter, part=3>
+Okay, we'll look for those pathetic hunters. Which way did they go? 
+<npc=21, iammale, iammage, part=3>
+Well, we shall see if we can find them. Could you give us approximate directions?
+<npc=21, iamfemale, iammage, part=3>
+I personally think that they paid the price for their ineptitude...but we'll look for them anyway. Which way did they go?
+<npc=2112, part=4>
+They took them along the South road, and no one has heard from them since. Our village will cease to exist if they don't return. Damn those squirrels!
+<npc=23, part=5>
+Weird...Normally those beasts hunt in the woods, and not in the plains! Something's wrong here...
+<npc=2112, part=6>
+People say that it's all because the Queen Squirrel detests us. Don't attack it if you see it. You may be able to settle this fiasco somehow.
+<npc=23, part=7>
+Queen Squirrel? I remember hearing tales about it, but it never occurred to me that it actually exists!
+<npc=2112, part=8>
+I didn't think so, too...But one of the lads who disappeared swore that he saw it with his own eyes! I had to believe the tales when I heard that.
+#
+=====Hero talks to the squirrel for the first time
+#event2
+<npc=639, part=1>
+Unwanted guests?! Humans always intrude in our lives...
+<npc=21, iammale, iamfighter, part=2>
+What a coincidence! Your kin intrudes into human lives as well. Can we settle this somehow and stop fighting each other?
+<npc=21, iamfemale, iamfighter, part=2>
+It's you who intrudes in people's lives, squirrel! Get out of here now if you care about your survival.
+<npc=21, iammale, iammage, part=2>
+I apologize. However, please be assured that your actions bother the humans just as much. Perhaps, you could move farther away from here?
+<npc=21, iamfemale, iammage, part=2>
+How touching...the poor tortured little squirrels! Why don't you get out of here and stay in a place without humans around?
+<npc=639, part=3>
+I would be very pleased to take my flock to the forest on the other side of the river. I have absolutely no need for those noisy and generally annoying peasants. Besides, they taste awful.
+<npc=639, part=4>
+However, a bunch of greedy ogres has taken that part of the forest and they let no one in. So we squirrels are unable to move there.
+<npc=22, part=5>
+Will you move away from the village if the road is cleared?
+<npc=639, part=6>
+Certainly, human. And no one of my flock will ever assail a human on this side of the river again. In addition to that, I will even let the hostages return to their village.
+<npc=21, iammale, iamfighter, part=7>
+It's a deal then. There's nothing left to do but find those ogres.
+<npc=21, iamfemale, iamfighter, part=7>
+A deal is a deal! There's one easy part left...gotta get rid of those ogres!
+<npc=21, iammale, iammage, part=7>
+Agreed then. I hope the deal is fair!
+<npc=21, iamfemale, iammage, part=7>
+That's better. Besides, it's much faster to get rid of the ogres than to fight all of your tribe.
+<npc=639, part=8>
+You have said your words and I have heard them. I will order my subjects to grant you free passage to the river!
+#
+===== Igles talks to the squirrel for the first time 
+#event3
+<npc=639, part=1>
+Unwanted guests?! Humans always intrude in our lives...
+<npc=22, part=2>
+It's you who intrudes in people's lives, squirrel! Get out of here now if you care about your survival.
+<npc=639, part=3>
+I would be very pleased to take my flock to the forest on the other side of the river. I have absolutely no need for those noisy and generally annoying peasants. Besides, they taste awful.
+<npc=639, part=4>
+However, a bunch of greedy ogres has taken that part of the forest and they let no one in. So we squirrels are unable to move there.
+<npc=22, part=5>
+Will you move away from the village if the road is cleared?
+<npc=639, part=6>
+Certainly, human. And no one of my flock will ever assail a human on this side of the river again. In addition to that, I will even let the hostages return to their village.
+<npc=22, part=7>
+It's a deal then. There's nothing left to do but find those ogres.
+<npc=639, part=8>
+You have said your words and I have heard them. I will order my subjects to grant you free passage to the river!
+#
+===== Dina talks to the squirrel for the first time 
+#event4
+<npc=639, part=1>
+Unwanted guests?! Humans always intrude in our lives...
+<npc=23, part=2>
+We wouldn't have come here if you weren't disturbing the working people. Why don't you move away from the village if you need calm? 
+<npc=639, part=3>
+I would be very pleased to take my flock to the forest on the other side of the river. I have absolutely no need for those noisy and generally annoying peasants. Besides, they taste awful.
+<npc=639, part=4>
+However, a bunch of greedy ogres has taken that part of the forest and they let no one in. So we squirrels are unable to move there.
+<npc=23, part=5>
+Will you move away from the village if the road is cleared?
+<npc=639, part=6>
+Certainly, human. And no one of my flock will ever assail a human on this side of the river again. In addition to that, I will even let the hostages return to their village.
+<npc=23, part=7>
+Then we should try to clear the path for you. I hope you aren't deceiving us! 
+<npc=639, part=8>
+You have said your words and I have heard them. I will order my subjects to grant you free passage to the river!
+#
+=====Hero talks to the squirrel for the second time 
+#event5
+<npc=639, part=1>
+Humans...I wished never to see humans again...Damn the ogres who prevent us from moving away! They make us live with you humans!
+<npc=21, iammale, iamfighter, part=2>
+What ogres? There are no more ogres left to meet! We've destroyed them all!
+<npc=21, iamfemale, iamfighter, part=2>
+Wake up, squirrel! The ogres are long extinct. Well, not exactly long, but since the moment we exterminated them!
+<npc=21, iammale, iammage, part=2>
+You would be surprised to know that there are no more ogres, good squirrel. There certainly were at one time, but our last visit has changed that. It's for the better, I suppose.
+<npc=21, iamfemale, iammage, part=2>
+Did you just mention the ogres? Perhaps, the same ogres whose bones are now rotting by the side of the river? Thanks to me, by the way.
+<npc=639, part=3>
+That is good news! Finally, my flock can move away from the humans. The hostages may return to their home now.
+#
+===== Igles talks to the squirrel for the second time 
+#event6
+<npc=639, part=1>
+Humans...I wished never to see humans again...Damn the ogres who prevent us from moving away! They make us live with you humans!
+<npc=22, part=2>
+The ogres are extinct now. I give you the word of sir Igles, and my word is true!
+<npc=639, part=3>
+That is good news! Finally, my flock can move away from the humans. The hostages may return to their home now.
+#
+===== Dina talks to the squirrel for the second time 
+#event7
+<npc=639, part=1>
+Humans...I wished never to see humans again...Damn the ogres who prevent us from moving away! They make us live with you humans!
+<npc=23, part=2>
+There are no more ogres! All that's left of them are white bones and ruined huts.
+<npc=639, part=3>
+That is good news! Finally, my flock can move away from the humans. The hostages may return to their home now.
+#
+=====The released hunters speak
+#event8
+<npc=2110, part=1>
+Thank you so much. We thought we were going to die behind this wall. We figured we'd either be gnawed to death by the squirrels, or just plain starve to death. But now we're free!
+#
+=====We talk to the headman after everything is done 
+#event9
+<npc=2112, part=1>
+Our village will prosper again! It isn't our custom to pay for noble deeds, but I promised a reward to those who saved us and you shall receive it!
+#

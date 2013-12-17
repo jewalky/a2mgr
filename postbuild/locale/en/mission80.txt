@@ -1,0 +1,79 @@
+#
+=======mission objective =========
+#briefing 
+The Scarab Wastes
+
+You must find Yelooy-shaman and take the Stone from him.
+#subobjective0
+
+#subobjective1
+Find Yelooy-shaman among the Orcs and kill him.
+#subobjective2
+Find the Star among the trophies.
+#
+=====Hero dies ======
+#failure2 
+Igles was right. The heat isn't the most harmful thing for a hero in this place! 
+#
+======Igles dies ======
+#failure3 
+The Orcs turned out to be vicious and cunning. Igles died... 
+#
+======Dina dies ======
+#failure4
+Poor Dina! She has traveled a long way together with the heroes, but this was her last adventure.
+#
+=======Starting conversation ====
+#event1
+<npc=21, iammale, iamfighter, part=1>
+Boy is it hot here! I bet I don't even have to fight. The evil stench of my armpits will scare off the Orcs instead!
+<npc=21, iamfemale, iamfighter, part=1>
+How entertaining it is to wander in the sands in such heat...I can feel my body cooking in the sun!
+<npc=21, iammale, iammage, part=1>
+I have found a serious gap in my magical knowledge: I can not protect myself from this stifling heat.
+<npc=21, iamfemale, iammage, part=1>
+Damn! My makeup will melt in this heat!
+<npc=22, iammale, part=2>
+I'm glad that this is the only thing you worry about. However, we're going to be facing problems far more serious than sweating!
+<npc=22, iamfemale, part=2>
+I agree that this is a dangerous for us, however, we're going to be facing other problems soon enough!
+#
+=======Hero takes the second piece ====
+#event2
+<npc=21, part=1>
+No wonder the Orcs cherished their Yelooy-shaman! He must have looked like a god to them with this thing on his neck...
+<npc=21, iammale, iamfighter, part=2>
+Now for the easy part...getting out of here as fast as we can. I hope that there's nothing left for us here. I'm quite fed up with the orcs now!
+<npc=21, iamfemale, iamfighter, part=2>
+As a matter of fact, he looks even better dead. Getting out of here alive and in good health should be easy now!
+<npc=21, iammale, iammage, part=2>
+Regardless of how he looked before, he seems rather peaceful now. As for us, we should depart from this place as quickly as we can.
+<npc=21, iamfemale, iammage, part=2>
+We should get out of here as fast as we can now. I'm quite fed up with the orcs now!
+#
+=======Igles takes the second piece ====
+#event3
+<npc=22, part=1>
+So this is the Second Star...Let those dirty, orcish claws never touch it again!
+#
+=======Dina takes the second piece========
+#event4
+<npc=23, part=1>
+It's so beautiful...Our quest was indeed worth this!
+#
+=======Hero takes the last piece =======
+#event5
+<npc=21, iamfighter, part=1>
+Our quest is over! I'm not a mage, but even I can feel the parts of the crown trying to pull themselves together...
+<npc=21, iammage, part=1>
+Our quest is over! I can actually feel the parts of the crown trying to pull themselves together...
+#
+=======Igles takes the last piece======
+#event6
+<npc=22, part=1>
+Our quest is over! I'm not a mage, but even I can feel the parts of the crown trying to pull themselves together. I never dreamed that I could hold the real Crown of Yases!
+#
+======Dina takes the last piece ======
+#event7
+<npc=23, part=1>
+The parts of the Crown are trying to pull themselves together...I can't believe that I, a plain country girl, will soon behold the Crown of Yases!

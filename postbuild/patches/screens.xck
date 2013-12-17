@@ -1,0 +1,11 @@
+[BeginXCK]-----------------------------------
+[BeginCRK]-----------------------------------
+= cOMPARe-to-cRACk 3000 v0.08 alpha2 = (c)oded by Alexei Krasavin = 5-03-2001 =
+
+Differences between a2orig.exe & allods2.exe
+allods2.exe
+00056E2B: E0 04
+00056E2C: B5 57
+00056E3B: 4A 8A     ; warning! means 4 bytes per pixel in screen presentation
+[EndCRK]-------------------------------------
+[EndXCK]-------------------------------------

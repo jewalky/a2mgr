@@ -1,0 +1,254 @@
+#
+===Mission objective ===
+#briefing 
+The Traveler
+
+Escort the traveler to the other side of the river. 
+#
+==Hero dies====
+#failure2 
+The Woods don't welcome strangers! 
+#
+===Igles dies===
+#failure3 
+Luck turned away from Igles...
+#
+===Dina dies==
+#failure4
+Dina failed to defend herself!
+# 
+====druids attacked====
+#failure5
+You have attacked the Druids and lost their trust forever. 
+#
+====Chief druid dies====
+#failure6
+Yole-Maye was the only one who knew how to cross the river.
+#
+====lonesome druid dies before talking to his chief====
+#failure7
+Yole-Maye would not talk to you because you failed to protect his apprentice.
+#
+====Traveler dies====
+#failure8
+There is not much sense in further escorting the traveler's body.
+#subobjective0
+
+#subobjective1
+Find and rescue the druid's apprentice.
+#subobjective2
+Clear the forest of the Necromancers.
+#
+=======Start
+#event1
+<npc=21, part=1>
+The air is so clean in this forest! I can understand why the druids would never leave it.
+<npc=22, part=2>
+I prefer the vastness of the Plains myself...Although I agree that the forest is indeed beautiful.
+<npc=2019, part=3>
+Well, I'm paying you for escorting me to my destination as fast as possible, not to stare at the trees.
+<npc=2019, part=4>
+You may have the spare time, but I do not!
+#
+=======Druid calls for help
+#event2
+<npc=682, part=1>
+Help! Someone! Help me!!!
+#
+=======saved druid to hero
+#event3
+<npc=682, iammale, part=1>
+Thank you, good sir! I'm just an apprentice and I can't restrain these monsters very well. The ogre did not obey my orders and nearly killed me!
+<npc=682, iamfemale, part=1>
+Thank you, good lady! I am just an apprentice and I can't restrain these monsters very well. The ogre did not obey my orders and nearly killed me!
+<npc=21, iammale, iamfighter, part=2>
+It's okay as long as you're the one left alive. Just be more cautious next time!
+<npc=21, iamfemale, iamfighter, part=2>
+Take it easy...It only matters that you're still alive. Just be more careful next time!
+<npc=21, iammale, iammage, part=2>
+Everything is well that ends well. I would suggest that you exercise more caution next time, young fellow.
+<npc=21, iamfemale, iammage, part=2>
+No wonder! I used to be much more careful in my apprentice-hood than you seem to be. I suggest that you be a little more cautious next time.
+<npc=682, part=3>
+Yes, I will. I...I really don't feel comfortable doing this, but I have to ask you for another favor.
+<npc=682, part=4>
+I must return to my mentor. His name is Yole-Maye, he is the chief Druid of this forest. I don't think that I'll be able to make it myself! Could you help me?
+<npc=21, part=5>
+Sure. I suppose we can. Besides, I have to find a way to cross over the river. Perhaps, your teacher could give me some information about doing this!
+#
+=======saved druid to Igles
+#event4
+<npc=682, part=1>
+Thank you, sir Knight! I'm just an apprentice and I can't restrain these monsters very well. The ogre did not obey my orders and nearly killed me!
+<npc=22, part=2>
+Well, there's no need to worry anymore. Just be more careful next time!
+<npc=682, part=3>
+Yes, I will. I...I really don't feel comfortable doing this, but I have to ask you for another favor.
+<npc=682, part=4>
+I must return to my mentor. His name is Yole-Maye, he is the chief Druid of this forest. I don't think that I'll be able to make it myself! Could you help me?
+<npc=22, part=5>
+Sure. I suppose we can. Besides, I have to find a way to cross over the river. Perhaps, your teacher could give me some information about doing this!
+#
+=======saved druid to Dina
+#event5
+<npc=682, part=1>
+Thank you, good lady! I'm just an apprentice and I can't restrain these monsters very well. The ogre did not obey my orders and nearly killed me!
+<npc=23, part=2>
+Take it easy...It only matters that you're ok. You will soon learn everything you need, but for now, just be more careful until you do!
+<npc=682, part=3>
+Yes, I will. I...I really don't feel comfortable doing this, but I have to ask you for another favor.
+<npc=682, part=4>
+I must return to my mentor. His name is Yole-Maye, he is the chief Druid of this forest. I don't think that I'll be able to make it myself! Could you help me?
+<npc=22, part=5>
+Sure. I suppose we can. Besides, I have to find a way to cross over the river. Perhaps, your teacher could give me some information about doing this!
+#
+=======Chief druid to hero
+#event6
+<npc=687, iammale, iamfighter, part=1>
+I take it you have rescued my apprentice, warrior? Your deed is worth a reward! Can I do something for you?
+<npc=687, iamfemale, iamfighter, part=1>
+I take it you have rescued my apprentice, woman? Your deed is worth a reward! Can I do something for you?
+<npc=687, iammale, iammage, part=1>
+I take it you have rescued my apprentice, mage? Your deed is worth a reward! Can I do something for you?
+<npc=687, iamfemale, iammage, part=1>
+I take it you have rescued my apprentice, woman? Your deed is worth a reward! Can I do something for you?
+<npc=21, iammale, part=2>
+Actually, I'm looking for a way to cross the river. I promised to escort someone to the other side, and I would like to keep that promise!
+<npc=21, iamfemale, part=2>
+Yes you can. I'm looking for a way to cross the river. I promised to escort someone to the other side, and I would like to keep that promise!
+<npc=687, part=3>
+That's not an easy task...We have a teleport to the other side, but the Necromancers have taken over our forest. Their magic not only makes the beasts attack, but also renders the teleport inoperable.
+<npc=687, part=4>
+I would gladly let you use the teleport if you manage to get rid of those Necromancers.
+#
+=======Chief druid to Igles
+#event7
+<npc=687, part=1>
+I take it you rescued my apprentice, Knight? We normally don't trust those like you. 
+<npc=687, part=2>
+But your deed is worth a reward! Can I do something for you? 
+<npc=22, part=3>
+I'm currently looking for a way to cross the river. I promised to escort someone to the other side, and I would like to keep that promise!
+<npc=687, part=4>
+That's not an easy task...We have a teleport to the other side, but the Necromancers have taken over our forest. Their magic not only makes the beasts attack, but also renders the teleport inoperable.
+<npc=687, part=4>
+I would gladly let you use the teleport if you manage to get rid of those Necromancers. 
+#
+=======Chief druid to Dina
+#event8
+<npc=687, part=1>
+I take it you rescued my apprentice, lass? You look so young and fragile...Your actions deserve a reward! Can I do something for you?
+<npc=21, part=2>
+Well...I'm looking for a way to cross the river. Can you help me with that?
+<npc=687, part=3>
+That's not an easy task...We have a teleport to the other side, but the Necromancers have taken over our forest. Their magic not only makes the beasts attack, but also renders the teleport inoperable.
+<npc=687, part=4>
+I would gladly let you use the teleport if you manage to get rid of those Necromancers. 
+#
+=======Chief druid ok's hero
+#event9
+<npc=21, part=1>
+Greetings once again, Yole-Maye! Your request has been fulfilled. The magic of the Necromancers is no longer affecting this forest.
+<npc=687, part=2>
+Thank you. I can now open the teleport to the other side.
+#
+=======Chief druid ok's Igles
+#event10
+<npc=22, part=1>
+Greetings once again, Yole-Maye! Your request has been fulfilled. The magic of the Necromancers is no longer affecting this forest.
+<npc=687, part=2>
+Thank you.  I can now open the teleport to the other side.
+#
+=======Chief druid ok's Dina
+#event11
+<npc=23, part=1>
+Greetings once again, Yole-Maye! Your request has been fulfilled. The magic of the Necromancers is no longer affecting this forest.
+<npc=687, part=2>
+Thank you.  I can now open the teleport to the other side.
+#
+=======Hero brags about missing bridge
+#event12
+<npc=687, iammale, iamfighter, part=1>
+I thought our journey was over...You can see the other side, but there's no way to cross the river now! We'll have to look for another way out of the forest...
+<npc=687, iamfemale, iamfighter, part=1>
+Damn! I hope the one who destroyed this bridge got the same in return! We'll have to look for another way out of the forest...
+<npc=687, iammale, iammage, part=1>
+I have always been proud of my prudence, but I find myself wanting to scream obscenities at the person who did this! We will have to look for another way out of the forest...
+<npc=687, iamfemale, iammage, part=1>
+Figures!! Someone must have it in for me. Expecting the bridge to be in one piece was probably too much to ask! We'll have to look for another way out of the forest now.
+#
+=======Igles brags about missing bridge
+#event13
+<npc=22, part=1>
+There are traces of a recent battle here! This bridge must have been very inconvenient for someone...We'll have to look for a backdoor out of the forest now.
+#
+=======Dina brags about missing bridge
+#event14
+<npc=23, part=1>
+Oh, I'm so sorry! This bridge was so nice! But it's not here anymore, so we'll have to look for another way out of the forest now.
+#
+=======chief druid to hero, druid not rescued, necromancers alive.
+#event15
+<npc=687, iammale, iamfighter, part=1>
+Who are you, warrior, and what do you seek in this forest?
+<npc=687, iamfemale, iamfighter, part=1>
+Who are you, woman, and what do you seek in this forest? 
+<npc=687, iammale, iammage, part=1>
+Who are you, mage, and what do you seek in this forest? 
+<npc=687, iamfemale, iammage, part=1>
+Who are you, woman, and what do you seek in this forest? 
+<npc=21, iammale, part=2>
+I'm looking for a way to cross the river. I promised to escort someone to the other side, and I would like to keep that promise!
+<npc=21, iamfemale, part=2>
+I'm looking for a way to cross the river. I promised to escort someone to the other side, and I would like to keep that promise!
+<npc=687, part=3>
+I would call you lucky then. Many of us won't talk to the people from the Plains, but I usually don't have a problem helping your kind.
+<npc=687, part=4>
+Unfortunately, right now there is nothing I can do for you. Our forest has been occupied by the Necromancers. Their magic is blocking the teleport that can be used for traveling to the other side.
+<npc=21, part=5>
+What if I kick the Necromancers out of here?
+<npc=687, part=6>
+Then I would certainly help you. But I have one more request. My apprentice went to observe the old bridge and never returned!
+<npc=687, part=7>
+The magic of the Necromancers makes the wild beasts disobey our orders, so I am very worried about him.
+<npc=21, part=8>
+All right. I'll go to this destroyed bridge and try to find him for you.
+#
+=======chief druid to Igles, druid not rescued, necromancers alive.
+#event16
+<npc=687, part=1>
+Who are you, Knight, and what do you seek in this forest? 
+<npc=22, part=2>
+I'm looking for a way to cross the river. I promised to escort someone to the other side, and I would like to keep that promise!
+<npc=687, part=3>
+I would call you lucky then. Many of us won't talk to the people from the Plains, but I usually don't have a problem helping your kind.
+<npc=687, part=4>
+Unfortunately, right now there is nothing I can do for you. Our forest has been occupied by the Necromancers. Their magic is blocking the teleport that can be used for traveling to the other side.
+<npc=22, part=5>
+What if I kick the Necromancers out of here? 
+<npc=687, part=6>
+Then I would certainly help you. But I have one more request. My apprentice went to observe the old bridge and never returned!
+<npc=687, part=7>
+The magic of the Necromancers makes the wild beasts disobey our orders, so I am very worried about him.
+<npc=22, part=8>
+All right. I'll go to this destroyed bridge and try to find him for you.
+#
+=======chief druid to Dina, druid not rescued, necromancers alive.
+#event17
+<npc=687, part=1>
+Who are you, lass, and what do you seek in this forest? 
+<npc=23, part=2>
+I'm looking for a way to cross the river. I promised to escort someone to the other side, and I would like to keep that promise!
+<npc=687, part=3>
+I would call you lucky then. Many of us won't talk to the people from the Plains, but I usually don't have a problem helping your kind.
+<npc=687, part=4>
+Unfortunately, right now there is nothing I can do for you. Our forest has been occupied by the Necromancers. Their magic is blocking the teleport that can be used for traveling to the other side.
+<npc=23, part=5>
+What if I kick the Necromancers out of here? 
+<npc=687, part=6>
+Then I would certainly help you. But I have one more request. My apprentice went to observe the old bridge and never returned!
+<npc=687, part=7>
+The magic of the Necromancers makes the wild beasts disobey our orders, so I am very worried about him.
+<npc=23, part=8>
+All right. I'll go to this destroyed bridge and try to find him for you.
+#

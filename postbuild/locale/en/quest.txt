@@ -1,0 +1,97 @@
+#quest1
+<part=1>
+The quest objective is to kill the particular foe whose portrayal is shown in the info window. The quest is viewed as completed when you have struck the final (mortal) blow to the enemy.
+<part=2>
+If you can not see your foe after you have reached the intended spot on the map, it is probably that he had been killed by someone else. In this case, you will have to wait until your enemy revives. 
+<part=3>
+To receive information on the quests available to you at the moment, press 'W' on your keyboard.
+To receive a reward for a completed quest, get back to the tavern where you have obtained the quest. 
+#quest2
+<part=1>
+This is one of the easiest quests. You must locate the given type of creatures on the map and kill several specimens.
+<part=2>
+To receive information on the quests available to you at the moment, press 'W' on your keyboard.
+To receive a reward for a completed quest, get back to the tavern where you have obtained the quest. 
+#quest3
+<part=1>
+Your quest objective is to eliminate a group of enemies. When you arrive at the quest area, point your mouse cursor at the enemies belonging to the appropriate group. You will see the 'Quest objective' message displayed in the info window.
+<part=2>
+The quest is viewed upon as completed when you have struck the final (mortal) blow to the last foe belonging to the group.
+<part=3>
+To receive information on the quests available to you at the moment, press 'W' on your keyboard.
+To receive a reward for a completed quest, get back to the tavern where you have obtained the quest. 
+#quest4
+<part=1>
+You must escort the character portrayed in the info window to the spot specified by the quest. In the event he dies, your quest is considered failed.
+<part=2>
+To receive information on the quests available to you at the moment, press 'W' on your keyboard.
+To receive a reward for a completed quest, get back to the tavern where you have obtained the quest. 
+#quest5
+<part=1>
+You must deliver the item to the specified tavern. You will automatically aquire the needed item which will disappear after you have completed the quest. 
+<part=2>
+Even as your character dies, your quest is still available. You can pick up the item and resume your journey. 
+<part=3>
+To receive information on the quests available to you at the moment, press 'W' on your keyboard.
+To receive a reward for a completed quest, get back to the tavern where you have obtained the quest. 
+#quest6
+<part=1>
+You must deliver the urgent message to the specified tavern. The message is considered delivered if your character managed to reach the tavern within the assigned time limits.
+<part=2>
+To receive information on the quests available to you at the moment, press 'W' on your keyboard.
+To receive a reward for a completed quest, get back to the tavern where you have obtained the quest. 
+#quest7
+<part=1>
+You must locate the item shown in the info window.
+<part=1>
+You must summon the stated number of zombies and bring them to the tavern where you have received the quest.
+<part=2>
+To receive information on the quests available to you at the moment, press 'W' on your keyboard.
+To receive a reward for a completed quest, get back to the tavern where you have obtained the quest. 
+#quest9
+<part=1>
+You must summon the stated number of skeletons and bring them to the tavern where you have received the quest.
+<part=2>
+To receive information on the quests available to you at the moment, press 'W' on your keyboard.
+To receive a reward for a completed quest, get back to the tavern where you have obtained the quest. 
+#quest10
+<part=1>
+You must summon the stated number of spirits and bring them to the tavern where you have received the quest.
+<part=2>
+To receive information on the quests available to you at the moment, press 'W' on your keyboard.
+To receive a reward for a completed quest, get back to the tavern where you have obtained the quest. 
+#quest11
+<part=1>
+You must intercept and kill the character portrayed in the info window before he reaches the tavern where you have received the quest. The quest is viewed as completed when you have struck the final blow to your foe.
+<part=2>
+To receive information on the quests available to you at the moment, press 'W' on your keyboard.
+To receive a reward for a completed quest, get back to the tavern where you have obtained the quest. 
+#quest12
+<part=1>
+You must intercept and exterminate a group of foes before they reach the tavern where you have received your quest. The quest is viewed as completed when you have struck the final (mortal) blow to the last enemy from the group.
+<part=2>
+To receive information on the quests available to you at the moment, press 'W' on your keyboard.
+To receive a reward for a completed quest, get back to the tavern where you have obtained the quest. 
+#quest13
+<part=1>
+You must exterminate all characters guarding the specified tavern. The quest is viewed as completed when you have struck the final (mortal) blow to the last enemy from the group. 
+<part=2>
+To receive information on the quests available to you at the moment, press 'W' on your keyboard.
+To receive a reward for a completed quest, get back to the tavern where you have obtained the quest. 
+#treasureitem
+<part=1>
+It's an item! The value of the item corresponds to the difficulty level of the completed quest. What you see is what you get.
+#treasuremoney
+<part=1>
+It's a bunch of gold! The sum of gold corresponds to the difficulty level of the completed quest. You can forget trying to wring anymore gold from the Innkeeper. It's not going to happen!
+#treasurexp
+<part=1>
+You can receive extra experience! All of your skills will be equally increased according to the amount of experience received.
+#treasureenchant
+<part=1>
+You can choose to improve the magic abilities of the item shown in the box.
+#treasureally
+<part=1>
+A buddy! You will be accompanied by the mercenary portrayed in the info window.
+
+Remember: there can be only one mercenary with you at a time! If you already have a mercenary, this prize will not be offered to you.

@@ -1,0 +1,193 @@
+"nival.bmp"
+
+
+
+
+
+
+
+GAME DESIGN
+Serge Orlovsky
+Dmitry Devishev
+Sergey Pavlenko
+Nick Skokov
+Peter Vysotin
+Helen Richkova
+George Ossipov
+
+EXECUTIVE PRODUCER
+Serge Orlovsky
+
+ASSOCIATE PRODUCER
+Sergey Pavlenko
+
+LEAD PROGRAMMER
+Peter Vysotin
+
+CLIENT PROGRAMMING
+Peter Vysotin
+Yuri Blazhevich
+Nickolay Kopylov
+
+SERVER PROGRAMMING
+Nick Skokov
+Dmitry Devishev
+Yuri Blazhevich
+
+MAP EDITOR PROGRAMMING
+Roman Kozlov
+Peter Vysotin
+
+LEAD ARTIST
+Helen Richkova
+
+LAYOUT & ANIMATION
+Nickolay Kozlov
+
+2D ART
+Nickolay Kozlov
+Helen Richkova
+
+3D ART & ANIMATION
+Oleg Glazunov
+Alexey Borzykh
+Alexander Korabelnikov
+
+WRITER
+Anna Klimenkova
+
+MISSION DESIGN
+Dmitry Devishev
+Alexey Markov
+Andrey Lensky
+Alexey Borzykh
+Oleg Glazunov
+Helen Richkova
+Peter Vysotin
+
+MUSIC
+Igor Krasilnikov
+
+SOUND
+Michail Matveev
+
+TECHNICAL SUPPORT
+Sergey Pavlenko
+Roman Kozlov
+
+MANUAL TEXT
+Sergey Pavlenko
+Anna Klimenkova
+
+MANUAL LAYOUT
+Roman Kozlov
+Alexander Korabelnikov
+
+TRANSLATION
+Yuri Vanzin
+Raj Naidu
+
+TESTERS
+Alexander Valensia-Kampo
+Alexey Sviridov
+George Ossipov
+Sergey Kirushin
+Alexander Nikitin
+Yuri Miroshnikov
+Oleg Hazhinsky
+Sergey Lyange
+Vasily Vorontsov
+Pavel Chuzhanov
+Lee Singleton
+David Bishop
+
+SPECIAL THANKS
+AmiCom Computer House
+Alexey Sviridov
+Evgeny Ivanov
+Alexander Valensia-Kampo
+Egor Doronin
+Tatiana Kuznetsova
+Yuri Miroshnikov 
+Alexander Nikitin
+Andrey Drazhnikov
+Alexey Dmitriev
+Alexander Dmitrevsky
+Denis Bystruev
+Raj Naidu
+Don McClure
+Bret Berry
+Sam Clifford
+Chris Carr
+
+
+
+
+
+
+"monolith.bmp"
+
+
+
+
+
+
+
+PRODUCER
+Matt Saettler
+
+PRODUCT MANAGER
+Daniel Bernstein
+
+GAME TEXT/SPEECH
+Benny Kee
+Daniel Bernstein
+
+MANUAL
+Bob Givnin
+Kris Walker
+Benny Kee
+
+FEATURING THE VOICE TALENT OF
+Mike Madeoy
+Tedd D'Arms
+Julie Briskman Hall
+David Silverman
+Kathy Levin
+Scott Burns
+Lyn McManus
+Kari McGee
+Jason Cottle
+Benny Kee
+Andrea Barringer
+Lynn Rott
+
+AUDIO CUTTING AND EDITING
+Boyd Post
+Cassano Thruston
+James Ackley
+
+RECORDED AT
+Steve Mitchell Productions, Seattle, WA
+Monolith Productions, Kirkland, WA
+
+QUALITY ASSURANCE MANAGER
+Jonathan Stein
+
+QUALITY ASSURANCE TESTERS
+Kelly Kristek
+Jordan Minkove
+Ryan Mattson
+Ben Chamberlain
+Benny Kee
+Bob Givnin
+
+TECH SUPPORT
+Bob Givnin
+Benny Kee
+
+MARKETING AND PUBLICITY
+Samantha Ryan
+Joel Reiff
+Shane Thompson
+Paul Butterfield

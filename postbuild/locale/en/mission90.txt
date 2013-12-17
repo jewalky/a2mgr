@@ -1,0 +1,178 @@
+#
+===mission objective===
+#briefing 
+A Kings Request
+
+Protect the Druids from the Necromancer's army.
+#subobjective0
+
+#subobjective1
+The King orders you to find and destroy the enemies of Yases.
+#subobjective2
+The Necromancers order you to attack the Druids in the name of the King! 
+#subobjective3
+The Druids ask for your help. They say that they haven't started the war and that they wish no harm to Plain dwellers. 
+#subobjective4
+The Necromancers have finally discarded the mask: they want to destroy both you and the Druids. They must be defeated!
+#
+==Hero dies====
+#failure2 
+Your hero has overestimated his combat skills.
+#
+===Igles dies ===
+#failure3 
+Igles saved his family honor, but lost his life...
+#
+===Dina dies ==
+#failure4
+No one was swift enough to save Dina...
+# 
+====Kill a Mage====
+#failure5
+The Druids were attacked. Igles and his friends have become their enemies...
+#
+====the framer says go to the crowd 
+#event1
+<npc=699, part=1>
+I'm glad that Sir Igles and his friends aren't completely out of their minds yet! I'm starting to enjoy this.
+<npc=699, part=2>
+Now, you should go west and join the army that's about to start the attack on the Druids. Make haste or I shall be disappointed with you.
+#
+====Beaten Druid says go warn my friends
+#event2
+<npc=686, part=1>
+I have survived a fierce battle, but a worse fate is about to befall my kin.
+<npc=686, part=2>
+Saken-Maye is gathering his forces in the North, on the other side of the river, to try and stop the Necromancers and their army. He is unaware that the Necromancers are ready for his attack.
+<npc=686, part=3>
+The one who passes the word of warning to him would do a great service to the glory and safety of the Ancient Woods!
+#
+====Knights talk before going to knock off the druids 
+#event3
+<npc=2125, part=1>
+My loyal warriors! The King has ordered the Necromancers to exterminate the green plague of the Druids, who even now devise their sinister plans in the heart of the Woods! Any questions? 
+<npc=2123, part=2>
+Excuse me, sir, but the Druids have never attacked us. Maybe they aren't as hostile as the King thinks?
+<npc=697, part=3>
+Exactly. That alone proves their hypocrisy and viciousness. But our Guild has uncovered their plan, and the King has ordered us to make a preemptive strike.
+<npc=2125, part=4>
+Those who doubt, doubt the King! Anyone else? No? Then...forward!
+#
+====Hero talks to chief druid
+#event4
+<npc=687, iammale, part=1>
+I am glad to see you again in our woods. But if you don't want to make the wrong impression, you should remember that the guest is the first to say words of greeting, not the host.
+<npc=687, iamfemale, part=1>
+I am glad to see you again in our woods. But if you don't want to make the wrong impression, you should remember that the guest is the first to says words of greeting, not the host.
+<npc=21, iammale, iamfighter, part=2>
+Oh, please forgive me! I'm in a bit of a hurry, and don't have the time for etiquette, right now. Are you aware that a Necromancer army is going to strike you at any moment now?
+<npc=21, iamfemale, iamfighter, part=2>
+I don't care about politeness now! You will soon forget about it, too. Are you aware that a Necromancer army is going to strike you at any moment now?
+<npc=21, iammale, iammage, part=2>
+I apologize, but the situation requires immediate action. Are you aware that a Necromancer army is going to strike you at any moment now?
+<npc=21, iamfemale, iammage, part=2>
+I don't have time for this! Are you aware that a Necromancer army is going to strike you at any moment now?
+<npc=687, part=3>
+This is distressing news...I knew that the Necromancers, following the King's orders, have declared all Druids of the Ancient Woods to be insurgents. Although it was they who tried to oppress us.
+<npc=687, part=4>
+So far it was just random encounters, but it seems that now they have decided to destroy us once and for all. Well, the Ancient Woods have enough forces to confront the royal army! 
+<npc=687, iammale, part=5>
+This will not be a war against all Plain dwellers. Confer my words to them, my guest. The Druids are not hostile towards the Humans, but our Woods are our home, and we will defend it!
+<npc=687, iamfemale, part=5>
+This will not be a war against all Plain dwellers. Convey my words to them, my guest. The Druids are not hostile towards the Humans, but our Woods are our home, and we will defend them!
+#
+==== Igles talks to chief druid 
+#event5
+<npc=687, part=1>
+I am glad to see you again in our woods. But if you don't want to make the wrong impression, you should remember that the guest is the first to say words of greeting, not the host.
+<npc=22, part=2>
+Please accept my apology, but this is the wrong time to follow the etiquette. Are you aware that a Necromancer army is going to strike you at any moment now?
+<npc=687, part=3>
+This is distressing news...I knew that the Necromancers, following the King's orders, have declared all Druids of the Ancient Woods to be insurgents. Although it was they who tried to oppress us.
+<npc=687, part=4>
+So far it was just random encounters, but it seems that now they have decided to destroy us once and for all. Well, the Ancient Woods have enough force to confront the royal army!
+<npc=687, part=5>
+This will not be a war against all Plain dwellers. Convey my words to them, my guest. The Druids are not hostile towards the Humans, but our Woods are our home, and we will defend them!
+#
+==== Dina talks to chief druid 
+#event6
+<npc=687, part=1>
+I am glad to see you again in our woods. But if you don't want to make the wrong impression, you should remember that the guest is the first to say words of greeting, not the host.
+<npc=23, part=2>
+I beg your pardon, Great Saken-Maye! But I have an urgent business. Are you aware that a Necromancer army is going to strike you at any moment now?
+<npc=687, part=3>
+This is distressing news...I knew that the Necromancers, following the King's orders, have declared all Druids of the Ancient Woods to be insurgents. Although it was they who tried to oppress us.
+<npc=687, part=4>
+So far it was just random encounters, but it seems that now they have decided to destroy us once and for all. Well, the Ancient Woods have enough force to confront the royal army!
+<npc=687, part=5>
+This will not be a war against all Plain dwellers. Convey my words to them, my guest. The Druids are not hostile towards the Humans, but our Woods are our home, and we will defend them!
+#
+====Hero returns to the necro and tells him he's an asshole
+#event7
+<npc=699, iammale, part=1>
+I'm waiting for a report describing the defeat of the vicious Druids. If you don't carry such news, you're going to regret that you came here!
+<npc=699, iamfemale, part=1>
+I'm waiting for a report describing the defeat of the vicious Druids. If you don't carry such news, you're going to regret that you came here!
+<npc=21, iammale, iamfighter, part=2>
+You dare to call the Druids vicious?! Your corruptness has cost both humans and druids lives in your senseless war. Was that your Guild's plan?!
+<npc=21, iamfemale, iamfighter, part=2>
+I deeply regret not slitting your throat as soon as I first saw you! Then, the humans and Druids wouldn't be dying in a senseless war! Anyway, I'm going to correct my mistake now!
+<npc=21, iammale, iammage, part=2>
+You and your Guild are a shame for all mages in the world. Your corruptness has caused a lot of deaths today. Your deaths will soon follow!
+<npc=21, iamfemale, iammage, part=2>
+You talk about viciousness after provoking such a senseless slaughter? It's time that you went away!
+<npc=699, part=3>
+Perfect! Now I have my justification for getting rid of you. By the way, we expected your mutiny and have prepared well.
+#
+=== Igles returns to the necro and tells him he's an asshole 
+#event8
+<npc=699, part=1>
+Here comes sir Igles! I'm waiting for a report describing the defeat of the vicious Druids. If you don't carry such news, you're going to regret that you came here!
+<npc=22, part=2>
+You are viciousness incarnated! The best of the King's soldiers have died today in a senseless battle and you are responsible!
+<npc=699, part=3>
+Perfect! Now I have my justification for getting rid of you. By the way, we expected your mutiny and have prepared well.
+#
+==== Dina returns to the necro and tells him he's an asshole 
+#event9
+<npc=699, part=1>
+Why are you here, maid? I'm waiting for a report describing the defeat of the vicious Druids. If you don't carry such news, you're going to regret that you came here!
+<npc=23, part=2>
+I came to spit in your face! People are dying in a senseless slaughter, and you and your accomplices are to blame!!! 
+<npc=699, part=3>
+Perfect! Now I have my justification for getting rid of you. By the way, we expected your mutiny and have prepared well.
+#
+====Start
+#event10
+<npc=21, part=1>
+I feel bad about this. The Druids are our friends, and I have no intention of fighting against them!
+<npc=22, part=2>
+I, too, remember how we were treated in the Ancient Woods. But there is also my obligation to the King, and my family honor...
+<npc=23, part=3>
+I'm a mere country girl, but I say that there isn't much honor in doing your duty, if you're harming the whole Allod by your actions!
+<npc=22, part=4>
+I can't argue with you, but I can't agree either. Why don't we find out what's going on and then decide what to do?
+#
+====Necro teleports to the Druids and says something 
+#event11
+<npc=699, part=1>
+Druids! I hate you and your kind! There shall be only one Guild of mages on Yases, and that Guild shall be the Necromancer Guild!!!
+#
+====Necro tells you to go to hell
+#event12
+<npc=672, part=1>
+Here are your humble servants, master! We are awaiting your instructions.
+<npc=699, part=2>
+Slaughter these humans! Let them see the might of the magic of death!
+#
+===Necro get's attacked
+#event13
+<npc=699, part=1>
+I had hoped that you would serve me in my task to ruin the Druids, but you proved tricky. In any case, the loyal Knights of the King will see to it without your aid.
+<npc=699, part=2>
+And as for Igles and all his followers, they will soon meet their end!
+<npc=699, part=3>
+Come to me, my loyal servants!
+<npc=672, part=4>
+We are here, master! We have heard the summons!!!
+#

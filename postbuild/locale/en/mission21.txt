@@ -1,0 +1,135 @@
+#
+===Mission objective===
+#briefing 
+The Brigands Camp
+
+You have an opportunity to take the brigands' treasure. Don't blow it!
+#subobjective0
+
+#subobjective1
+Find the outlaws' camp where the treasure is hidden. 
+#subobjective2
+Destroy the outlaws!
+#
+==hero dies====
+#failure2 
+Death walks around gold!
+#
+==Igles (if present) dies====
+#failure3 
+Death walks around gold!
+#
+==Dina dies====
+#failure4 
+Death walks around gold!
+#
+==Peasants attaced====
+#failure5 
+You have slaughtered pieceful peasants! Shame on you!
+#
+==Leader dead====
+#failure6 
+The village elder has perished... 
+#
+=====Knights attaced====
+#failure7
+You have attacked the royal guard! Word of your deeds will spread swiftly to the capital...
+#
+====Start message
+#event1
+<npc=21, iammale, iamfighter, part=1>
+Maybe it was a mistake to trust a former brigand. This whole thing could be a vicious trap! I'd better be careful, I AM still a stranger here.
+<npc=21, iamfemale, iamfighter, part=1>
+If it turns out that this brigand fooled me and there's no treasure, he's going to regret it when I get back to town!
+<npc=21, iammale, iammage, part=1>
+It was probably a mistake to trust a former brigand. Perhaps, this whole thing is just a big trap! Nevertheless, I must attempt to obtain the gold. I'll need it for my journey!
+<npc=21, iamfemale, iammage, part=1>
+What if this treasure story IS just a story? If so, that brigand scum will pay for distracting me from my quest!
+#
+====Talking to knights about danger
+#event2
+<npc=2117, iammale, part=1>
+Halt, traveler! We guard the road, but we can't be responsible for those who wander into the forest!
+<npc=2117, iamfemale, part=1>
+Halt, lady! We guard the road, but we can't be responsible for those who wander into the forest!
+<npc=21, iammale, iamfighter, part=2>
+So, don't be responsible! If I return alive, there will be no problem. If I don't, nobody will be able to accuse you. At least I definitely won't be able to.
+<npc=21, iamfemale, iamfighter, part=2>
+I am not looking for someone to be responsible for me. I can take care of myself.
+<npc=21, iammale, iammage, part=2>
+I will take your warning into account. Nevertheless, I have some business in the forest.
+<npc=21, iamfemale, iammage, part=2>
+Then why do you carry those huge swords if all you can do is "not be responsible?" I can get along without you taking care of me, thank you very much.
+<npc=2117, iammale, part=3>
+Don't be so confident, lad! There are a lot of brigands in this forest. You should thank us for not letting them get out on the open road!
+<npc=2117, iammale, part=4>
+But it's your life, buddy. If you want to go and get yourself killed, go right ahead.
+<npc=2117, iamfemale, part=3>
+Don't be so confident, lass! There are a lot of brigands in this forest. You should thank us for not letting them get out on the open road!
+<npc=2117, iamfemale, part=4>
+But it's your life, lady. If you think you're so smart, you can go wherever you please.
+#
+====Talking to headman about corrupt guards
+#event3
+<npc=21, part=1>
+Good day! Would you be able to tell me what is going on here? Why are there so many guards on the road?
+<npc=2112, part=2>
+Hello, stranger! There are brigands in the nearby forest, and the guards are supposed to be protecting us from them.
+<npc=2112, part=3>
+We doubt that the guards are really trying though. They haven't seized anyone for quite a while now. There's even talk that the brigands have paid-off some of them...
+<npc=2112, part=4>
+I don't know if it's true or not, but we villagers have learned to expect the worst.
+#
+====Corrupt guards harass the hero 
+#event4
+<npc=2117, iammale, part=1>
+So that was this man's business in the forest! He's returned with a sack full of gold!
+<npc=2117, iamfemale, part=1>
+So that was this woman's business in the forest! She's returned with a sack full of gold!
+<npc=2117, iammale, part=2>
+He must be the brigands' accomplice. Kill him!
+<npc=2117, iamfemale, part=2>
+She must be the brigands' accomplice. Kill her!
+#
+====We report the brigands to good guards
+#event5
+<npc=21, iammale, iamfighter, part=1>
+I have good news for you, guards. The brigand camp that you've been looking for is nearby, up in the hills. It's pretty easy to find, actually!
+<npc=21, iamfemale, iamfighter, part=1>
+Hey, guys! You want to take care of the brigands, right? Their camp is nearby, up in the hills. It's pretty easy to get there from here.
+<npc=21, iammale, iammage, part=1>
+I have good news for you, guards. The brigand camp that you have been looking for is nearby, up in the hills. You should not have a difficult time finding it!
+<npc=21, iamfemale, iammage, part=1>
+Hail, valorous guards! You weren't very nice to me the last time we met, but I'll do you a favor anyway. The brigand camp that you've been looking for is nearby, up in the hills beyond the lake.
+<NPC=2117, part=2>
+Thank you for the information! We will immediately check it out, but some of us will stay behind to protect the road.
+#
+====Corrupt guards harass the hero alone
+#event6
+<NPC=2117, iammale, part=1>
+Damn! Thanks a lot, buddy! We had a great deal going with the forest guys, and then you come here and mess it up. Do you now what happens now?
+<NPC=2117, iamfemale, part=1>
+Damn! Thanks a lot, woman! We had a great deal going with the forest guys, and then you come here and mess it up. Do you now what happens now?
+<npc=21, iammale, iamfighter, part=2>
+Jail, probably, or even capital punishment...Would you prefer to take the matter to the judge, or shall we settle this right here?
+<npc=21, iamfemale, iamfighter, part=2>
+Well, you either let me go, or I carve you up like a holiday roast! Which would you prefer?
+<npc=21, iammale, iammage, part=2>
+To the best of my knowledge of the law, it's either a jail or death sentence. Considering that the nearest court is far from here, I'll take my chances with the death sentence. Shall we begin?
+<npc=21, iamfemale, iammage, part=2>
+You'll find out soon enough! I intend to put a stop to your greedy ways once and for all!
+#
+=====
+#event8
+<part=1>
+The village of Sheep's Shallow
+#
+=====
+#event7
+<part=1>
+The Desert Town of Kaarg
+#
+======
+#event9
+<part=1>
+To the Stone Circle

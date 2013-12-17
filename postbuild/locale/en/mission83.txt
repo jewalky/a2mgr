@@ -1,0 +1,45 @@
+#
+========= mission objective =======
+#briefing 
+The Stone Web
+
+You must destroy the Necromancer base in the Stone Web.
+#
+========= Hero dies =========
+#failure2 
+The Stone Web firmly embraces its victim!
+#
+========= Igles dies =========
+#failure3 
+Igles' sword couldn't cut through the Stone Web. 
+#
+========= Dina dies =========
+#failure4
+Dina's death was waiting in the Stone Web. 
+#
+======= Start =========
+#event1
+<npc=23, part=1>
+You can imagine what I feel if the Orcs are uncomfortable here! I've got goosebumps all over!
+<npc=21, iammale, iamfighter, part=2>
+Why don't you stay here then? We are not forcing you to come with us, you know. 
+<npc=21, iamfemale, iamfighter, part=2>
+You should have thought about it before! Well, if your knees are shaking, stay here and don't move. Nobody's kicking your butt to make you come with us! 
+<npc=21, iammale, iammage, part=2>
+Low morale dramatically degrades performance in complicated environments. From my perspective, you should stay here and avoid motion.
+<npc=21, iamfemale, iammage, part=2>
+No wonder, darling, you are still a little baby, especially compared to me. You can stay here if you're scared.
+<npc=22, part=3>
+Now cut that out! Don't be discourteous with Dina if you don't want to have a problem with me too!
+<npc=22, part=4>
+She can decide what to do by herself. Besides, it's way scarier to stay here alone than to go with us.
+#
+======= Finish ======
+#event2
+<npc=21, iamfighter, part=1>
+That's it then. There wasn't anything so scary in that Stone Web. Well, maybe there was, but there certainly isn't anymore!
+<npc=21, iammale, iammage, part=1>
+After a close examination, the perils of the Stone Web turned out to be fairly harmless.  Besides that, our visit has considerably reduced their quantity.
+<npc=21, iamfemale, iammage, part=1>
+Gone are the horrors of the Stone Web! Nothing left to scare poor Dina! Heh heh!
+#

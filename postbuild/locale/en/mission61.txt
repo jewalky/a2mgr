@@ -1,0 +1,74 @@
+#
+=========mission objective=========
+#briefing 
+Village Under Attack
+
+You must help to ward off the attacking Orcs from the village.
+#subobjective0
+
+#subobjective1
+The Goblins are bothering the peasants as much as the Orcs are. Perhaps, they are the responsible party.
+#subobjective2
+The Orcs took an unexpected route. Defeat them!
+#
+==========hero dies==========
+#failure2 
+The desert frontier is dangerous! 
+#
+==========Igles dies =========
+#failure3 
+Igles' uncle had no idea that he was sending his nephew to death. 
+#
+==========Dina dies========
+#failure4
+The foes are ruthless!
+# 
+=========Headman dies=========
+#failure5
+The headman has died...You failed to protect him and the village!
+#
+=========We attack the peasants =========
+#failure6
+You were supposed to protect the peasants, not attack them! 
+# 
+=========We attack the knights =========
+#failure7
+The Knights of Yases have no mercy for traitors! 
+#
+========The knights come to the village and talk to the headman 
+#event1
+<npc=2127, part=1>
+Hey, where is the headman? We came to save you from the orcish assaults! 
+<npc=2112, part=2>
+We are so glad to see you! Life's getting worse here. You know, our village is on the desert frontier....
+<npc=2127, part=3>
+That's where we are going. By the way, there are a few people following us. Don't be afraid of them. They're sort of volunteers.
+#
+=======Start ========
+#event2
+<npc=2127, part=1>
+I don't like it when someone is assigned to my regiment just because they have important relatives. I don't need such reinforcements!
+<npc=22, part=2>
+But my uncle said that you need swordsmen. Was he mistaken?
+<npc=2127, part=3>
+Let him command in town, but out here, I decide whom I need. Do whatever you want, I'm not interested in you, or in your companions.
+<npc=21, iammale, iamfighter, part=4>
+So much for making the effort. There's only one way to protect our honor now. We have to destroy the orcs before the Knights can do it.
+<npc=21, iamfemale, iamfighter, part=4>
+What an outrageously arrogant moron! We can take care of these orcs faster than they can!
+<npc=21, iammale, iammage, part=4>
+An uncomfortable situation indeed...Our only chance to avoid further humiliation is to take care of the orcs faster than these Knights.
+<npc=21, iamfemale, iammage, part=4>
+Oh, this guy thinks he tough, huh? I wonder what he'll say when we clear the area better and faster than those illustrious Knights could ever hope? 
+#
+====Headman talks upon our arrival
+#event3
+<npc=2112, part=1>
+The gallant Knights headed straight to the desert so fast that they didn't even asked where the orcs are coming from.
+<npc=2112, part=2>
+I don't know why they headed that way! The orcs never come from the sands, they always come from the forest to the North of our village.
+#
+====Headman talks upon victory.
+#event4
+<npc=2112, part=1>
+My goodness! So sir Knight was mistaken! It was the volunteers who saved us. Thank you, from the bottom of our hearts!

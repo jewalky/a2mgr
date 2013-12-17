@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document>
+	<Protection
+		InputFileName=".\a2mgr.dll"
+		Options="200"
+		>
+		<Messages
+		/>
+		<Folders
+		/>
+		<Procedures>
+			<Procedure
+				MapAddress="NETPROTO_createAuthorizationPacket(void)"
+			/>
+			<Procedure
+				MapAddress="NETPROTO_sendAuthorizationPacket(void)"
+			/>
+			<Procedure
+				MapAddress="NET_cryptPacket(unsigned char *,int)"
+			/>
+			<Procedure
+				MapAddress="crcmain(char*)"
+				IncludedInCompilation="false"
+			/>
+			<Procedure
+				MapAddress="NETPROTO_loginToHat"
+			/>
+			<Procedure
+				MapAddress="SOCK_Destroy(unsigned int)"
+				CompilationType="1"
+			/>
+			<Procedure
+				MapAddress="SOCK_ReceivePacket(unsigned int,class Archive &amp;,unsigned long)"
+				CompilationType="1"
+			/>
+			<Procedure
+				MapAddress="SOCK_SendPacket(unsigned int,class Archive &amp;,unsigned long)"
+				CompilationType="1"
+			/>
+		</Procedures>
+	</Protection>
+	<DLLBox
+	/>
+	<Script
+	/>
+</Document>

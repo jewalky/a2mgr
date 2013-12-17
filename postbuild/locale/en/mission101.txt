@@ -1,0 +1,120 @@
+#
+=====mission objective ======
+#briefing 
+Forest Madness
+
+You must help the Druids of the Western Territory to gain control over their animals.
+#subobjective0
+
+#subobjective1
+You must find out the reason why the animals went berserk.
+#subobjective2
+The Necromancers must die!
+#subobjective3
+You must heal the dying Druid.
+#
+=====Hero dies =======
+#failure2 
+There will be no grave for your hero now. The rabid beasts didn't leave anything to bury!
+#
+=====Igles dies ======
+#failure3 
+Igles was ill-prepared for dying so far away from home...
+#
+=====Dina dies ======
+#failure4
+Dina had always trusted the Ancient Woods. But today she found out it's not as tranquil as she thought it was...
+# 
+=====Chief Druid dies ====
+#failure5
+The Chief Druid of the Western Territory failed to defend himself and is dead!
+# 
+======We attack the druids ====
+#failure6
+The Druids are our friends. Fighting them destroyed any chance of getting out of the Woods alive!
+#
+======Start
+#event1
+<npc=23, part=1>
+Everything looks so tranquil and peaceful...I can't believe that something terrible is happening here!
+<npc=22, part=2>
+They wouldn't call us otherwise. We shall have to be doubly vigilant, my friends! 
+#
+======Hero talks to the first druid at the bridge 
+#event2
+<NPC=689, part=1>
+Are you the people that Arafel-Faye was supposed to send to relieve me? 
+<npc=21, iammale, iamfighter, part=2>
+Why else would we wander into the middle of nowhere! What happened here? 
+<npc=21, iamfemale, iamfighter, part=2>
+Yes we are. So what's the problem here?
+<npc=21, iammale, iammage, part=2>
+You guessed correct, lady. We're the ones. Tell us what happened.
+<npc=21, iamfemale, iammage, part=2>
+Nah, we came all the way out here for the fun of it. Don't waste my time asking stupid questions! What happened here??
+<NPC=689, part=3>
+It's the animals...We always lived in peace with them up to now, but recently they all started going berserk! Now they're attacking everybody they see, even those who fed and cared for them. I don't know what to do!
+<NPC=689, part=4>
+The only explanation I could come up with is that something has happened to the water in the river to cause the animals to go crazy. I tried to go up to the riverhead spring, but failed.
+<npc=21, iammale, iamfighter, part=5>
+Okay, take it easy. We'll go and take a look at the spring for you...I hope it's not very far away.
+<npc=21, iamfemale, iamfighter, part=5>
+All right, all right. You want us to do your work for you. Fine, we'll do it. We'll journey to the spring for you and find out what's happening.
+<npc=21, iammale, iammage, part=5>
+Fine, I shall attempt to accomplish this task for you. I hope that the spring is relatively nearby. I detest long walks.
+<npc=21, iamfemale, iammage, part=5>
+Take it easy already. I'll go up the river for you right now. Your beasts should be as meek as sheep by the time I return.
+#
+======Igles talks to the first Druid by the bridge 
+#event3
+<NPC=689, part=1>
+Are you the people that Arafel-Faye was supposed to send to relieve me?
+<npc=22, part=2>
+Yes, we are. She honored us with this charge. What's seems to be your problem?
+<NPC=689, part=3>
+It's the animals...We always lived in peace with them up to now, but recently they all started going berserk! Now they're attacking everybody they see, even those who fed and cared for them. I don't know what to do!
+<NPC=689, part=4>
+The only explanation I could come up with is that something has happened to the water in the river to cause the animals to go crazy. I tried to go up to the riverhead spring, but failed.
+<npc=22, part=5>
+I understand. I'll try and find out what's wrong with the spring for you. I'll do everything I can to help your animals!
+#
+======Dina talks to the first Druid by the bridge 
+#event4
+<NPC=689, part=1>
+Are you the people that Arafel-Faye was supposed to send to relieve me?
+<npc=22, part=2>
+Yes, she asked us to come here. What is your problem?
+<NPC=689, part=3>
+It's the animals...We always lived in peace with them up to now, but recently they all started going berserk! Now they're attacking everybody they see, even those who fed and cared for them. I don't know what to do!
+<NPC=689, part=4>
+The only explanation I could come up with is that something has happened to the water in the river to cause the animals to go crazy. I tried to go up to the riverhead spring, but failed.
+<npc=22, part=5>
+Oh, so that's what's going on! We'll try to find out what happened and fix the problem if we can, so don't worry.
+#
+======Hero talks to the chief druid by the spring 
+#event5
+<npc=21, iammale, iamfighter, part=1>
+That was quite a scene by the fountain! Even here, the Necromancers managed to leave their foul stench behind them.
+<npc=21, iamfemale, iamfighter, part=1>
+That was quite a riverside walk! It wasn't as peaceful as I would've liked. The Necromancers managed to make even this peaceful place a warzone!
+<npc=21, iammale, iammage, part=1>
+What a disgusting sight! The Necromancers managed to poison even THIS spring! And in the midst of the Ancient Woods, no less!
+<npc=21, iamfemale, iammage, part=1>
+Those dirty Necromancers! It's good that I've relieved the forest spring of their repulsive presence!
+<NPC=690, part=2>
+The venom they used to contaminate the waters not only poisoned the animals, but made them rabid as well. But now it's over, and I would like to thank you on behalf of the entire Western Territory!
+#
+====== Igles talks to the chief druid by the spring 
+#event6
+<npc=22, part=1>
+Those vile Necromancers seem to poison everything they touch!
+<NPC=690, part=2>
+The venom they used to contaminate the waters not only poisoned the animals, but made them rabid as well. But now it's over, and I would like to thank you on behalf of the entire Western Territory!
+#
+====== Dina talks to the chief druid by the spring 
+#event7
+<npc=23, part=1>
+Those vile Necromancers seem to poison everything they touch!
+<NPC=690, part=2>
+The venom they used to contaminate the waters not only poisoned the animals, but made them rabid as well. But now it's over, and I would like to thank you on behalf of the entire Western Territory!
+#

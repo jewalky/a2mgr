@@ -1,0 +1,26 @@
+unarmed
+swordsman
+swordsman
+swordsman
+swordsman
+swordsman2h
+clubman
+clubman
+clubman
+clubman
+axeman
+axeman2h
+mage_st
+mage_st
+pikeman
+pikeman
+pikeman
+axeman
+axeman2h
+archer
+archer
+xbowman
+
+Sonic Beam
+Flame Thrower
+swordsman
