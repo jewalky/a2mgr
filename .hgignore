@@ -1,6 +1,0 @@
-.hgignore
-Release
-postbuild/release
-^.*\.user$
-postbuild/log.txt
-postbuild/a2mgr.map
