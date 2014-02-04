@@ -102,12 +102,12 @@ Hard
 Horror!
 Retrieving server list from web page or Hat
 Enter URL:
-Cooperative game
+Hardcore (PvP)
 DeathMatch
 Server list from
 Server name            map            size     level    players
 Refresh
-Capture the Flag (team play)
+Arena
 Login
 Password
 Enter server list page URL or Hat URL
@@ -211,7 +211,7 @@ Game scores
 Game over (frag limit hit)
 Game over (time limit hit)
 Game over (the map was changed)
-Arena
+Softcore (PvE)
 We have a planned maintenance outage. The functionality of the server will be restored soon.
 Initiating download...
 Failed downloading update.

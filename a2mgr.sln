@@ -6,13 +6,10 @@ EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Release|Win32 = Release|Win32
-		ver10|Win32 = ver10|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{404E5A7B-4EB4-4305-8705-CBF5BAADC889}.Release|Win32.ActiveCfg = Release|Win32
 		{404E5A7B-4EB4-4305-8705-CBF5BAADC889}.Release|Win32.Build.0 = Release|Win32
-		{404E5A7B-4EB4-4305-8705-CBF5BAADC889}.ver10|Win32.ActiveCfg = Release|Win32
-		{404E5A7B-4EB4-4305-8705-CBF5BAADC889}.ver10|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

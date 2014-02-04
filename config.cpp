@@ -43,6 +43,8 @@ unsigned char sha1_world_res[20];
 unsigned char sha1_graphics_res[20];
 unsigned char sha1_uuid[20];
 
+bool z_softcore = false;
+
 using namespace std;
 
 void ParseConfig2x(ifstream& f_temp)

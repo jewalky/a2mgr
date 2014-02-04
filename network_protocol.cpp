@@ -57,6 +57,22 @@ void _stdcall crcmain(char* data)
 	*(unsigned long*)(data + 0x2C) = crc.CalcCRC((LPVOID)(data + 0x18), 20) ^ net_key;
 	for(int i = 0; i < 5; i++)
 		*(unsigned long*)(data + 0x18 + i * 4) ^= net_key;
+
+	unsigned long uoth = *(unsigned long*)(data + 0x40);
+	unsigned long gamemode = (uoth & 0x00FF0000) >> 16;
+
+	log_format("gamemode = %d\n", gamemode);
+
+	if(gamemode == 2)
+	{
+		unsigned long mainWnd = zxmgr::AfxGetMainWnd();
+		*(unsigned long*)(mainWnd + 0x3C8) = 0; // reset gamemode to 0
+		z_softcore = 1;
+	}
+	else
+	{
+		z_softcore = 0;
+	}
 }
 
 int NETPROTO_sendAuthorizationPacket() 
@@ -160,9 +176,6 @@ int NETPROTO_createAuthorizationPacket()
 		//push eax
 		//call crcmain
 		//crc
-		lea		eax, [edx+0x0A]
-		push	eax
-		call	crcmain
 		lea	ecx, [ebp+0x08]
 		mov	edx, 0x402970
 		call	edx
@@ -174,6 +187,10 @@ int NETPROTO_createAuthorizationPacket()
 		or	eax, ecx /* версия 11 */
 		mov	edx, [ebp-0x010]
 		mov	[edx+0x4A], eax
+		mov	edx, [ebp-0x010]
+		lea		eax, [edx+0x0A]
+		push	eax
+		call	crcmain
 		mov	eax, [ebp-0x010]
 		mov	word ptr [eax+7], 0
 		mov	ecx, [ebp-0x010]

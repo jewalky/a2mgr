@@ -101,6 +101,9 @@ NETPROTO_enlargeBuffer				@100 NONAME
 NETPROTO_enlargeBuffer2				@101 NONAME
 ITEMPNG_loadPng						@102 NONAME
 ITEMPNG_loadPngChar					@103 NONAME
+GUI_softcoreSwitch					@104 NONAME
+GUI_softcoreResetSwitch				@105 NONAME
+GUI_softcoreSaveSwitch				@106 NONAME
 
 DBG_load256		@300
 DBG_disp256		@301

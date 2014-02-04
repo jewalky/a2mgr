@@ -6,21 +6,21 @@
       <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
     <Filter Include="Source Files\lib">
-      <UniqueIdentifier>{c38b4438-3f57-4d72-b29d-73644617b18f}</UniqueIdentifier>
+      <UniqueIdentifier>{949608e2-ddd6-4c6e-af36-e8d403dc5caf}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
     <Filter Include="Header Files\lib">
-      <UniqueIdentifier>{b4995585-0186-4bd2-b237-78cc8136dc14}</UniqueIdentifier>
+      <UniqueIdentifier>{e47e9db7-8b62-4a11-b8bc-340410268918}</UniqueIdentifier>
     </Filter>
     <Filter Include="Resource Files">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx</Extensions>
     </Filter>
     <Filter Include="Patches">
-      <UniqueIdentifier>{70d4a7fd-ac8b-49c2-a25a-615c4423c4d8}</UniqueIdentifier>
+      <UniqueIdentifier>{64313a82-66b9-4979-80d6-ff03ff05219d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

@@ -4,6 +4,8 @@
 #define URL_ATV "atvision.net"
 #define URL_TESTING "hat.allods2.eu:18000"
 
+char aLogin[] = "test";
+
 char aHat[] = URL_EU;
 
 void __declspec(naked) HATENT_url_text()
@@ -17,6 +19,17 @@ void __declspec(naked) HATENT_url_text()
 		mov		edx, 0x005AB9E0
 		call	edx
 		mov		edx, 0x0043F755
+		jmp		edx
+
+		// the following piece of code also replaces login and possibly password (if done to +0x10 addr)
+		mov		eax, offset aLogin
+		push	eax
+		mov		ecx, [ebp-0x124]
+		add		ecx, 0x0C
+		mov		edx, 0x005AB9E0
+		call	edx
+
+		mov		edx, 0x0043F7ED
 		jmp		edx
 	}
 }

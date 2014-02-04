@@ -14,3 +14,6 @@
 
 # VC++ files
 *.user
+
+Release
+postbuild\release

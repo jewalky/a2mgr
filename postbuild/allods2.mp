@@ -100,6 +100,9 @@
 0 101 512314 // : NETPROTO_enlargeBuffer2
 0 102 46E014 // : ITEMPNG_loadPng
 0 103 46E1B0 // : ITEMPNG_loadPngChar
+0 104 44C966 // : GUI_softcoreSwitch
+0 105 44CBC7 // : GUI_softcoreResetSwitch
+0 106 43FA41 // : GUI_softcoreSaveSwitch
 
 //0 300 426DA9
 //0 301 427014
