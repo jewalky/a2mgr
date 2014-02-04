@@ -13,6 +13,8 @@ extern unsigned long g_scrollintv;
 extern bool r_fps;
 extern bool r_time;
 
+extern bool show_stopwatch;
+
 extern bool r_grid;
 
 extern bool g_altchat;

@@ -24,6 +24,8 @@ unsigned long z_resolution = 0;
 bool z_russian = true;
 bool z_lang_override = false;
 
+bool show_stopwatch = false;
+
 unsigned long net_key = 0;
 unsigned long net_maxplayers = 16;
 
@@ -113,6 +115,11 @@ void ParseConfig2x(ifstream& f_temp)
 		{
 			if(cmd.size() == 2) r_time = StrToBoolean(cmd[1]);
 			else r_time = true;
+		}
+		else if(cmd[0] == "show_stopwatch")
+		{
+			if(cmd.size() == 2) show_stopwatch = StrToBoolean(cmd[1]);
+			else show_stopwatch = true;
 		}
 		else if(cmd[0] == "g_altchat")
 		{

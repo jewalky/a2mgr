@@ -10,14 +10,22 @@ using namespace std;
 #include "Image.h"
 bool c_Visible = false;
 
+time_t start_time = time(NULL);
+
 bool _stdcall ConsoleProc(unsigned char ch, int unk)
 {
-	//log_format("ch = %02X (%c); unk = %08X (%d, %u)\n", ch, ch, unk, unk, unk);
+	// log_format("ch = %02X (%c); unk = %08X (%d, %u)\n", ch, ch, unk, unk, unk);
+
 	if(ch == 0xC0 && unk == 0xB8 &&
 		(GetAsyncKeyState(VK_SHIFT) & 0x8000)) // Shift+~
 	{
 		c_Visible = !c_Visible;
 		return true;
+	}
+	
+	if(ch == 0x10 && unk == 0x08 && (GetAsyncKeyState(VK_RSHIFT) & 0x8000)) // Right Shift
+	{
+		start_time = time(NULL);
 	}
 
 	char ch2 = MapVirtualKey(ch, 2);
@@ -103,6 +111,16 @@ void _stdcall FpsImpl(unsigned long cptr, RECT* rcSrc2)
 		string time_string = Format("%02u:%02u:%02u", tm->tm_hour, tm->tm_min, tm->tm_sec);
 
 		Font::DrawText(FONT1, rcSrc2->right - 136, top, "time:", FONT_ALIGN_LEFT, FONT_COLOR_GRAY, 1);
+		Font::DrawText(FONT1, rcSrc2->right - 86, top, time_string.c_str(), FONT_ALIGN_LEFT, FONT_COLOR_WHITE, 1);
+		top += 16;
+	}
+	if(show_stopwatch)
+	{
+		time_t time_diff = (time_t)difftime(time(NULL), start_time);
+		struct tm *td = gmtime(&time_diff);
+
+		string time_string = Format("%02u:%02u:%02u", td->tm_hour, td->tm_min, td->tm_sec);
+
 		Font::DrawText(FONT1, rcSrc2->right - 86, top, time_string.c_str(), FONT_ALIGN_LEFT, FONT_COLOR_WHITE, 1);
 	}
 }
