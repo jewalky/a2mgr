@@ -61,8 +61,6 @@ void _stdcall crcmain(char* data)
 	unsigned long uoth = *(unsigned long*)(data + 0x40);
 	unsigned long gamemode = (uoth & 0x00FF0000) >> 16;
 
-	log_format("gamemode = %d\n", gamemode);
-
 	if(gamemode == 2)
 	{
 		unsigned long mainWnd = zxmgr::AfxGetMainWnd();

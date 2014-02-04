@@ -12,6 +12,10 @@ extern unsigned long g_scrollintv;
 
 extern bool r_fps;
 extern bool r_time;
+extern bool r_stopwatch;
+
+extern bool show_stopwatch;
+extern unsigned long show_stopwatch_frozen;
 
 extern bool r_grid;
 

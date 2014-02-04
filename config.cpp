@@ -9,6 +9,7 @@ unsigned long g_scrollintv = 25;
 
 bool r_fps = false;
 bool r_time = false;
+bool r_stopwatch = false;
 
 bool r_grid = false;
 
@@ -23,6 +24,9 @@ unsigned long z_resolution = 0;
 
 bool z_russian = true;
 bool z_lang_override = false;
+
+bool show_stopwatch = false;
+unsigned long show_stopwatch_frozen = 0;
 
 unsigned long net_key = 0;
 unsigned long net_maxplayers = 16;
@@ -115,6 +119,11 @@ void ParseConfig2x(ifstream& f_temp)
 		{
 			if(cmd.size() == 2) r_time = StrToBoolean(cmd[1]);
 			else r_time = true;
+		}
+		else if(cmd[0] == "r_stopwatch")
+		{
+			if(cmd.size() == 2) r_stopwatch = StrToBoolean(cmd[1]);
+			else r_stopwatch = true;
 		}
 		else if(cmd[0] == "g_altchat")
 		{

@@ -1,6 +1,6 @@
 @echo off
 
-set VER=21
+set VER=22
 
 call log --------------------------------------
 call log copying temporary files...
@@ -36,7 +36,7 @@ call log compiling NSIS installer..
 
 rem TODO: make single nsis script
 
-call "c:\program files\NSIS\makensis.exe" /DVER=%VER% /V2 "%CD%\a2patch.nsi"
+call "c:\program files (x86)\NSIS\makensis.exe" /DVER=%VER% /V2 "%CD%\a2patch.nsi"
 if errorlevel 1 goto fail
 
 cd nsis
@@ -46,7 +46,7 @@ cd ..
 copy /Y release\allods2_en.cfg nsis\allods2.cfg >nul
 copy /Y release\patch%VER%_en.txt nsis\patch%VER%.txt >nul
 
-call "c:\program files\NSIS\makensis.exe" /DVER=%VER% /V2 "%CD%\a2patch_en.nsi"
+call "c:\program files (x86)\NSIS\makensis.exe" /DVER=%VER% /V2 "%CD%\a2patch_en.nsi"
 if errorlevel 1 goto fail
 
 cd nsis
