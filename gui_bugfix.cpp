@@ -2,6 +2,7 @@
 #include <string>
 #include "zxmgr.h"
 #include "utils.h"
+#include "config.h"
 
 using namespace zxmgr;
 using namespace std;
@@ -110,5 +111,38 @@ ggme_ret1:
 		pop		ebp
 		retn	0x0004
 		
+	}
+}
+
+void __declspec(naked) GUI_softcoreEnter()
+{
+	__asm
+	{ // 44DD0F
+		mov		ecx, [ebp-0x18]
+		add		ecx, 0x468
+
+		mov		edx, [ebp-0x10]
+		add		edx, 1
+
+		cmp		[z_softcore], 0
+		jnz		test_upper
+
+		cmp		[ecx+0x114], edx
+		jg		test_failed
+
+test_upper:
+		cmp		[ecx+0x118], edx
+		jl		test_failed
+
+		cmp		[ebp-0x14], 0x10
+		jge		test_failed
+
+		mov		[ebp-0x40], 1
+		mov		edx, 0x0044DD55
+		jmp		edx
+
+test_failed:
+		mov		edx, 0x0044DD4E
+		jmp		edx
 	}
 }

@@ -6,6 +6,11 @@ Version from May 26, 2012
 
 ATTENTION! This patch contains all previous updates.
 
+Update 24 (version 2.2)
+-----------------------
+1. Added timer. For using it you need to set r_stopwatch to true in the configuration file and then use right Shift key to activate or reset the timer.
+2. Added new game mode called Softcore. In this game mode dead players never drop their equipment and also gain experience 10 times slower.
+
 Update 23 (version 2.1.1)
 -------------------------
 1. Fixed bug that didn't allow players to log into accounts with big characters and also affected server list updating.
