@@ -1,5 +1,5 @@
 [ProjectInfo]
-Count=14
+Count=13
 Options=216
 AddressSort=0
 VMCodeSectionName=.vmp
@@ -57,7 +57,3 @@ ExtAddressCount11=0
 NeedCompile12=1
 MapAddress12=DllMain_Init(struct HINSTANCE__ *,unsigned long,void *)
 ExtAddressCount12=0
-
-NeedCompile13=1
-MapAddress13=TestGraphics(char const *)
-ExtAddressCount13=0

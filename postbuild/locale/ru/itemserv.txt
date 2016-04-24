@@ -460,6 +460,7 @@ Elven Dragon Leather Amulet
 Very Rare Dragon Leather Helm
 Elven Dragon Leather Low Hat
 Very Rare Dragon Leather Mail
+Very Rare Dragon Leather Scale Mail
 Elven Dragon Leather Dress
 Elven Dragon Leather Cloak
 Very Rare Dragon Leather Bracers
@@ -540,21 +541,31 @@ Very Rare Crystal War Hammer
 Very Rare Crystal Pike
 Very Rare Crystal Axe
 Very Rare Crystal Two Handed Axe
+Very Rare Crystal Crossbow
 Elven Crystal Staff
 Very Rare Crystal Large Shield
 Very Rare Crystal Ring
 Elven Crystal Ring
 Very Rare Crystal Amulet
 Elven Crystal Amulet
+Very Rare Crystal Chain Helm
+Very Rare Crystal Full Helm
 Very Rare Crystal Plate Helm
 Elven Crystal Hat
+Very Rare Crystal Scale Mail
 Elven Crystal Dress
+Rare Crystal Cuirass
+Rare Crystal Plate Cuirass
 Very Rare Crystal Cuirass
 Very Rare Crystal Plate Cuirass
 Elven Crystal Cloak
+Rare Crystal Plate Bracers
+Very Rare Crystal Bracers
 Very Rare Crystal Plate Bracers
+Rare Crystal Scale Gauntlets
 Very Rare Crystal Scale Gauntlets
 Elven Crystal Gloves
+Rare Crystal Plate Boots
 Very Rare Crystal Plate Boots
 Elven Crystal Shoes
 Common None Hat

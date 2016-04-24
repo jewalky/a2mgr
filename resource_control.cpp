@@ -1,20 +1,29 @@
+#include <windows.h>
+#include <stdint.h>
 #include "utils.h"
 
-char aPatchC[] = "patch\\";
+char aPatchC[] = "data\\patch\\";
+char aDataC[] = "data\\";
 
 char aLocale_res[] = "locale.res";
 
-bool _stdcall TestGraphics(const char* file)
+bool _stdcall TestMap(const char* file) // if this returns true, the file's path is unchanged for loading
 {
-	return false;
 	std::string filename = TruncateSlashes(FixSlashes(ToLower(file)));
-	if(((filename.find("graphics/") == 0) ||
+	if ((filename.find("graphics/") == 0) ||
+		(filename.find("locale/") == 0) ||
 		(filename.find("main/") == 0) ||
+		(filename.find("movies/") == 0) ||
+		(filename.find("music/") == 0) ||
 		(filename.find("patch/") == 0) ||
-		(filename.find("world/") == 0) ||
-		(filename.find("locale/") == 0)) && FileExists(filename)) return true;
+		(filename.find("scenario/") == 0) ||
+		(filename.find("sfx/") == 0) ||
+		(filename.find("speech/") == 0) ||
+		(filename.find("video/") == 0) ||
+		(filename.find("world/") == 0))
+			return false;
 
-	return false;
+	return true;
 }
 
 int __declspec(naked) RES_loadFile(int x)
@@ -45,10 +54,10 @@ sub_4EB99D:
 		mov		[ebp-4], ecx
 
 		push	[ebp+8]
-		call	TestGraphics
+		call	TestMap
 		and		eax, 0xFF
 		test	eax, eax
-		jnz		loc_retzero
+		jnz		regular_load
 
 		push	0x200
 		mov		edx, 0x0058CA80
@@ -57,7 +66,7 @@ sub_4EB99D:
 		mov		[ebp-8], eax
 
 		push	offset aPatchC
-		push	eax
+		push	[ebp-8]
 		mov		edx, 0x0058CDF0
 		call	edx	// strcpy
 		add		esp, 8
@@ -75,21 +84,43 @@ sub_4EB99D:
 		test	eax, eax
 		jnz		en
 
+		// concat with data
+
+		push	offset aDataC
+		push	[ebp-8]
+		mov		edx, 0x0058CDF0
+		call	edx	// strcpy
+		add		esp, 8
+
+		push	dword ptr [ebp+8]
+		push	dword ptr [ebp-8]
+		mov		edx, 0x0058CE00 // strcat
+		call	edx
+		add		esp, 8
+
+		push	dword ptr [ebp-8]
+		mov		ecx, [ebp-4]
+		mov		edx, 0x004EB99D
+		call	edx
+		jmp		en
+
+regular_load:
 		push	dword ptr [ebp+8]
 		mov		ecx, [ebp-4]
 		mov		edx, 0x004EB99D
 		call	edx
+		jmp		en_nofree
 
 en:
 
 		mov		[ebp-4], eax
-
 		push	dword ptr [ebp-8]
 		mov		edx, 0x0058CB50
 		call	edx /// free
 		add		esp, 4
-
 		mov		eax, [ebp-4]
+
+en_nofree:
 
 		mov		esp, ebp
 		pop		ebp
@@ -113,6 +144,19 @@ void __declspec(naked) RES_loadException()
 	}
 }
 
+void _stdcall CheckMusic()
+{
+	// check if data/music directory exists
+	// if not, disable music
+	uint32_t dwAttrib = GetFileAttributes("data\\music");
+
+	bool exists = (dwAttrib != INVALID_FILE_ATTRIBUTES && 
+				  (dwAttrib & FILE_ATTRIBUTE_DIRECTORY));
+
+	if (!exists)
+		*(uint32_t*)(0x0062C870) = 0; // disable music
+}
+
 void __declspec(naked) RES_loadDirectories()
 { // 004867E6
 	__asm
@@ -129,7 +173,22 @@ void __declspec(naked) RES_loadDirectories()
 		call	edx
 		add		esp, 4
 
+		call	CheckMusic
+
 		mov		edx, 0x0048681A
 		jmp		edx
+	}
+}
+
+void __declspec(naked) RES_noLoad()
+{
+	__asm
+	{ // 4EB741
+		push	ebp
+		mov		ebp, esp
+		// do nothing
+		mov		esp, ebp
+		pop		ebp
+		retn
 	}
 }

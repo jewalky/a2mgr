@@ -201,12 +201,13 @@ std::string BinaryStream::ReadString()
 
     bool nowrite = false;
     std::string ret;
-    for(uint16_t i = 0; i < size; i++)
+    for(uint16_t i = 0; i < size+1; i++)
     {
         if(myBuffer[myGetPos] == 0) nowrite = true;
-        else if(!nowrite) ret += myBuffer[myGetPos];
+        if(!nowrite) ret += myBuffer[myGetPos];
         myGetPos++;
     }
+
     return ret;
 }
 

@@ -61,7 +61,13 @@ void _stdcall crcmain(char* data)
 	unsigned long uoth = *(unsigned long*)(data + 0x40);
 	unsigned long gamemode = (uoth & 0x00FF0000) >> 16;
 
-	if(gamemode == 2)
+	if(gamemode == 4)
+	{
+		unsigned long mainWnd = zxmgr::AfxGetMainWnd();
+		*(unsigned long*)(mainWnd + 0x3C8) = 0; // reset gamemode to 0
+		z_softcore = 2;
+	}
+	else if(gamemode == 2)
 	{
 		unsigned long mainWnd = zxmgr::AfxGetMainWnd();
 		*(unsigned long*)(mainWnd + 0x3C8) = 0; // reset gamemode to 0
@@ -271,17 +277,27 @@ int PASCAL recv_(SOCKET s, char* buf, int len, int flags)
 		pack.Seek(0);
 
 		delete[] rd;
-
+		
 		if(!Cl_ProcessServerPacket(pack))
 			return -1;
 
-		memset(buf, 0, len);
-		return recv_(s, buf, len, flags);
+		// ok now make it look like we just received a 0x64 packet
+		*(uint32_t*)(buf) = 5;
+		*(uint32_t*)(buf+4) = 0x01000000;
+		*(uint8_t*)(buf+8) = 0x64 ^ key_20[0];
+		*(uint32_t*)(buf+9) = 1 ^ *(uint32_t*)(key_20+1);
+		return 8+5;
 	}
 	else
 	{
 		//log_format("received allods packet (size = %u, flags = %08X).\n", pkt_size, pkt_flags);
 		r = recv(s, buf+8, pkt_size, 0);
+		/*
+		for (int i = 0; i < pkt_size; i++)
+		{
+			log_format2("%02X ", (uint8_t)buf[8+i] ^ key_20[i%0x50]);
+		}
+		log_format("\n\n");*/
 		if(r != pkt_size)
 		{
 			recv_lastCustom = false;

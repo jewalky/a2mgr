@@ -84,6 +84,28 @@ namespace zxmgr
 
 	namespace Font
 	{
+		unsigned long __declspec(naked) GetColor(unsigned long t)
+		{
+			__asm
+			{
+				/*push    0
+				mov     ecx, dword_62B088
+				call    sub_420440
+				*/
+				push	ebp
+				mov		ebp, esp
+				push	0
+				mov		ecx, [ebp+0x08]
+				//mov		ecx, 0x0062B088
+				mov		ecx, [ecx]
+				mov		edx, 0x00420440
+				call	edx
+				mov		esp, ebp
+				pop		ebp
+				retn
+			}
+		}
+
 		void DrawText(unsigned long cptr, int x, int y, const char* string, unsigned long align, unsigned long color, unsigned long shadowpos)
 		{
 			__asm

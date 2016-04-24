@@ -52,7 +52,7 @@ extern unsigned char sha1_graphics_res[20];
 extern unsigned char sha1_uuid[20];
 extern std::string current_directory;
 
-extern bool z_softcore;
+extern int z_softcore;
 
 #define PROTO_VER 20
 

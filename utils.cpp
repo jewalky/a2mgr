@@ -31,6 +31,7 @@ void _stdcall log_format(char *s, ...)
 	if(_LOG_FILE.is_open())
 	{
 		_LOG_FILE << l2;
+		_LOG_FILE.flush();
 		_LOG_FILE.close();
 	}
 }
@@ -48,6 +49,7 @@ void _stdcall log_format2(char *s, ...)
 	if(_LOG_FILE.is_open())
 	{
 		_LOG_FILE << line;
+		_LOG_FILE.flush();
 		_LOG_FILE.close();
 	}
 }
@@ -57,59 +59,34 @@ vector<string> ParseCommandLine(string raw)
 	for(size_t i = 0; i < raw.length(); i++)
 		if(raw[i] == '\t') raw[i] = ' ';
 
-    unsigned long posf = raw.find_first_of(' ');
+	vector<string> parameters;
+	parameters.push_back("");
+	bool encaps = false;
+    for (size_t i = 0; i < raw.size(); i++)
+	{
+		if (!encaps && !parameters.back().length() && IsWhitespace(raw[i]))
+			continue;
+		else if (raw[i] == '\\' && i+1 < raw.size())
+		{
+			parameters.back() += raw[i+1];
+			i++;
+		}
+		else if (raw[i] == '"')
+		{
+			encaps = !encaps;
+		}
+		else if (!encaps && IsWhitespace(raw[i]))
+		{
+			parameters.push_back("");
+		}
+		else
+		{
+			parameters.back() += raw[i];
+		}
+	}
 
-    string command = Trim(raw);
-
-    string name = ToLower(command);
-    vector<string> parameters;
-	parameters.resize(0);
-
-    if(!command.length()) return parameters;
-
-    if(posf != string::npos)
-    {
-        name.erase(posf);
-		parameters.push_back(name);
-        string tmpp = command;
-        string parm = "";
-        bool in_encaps = false;
-		bool prev_whitespace = true;
-        tmpp.erase(0, posf+1);
-        for(int i = 0; i < tmpp.length(); i++)
-        {
-			prev_whitespace = IsWhitespace(tmpp[i]);
-            if(tmpp[i] == '\\' && i+1 < tmpp.length() && tmpp[i+1] == '"')
-            {
-                parm += '"';
-                i++;
-            }
-            else if(tmpp[i] == '\\' && i+1 < tmpp.length() && IsWhitespace(tmpp[i+1]))
-            {
-                parm += tmpp[i+1];
-                i++;
-            }
-            else if(tmpp[i] == '"')
-            {
-                in_encaps = !in_encaps;
-            }
-            else if((IsWhitespace(tmpp[i]) && in_encaps) || (!IsWhitespace(tmpp[i]) && !in_encaps))
-            {
-                parm += tmpp[i];
-            }
-			
-			if(IsWhitespace(tmpp[i]) || i == tmpp.length()-1)
-			{
-				if(!prev_whitespace)
-				{
-					parameters.push_back(parm);
-					parm = "";
-					in_encaps = false;
-					prev_whitespace = true;
-				}
-			}
-        }
-    }
+	if (!parameters.back().length())
+		parameters.clear();
 
 	return parameters;
 }

@@ -1,6 +1,6 @@
 @echo off
 
-set VER=21
+set VER=25
 
 if not exist final mkdir final >nul
 if not exist nsis mkdir nsis >nul
@@ -62,10 +62,11 @@ call log adding a2mgr...
 add_dll allods2.exe a2mgr.dll allods2.mp >nul
 if errorlevel 1 goto add_dll_fail
 
-call log vmprotecting dll...
-vmprotect_con a2mgr.dll
+rem call log vmprotecting dll...
+rem copy /Y a2mgr.dll a2mgr.dll2
+rem vmprotect_con a2mgr.dll
 rem copy /Y a2mgr.dll a2mgr.vmp.dll >nul
-if errorlevel 1 goto vmp_fail
+rem if errorlevel 1 goto vmp_fail
 
 move /Y allods2.exe release >nul
 move /Y patch.res release >nul
@@ -74,7 +75,7 @@ move /Y world.res release >nul
 rem move /Y worlds.res release >nul
 copy /Y whatsnew.txt release\patch%VER%.txt >nul
 copy /Y whatsnew_en.txt release\patch%VER%_en.txt >nul
-move /Y a2mgr.vmp.dll release\a2mgr.dll >nul
+move /Y a2mgr.dll release\a2mgr.dll >nul
 copy /Y add\helper32.dll release >nul
 copy /Y locale.res release >nul
 copy /Y allods2.cfg release >nul
@@ -90,7 +91,7 @@ copy /Y add\smackw32.dll release >nul
 copy /Y add\templates.bin release\templates.bin >nul
 
 rem call nsis.bat %VER%
-if errorlevel 1 goto nsis_fail
+rem if errorlevel 1 goto nsis_fail
 
 call log cleaning up...
 del /Q a2mgr.dll

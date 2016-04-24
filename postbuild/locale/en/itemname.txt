@@ -460,6 +460,7 @@ Sea Witcher Amulet
 Dragon Leather Helm
 Sea Witcher Crown
 Dragon Leather Mail
+Dragon Hard Leather Mail
 Sea Witcher Dress
 Sea Witcher Cloak
 Dragon Leather Bracers
@@ -540,21 +541,31 @@ Crystal War Hammer
 Crystal Pike
 Crystal Axe
 Crystal Two Handed Axe
+Crystal Crossbow
 BFG9000
 Crystal Shield Of Death
 Crystal Ring
 Neo Ring
 Crystal Amulet
 Neo Matrix
+Crystal Chain Helm
+Crystal Full Helm
 Crystal Plate Helm
 Neo Glasses
+Crystal Scale Mail
 Neo Suit
+Crystal Sapphire Cuirass
+Crystal Hard Plated Cuirass
 Crystal Cuirass
 Crystal Plate Cuirass
 Neo Cape
+Crystal Bracers
+Crystal Hard Bracers
 Crystal Plate Bracers
+Crystal Gauntlets
 Crystal Scale Gauntlets
 Neo Gloves
+Crystal Hard Plated Boots
 Crystal Plate Boots
 Neo Shoes
 Mage's Hat

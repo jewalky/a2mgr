@@ -6,6 +6,7 @@ char* _stdcall GetFirstName(unsigned long dch)
 	if(strstr(longname, "Administrator ") == longname) return "Administrator";
 	if(strstr(longname, "GameMaster ") == longname) return "GameMaster";
 	if(strstr(longname, "TournamentMaster ") == longname) return "TournamentMaster";
+	if(strstr(longname, "BalanceMaker ") == longname) return "BalanceMaker";
 	return "";
 }
 
@@ -16,6 +17,7 @@ char* _stdcall GetSecondName(unsigned long dch)
 	if(strstr(longname, "Administrator ") == longname) position = 14;
 	else if(strstr(longname, "GameMaster ") == longname) position = 11;
 	else if(strstr(longname, "TournamentMaster ") == longname) position = 17;
+	else if(strstr(longname, "BalanceMaker ") == longname) position = 13;
 	return (longname + position);
 }
 
@@ -25,7 +27,8 @@ bool _stdcall CheckNickname(unsigned long dunit)
 	if(*(char*)(dunit + 0xF8) != 0) return false;
 	if((strstr(longname, "Administrator ") == longname) ||
 	   (strstr(longname, "GameMaster ") == longname) ||
-	   (strstr(longname, "TournamentMaster ") == longname)) return true;
+	   (strstr(longname, "TournamentMaster ") == longname) ||
+	   (strstr(longname, "BalanceMaker ") == longname)) return true;
 	return false;
 }
 

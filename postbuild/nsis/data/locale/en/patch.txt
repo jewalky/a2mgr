@@ -1,0 +1,241 @@
+Server is not responding.
+Incorrect login name or password.
+Can't start server. IP Address may be invalid.
+Can't connect to server. IP Address or URL may be invalid.
+Server Error 04
+Server Error 05
+Server Error 06
+Server Error 07
+Server Error 08
+Server Error 09
+Server Error 10
+Your character file not found. It may be deleted.
+Your previous character still present in the game. You can join another character in 5 minutes since leaving with previous one.
+Error downloading map.
+Your character is too strong for this map.
+Your character is too weak for this map.
+Вы играли на сервере, который потерял связь с хэтом. Если вы хотите играть старой версией персонажа, нажмите Да, иначе нажмите Нет и подождите, пока сервер восстановит связь с хэтом.
+Connection with Hat has been lost.
+Hat doesn't respond.
+Can't connect to Hat. IP Address or URL may be invalid.
+Incorrect login name or password.
+Player with the same login name as yours already exists in the game.
+Your account is blocked by administrator.
+The server you played last time has lost connection with Hat and is restoring it now. Please wait for 30 seconds and try again.
+The server you played last time has lost connection with Hat. Please wait for several minutes while the server tries to reconnect.
+Server is full.
+Character with the same name and clan as yours already exists in the game.
+Your character's name is banned.
+Your character's name is too short. At least 3 letters required.
+Your character has bad file data.
+Your character is too strong for this map.
+Your character is too weak for this map.
+You can join team play only if it isn't already started.
+This server is shutting down now. Please select another server.
+Your IP address is banned.
+This name is already used on this Hat. Please change it.
+Your client version is outdated or game resources are invalid. Please download latest patch from Allods2.EU.
+Server Error 37
+Server Error 38
+Server Error 39
+Server Error 40
+Server Error 41
+Server Error 42
+Server Error 43
+Server Error 44
+Server Error 45
+Server Error 46
+Server Error 47
+Server Error 48
+Server Error 49
+Are you sure you want to delete game '
+' ?
+Shadows
+Dynamic lighting
+Object animations
+Restart last mission
+keep saved characters on server
+Rage of Mages 2: Necromancer. Server 1.05
+id
+player name
+online
+bps
+avg
+max
+kills
+pk
+players: %d  monsters: %d  buildings: %d  corpses: %d  sacks: %d  cpu: %d%%  cpu avg: %d%%  map: %s  %s
+Name: %s%sLogin: %s%sIP Address: %s%sCharacter: %u%u.a2c%sID: %d%sKills: %d%sPK: %d%sFrags: %d%sDeaths: %d%sMoney: %d%sPosition: %d,%d%sTime playing: %s%sTraffic cur/avg/max: %s
+Your character is dead.
+Press SPACE to continue game
+Player
+shows to you his area of vision
+Player
+hides from you his area of vision
+Traffic (IN)
+cur:
+avg:
+max:
+Player
+kicked from game
+Player
+killed by player
+!
+Shout limit. You are restricted to shout for
+sec
+Standard message colors
+Alternative message colors
+Alt. message colors
+You have accepted the quest
+You have completed the quest!
+Return back to the Inn to get a reward!
+You have failed the quest.
+The quest can't be completed.
+Are you sure you want to delete character '
+' ?
+Abort mission and return to town
+Cancel quest
+You've got a new mission!
+Easy
+Medium
+Hard
+Horror!
+Retrieving server list from web page or Hat
+Enter URL:
+Hardcore (PvP)
+DeathMatch
+Server list from
+Server name            map            size     level    players
+Refresh
+Arena
+Login
+Password
+Enter server list page URL or Hat URL
+Error downloading server list
+Connecting. Please wait...
+Autocasting is set to minimum
+Autocasting is set to average
+Autocasting is set to maximum
+Cthulhu fhtagn!
+<Hat URL must be here>
+Connect to web page
+Connect to Hat
+Save last login and password
+Turn off this box if you share#this computer with other people
+Connecting to Hat...
+Checking and downloading character files...
+Connecting to server...
+Ping: min %dms, avg %dms, max %dms. packet loss: %d%%.
+Last ping %dms. Total %d packets.
+Error: Windows Sockets version is outdated
+Error: Can't open socket
+Error: Can't set timeout
+Error: Bad server address
+Error: Can't allocate buffers
+Error: Timeout
+Error: Can't send packet
+Error: Timeout
+Error: Can't receive packet
+Error: Incorrect packet received
+Join Red team
+Join Blue team
+Can't create more than 16 characters in internet game. Delete an old character first.
+Can't create new character in non-cooperative game.
+%s has been slaughtered by player %s
+%s got the knife under ribs from player %s
+%s received a nasty cut from player %s
+%s was chopped down by player %s
+%s was sliced to pieces by player %s
+%s was hacked to death by player %s
+%s fell victim to a club of player %s
+%s had his head crashed with a club of player %s
+%s had his brains beaten out with a club of player %s
+%s was stabbed to death by player %s
+%s got pierced by player %s
+%s was stuck by a spear of player %s
+%s was shot by player %s
+%s caught an arrow sent by player %s
+%s should learn to shoot better than player %s
+%s got fried by player %s
+%s caught fire from player %s
+%s was set on fire by player %s
+%s failed to escape the water magic of player %s
+%s belittled the water magic skills of player %s
+%s learned a lesson of water magic from player %s
+%s rode a lightning cast by player %s
+%s got an electric shock from player %s
+%s was not properly grounded standing close to player %s
+%s unsuccessfully tried to duck a stone thrown by player %s
+%s was knocked down by a rock trown by player %s
+%s caught a stone from player %s
+%s gave lifeblood to player %s
+%s became an unwilling donor for player %s
+%s had an unpleasant encounter with a vampire called %s
+Player %s has been mistreated by local thugs.
+Well, %s! It seems like today is not the right time...
+Player %s has had too much sightseeing.
+Player %s had some bad luck.
+Player %s fell in action.
+Player %s came to the wrong place at the wrong time.
+Your skills are increased by %d!
+Frags
+some players not ready
+Ready
+Not ready
+Red
+Blue
+Frags (Limit %d)
+Game over - time limit hit!
+Game over - frag limit hit!
+The server has changed the map. Please re-enter the game.
+Game interrupted - all Red team members has disconnected!
+Game interrupted - all Blue team members has disconnected!
+Game has been started!
+When ready, type #ready in message line
+Red flag is returned to base!
+Blue flag is returned to base!
+Player %s has got the Red flag!
+Player %s has got the Blue flag!
+Player %s has lost the Red flag!
+Player %s has lost the Blue flag!
+Player %s has delivered the Red flag to the Blue base!
+Player %s has delivered the Blue flag to the Red base!
+ATTENTION! The server will change map in %d minute(s)!
+ATTENTION! The server will shut down in %d minute(s)!
+ATTENTION! The server will change map in %d second(s)!
+ATTENTION! The server will shut down in %d second(s)!
+Camping in %d second(s)
+Camping cancelled
+Make camp
+Game scores
+Game over (frag limit hit)
+Game over (time limit hit)
+Game over (the map was changed)
+Softcore (PvE)
+We have a planned maintenance outage. The functionality of the server will be restored soon.
+Initiating download...
+Failed downloading update.
+Your client version is outdated or game resources were modified. Download latest patch from our server?
+Downloading client update...
+Your account is blocked by administrator forever.
+This game mode is disabled.
+You should try to create character a bit later.
+You should select correct game mode before continuing the game.
+ally
+private
+shout
+Screenshot saved into "%s"
+Downloading version information...
+
+
+%d%% (%s)
+%.2f B/s
+%.2f KB/s
+%.2f MB/s
+Receiving resource updates...
+file
+%d/%d files done
+Sandbox
+Play
+Authors
+Quit

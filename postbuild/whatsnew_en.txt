@@ -2,9 +2,15 @@
 Rage of Mages II: Necromancer
       Important Notes
 -----------------------------
-Version from May 26, 2012
+Version from Jan 22, 2015
 
 ATTENTION! This patch contains all previous updates.
+
+Update 25 (version 3.0)
+-----------------------
+1. RES archives are not used anymore. The game resources are contained within the data subdirectory.
+2. Implemented automatic synchronization of game resources with the server without the need to download updates manually every time they change.
+3. The configuration file isn't reset anymore during automatic updates of the patch (allods2.exe, a2mgr.dll).
 
 Update 24 (version 2.2)
 -----------------------

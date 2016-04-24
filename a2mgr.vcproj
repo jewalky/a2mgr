@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="windows-1251"?>
 <VisualStudioProject
 	ProjectType="Visual C++"
-	Version="8,00"
+	Version="8.00"
 	Name="a2mgr"
 	ProjectGUID="{404E5A7B-4EB4-4305-8705-CBF5BAADC889}"
 	RootNamespace="a2mgr"
@@ -40,7 +40,10 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="&quot;curl\include&quot;; &quot;sdl\include&quot;"
+				Optimization="3"
+				InlineFunctionExpansion="0"
+				FavorSizeOrSpeed="1"
+				AdditionalIncludeDirectories="$(ProjectDir); &quot;curl\include&quot;; &quot;sdl\include&quot;"
 				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_USRDLL;A2MGR_EXPORTS"
 				RuntimeLibrary="0"
 				UsePrecompiledHeader="0"
@@ -198,6 +201,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\menu.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\misc.cpp"
 				>
 			</File>
@@ -219,6 +226,10 @@
 			</File>
 			<File
 				RelativePath=".\network_protocol_ext.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\nosingle.cpp"
 				>
 			</File>
 			<File
@@ -274,6 +285,10 @@
 				</File>
 				<File
 					RelativePath=".\lib\hat2.cpp"
+					>
+				</File>
+				<File
+					RelativePath=".\lib\lodepng.cpp"
 					>
 				</File>
 				<File
@@ -418,6 +433,10 @@
 				</File>
 				<File
 					RelativePath=".\lib\hat2.hpp"
+					>
+				</File>
+				<File
+					RelativePath=".\lib\lodepng.h"
 					>
 				</File>
 				<File

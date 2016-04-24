@@ -1,24 +1,24 @@
 @echo off
 
-set VER=22
+set VER=25
 
 call log --------------------------------------
 call log copying temporary files...
 
-if exist final\a2patch%VER%_ru.exe del /Q /F final\a2patch%VER%_ru.exe
-if exist final\a2patch%VER%_ru.zip del /Q /F final\a2patch%VER%_ru.zip
-if exist final\a2patch%VER%_en.exe del /Q /F final\a2patch%VER%_en.exe
-if exist final\a2patch%VER%_en.zip del /Q /F final\a2patch%VER%_en.zip
+if exist final\a2inst%VER%_ru.exe del /Q /F final\a2inst%VER%_ru.exe
+if exist final\a2full%VER%_ru.zip del /Q /F final\a2full%VER%_ru.zip
+if exist final\a2inst%VER%_en.exe del /Q /F final\a2inst%VER%_en.exe
+if exist final\a2full%VER%_en.zip del /Q /F final\a2full%VER%_en.zip
 
 copy /Y release\a2mgr.dll nsis\a2mgr.dll >nul
 copy /Y release\allods2.cfg nsis\allods2.cfg >nul
 copy /Y release\allods2.exe nsis\allods2.exe >nul
 copy /Y release\helper32.dll nsis\helper32.dll >nul
-copy /Y release\patch.res nsis\patch.res >nul
+rem copy /Y release\patch.res nsis\patch.res >nul
 copy /Y release\patch%VER%.txt nsis\patch%VER%.txt >nul
 copy /Y release\smackw32.dll nsis\smackw32.dll >nul
-copy /Y release\world.res nsis\world.res >nul
-copy /Y release\locale.res nsis\locale.res >nul
+rem copy /Y release\world.res nsis\world.res >nul
+rem copy /Y release\locale.res nsis\locale.res >nul
 rem copy /Y release\curllib.dll nsis\curllib.dll >nul
 rem copy /Y release\openldap.dll nsis\openldap.dll >nul
 copy /Y release\SDL.dll nsis\SDL.dll >nul
@@ -36,22 +36,22 @@ call log compiling NSIS installer..
 
 rem TODO: make single nsis script
 
-call "c:\program files (x86)\NSIS\makensis.exe" /DVER=%VER% /V2 "%CD%\a2patch.nsi"
+call "makensis.exe" /DVER=%VER% /V2 "%CD%\a2patch.nsi"
 if errorlevel 1 goto fail
 
-cd nsis
-..\7za a ..\final\a2patch%VER%_ru.zip *.*
-cd ..
+rem cd nsis
+rem ..\7za a -r ..\final\a2full%VER%_ru.zip *.*
+rem cd ..
 
 copy /Y release\allods2_en.cfg nsis\allods2.cfg >nul
 copy /Y release\patch%VER%_en.txt nsis\patch%VER%.txt >nul
 
-call "c:\program files (x86)\NSIS\makensis.exe" /DVER=%VER% /V2 "%CD%\a2patch_en.nsi"
+call "makensis.exe" /DVER=%VER% /V2 "%CD%\a2patch_en.nsi"
 if errorlevel 1 goto fail
 
-cd nsis
-..\7za a ..\final\a2patch%VER%_en.zip *.*
-cd ..
+rem cd nsis
+rem ..\7za a -r ..\final\a2full%VER%_en.zip *.*
+rem cd ..
 
 
 call log NSIS compiled succeful!
@@ -62,16 +62,13 @@ rem exit 1
 :remove_temp
 
 call log deleting temporary files...
-if exist nsis\a2mgr%VER%.dll del /Q /F nsis\a2mgr%VER%.dll >nul
-if exist nsis\allods2com%VER%.exe del /Q /F nsis\allods2com%VER%.exe >nul
+if exist nsis\a2mgr.dll del /Q /F nsis\a2mgr.dll >nul
+if exist nsis\allods2.exe del /Q /F nsis\allods2.exe >nul
 if exist nsis\helper32.dll del /Q /F nsis\helper32.dll >nul
-if exist nsis\patch%VER%.res del /Q /F nsis\patch%VER%.res >nul
 if exist nsis\patch%VER%.txt del /Q /F nsis\patch%VER%.txt >nul
 if exist nsis\rom2me%VER%.exe del /Q /F nsis\rom2me%VER%.exe >nul
 if exist nsis\templates%VER%.bin del /Q /F nsis\templates%VER%.bin >nul
-if exist nsis\world%VER%.res del /Q /F nsis\world%VER%.res >nul
-if exist nsis\world%VER%s.res del /Q /F nsis\world%VER%s.res >nul
-if exist nsis\allods2.conf del /Q /F nsis\allods2.conf >nul
+if exist nsis\allods2.cfg del /Q /F nsis\allods2.cfg >nul
 if exist nsis\smackw32.dll del /Q /F nsis\smackw32.dll >nul
 if exist nsis\curllib.dll del /Q /F nsis\curllib.dll >nul
 if exist nsis\openldap.dll del /Q /F nsis\openldap.dll >nul

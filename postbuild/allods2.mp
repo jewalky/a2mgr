@@ -104,6 +104,18 @@
 0 105 44CBC7 // : GUI_softcoreResetSwitch
 0 106 43FA41 // : GUI_softcoreSaveSwitch
 0 107 44DD0F // : GUI_softcoreEnter
+0 108 4EB741 // : RES_noLoad
+0 109 457FF4 // : imp_MakeScreenshotNet
+0 110 44CB2D // : GUI_sandboxSwitch
+0 111 44CC1E // : GUI_removeServerList
+0 112 42AAC0 // : ITEMPNG_cachePng
+
+0 113 4AEDF5 // : MENU_load
+0 114 4AF2C8 // : MENU_draw
+0 115 4AF93F // : MENU_click
+0 116 4AF8E6 // : MENU_hover1
+0 117 4AF8C3 // : MENU_hover2
+0 118 4AFA5B // : MENU_hover3
 
 //0 300 426DA9
 //0 301 427014

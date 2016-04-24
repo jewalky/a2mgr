@@ -3,7 +3,7 @@
 <boost_serialization signature="serialization::archive" version="5">
 <itemname class_id="0" tracking_level="0" version="0">
 	<items class_id="1" tracking_level="0" version="0">
-		<count>606</count>
+		<count>617</count>
 		<item_version>0</item_version>
 		<item class_id="2" tracking_level="0" version="0">
 			<name>Common Iron Dagger</name>
@@ -5891,7 +5891,7 @@
 		</item>
 		<item>
 			<name>Rare Gold Scale Mail</name>
-			<name2>Золотая Пластинчаная Подкира Гнева</name2>
+			<name2>Золотой Пластинчатый Доспех Гнева</name2>
 			<id>18257</id>
 			<special>0</special>
 			<scroll>0</scroll>
@@ -9120,7 +9120,7 @@
 				</item>
 				<item>
 					<first>damageMax</first>
-					<second>49</second>
+					<second>24</second>
 				</item>
 				<item>
 					<first>defence</first>
@@ -11337,6 +11337,27 @@
 			</modifiers>
 		</item>
 		<item>
+			<name>Very Rare Dragon Leather Scale Mail</name>
+			<name2>Доспех из Прочной Драконьей Кожи</name2>
+			<id>51057</id>
+			<special>0</special>
+			<scroll>0</scroll>
+			<usableByMage>0</usableByMage>
+			<usableByWarrior>1</usableByWarrior>
+			<modifiers>
+				<count>2</count>
+				<item_version>0</item_version>
+				<item>
+					<first>price</first>
+					<second>2</second>
+				</item>
+				<item>
+					<first>defence</first>
+					<second>40</second>
+				</item>
+			</modifiers>
+		</item>
+		<item>
 			<name>Elven Dragon Leather Dress</name>
 			<name2>Облачение Морского Ведьмака</name2>
 			<id>51086</id>
@@ -12205,7 +12226,7 @@
 		</item>
 		<item>
 			<name>Common Bone Chain Mail</name>
-			<name2>Подкира Черной Вдовы</name2>
+			<name2>Доспех Черной Вдовы</name2>
 			<id>55056</id>
 			<special>0</special>
 			<scroll>0</scroll>
@@ -12226,7 +12247,7 @@
 		</item>
 		<item>
 			<name>Uncommon Bone Chain Mail</name>
-			<name2>Подкира Огнемета</name2>
+			<name2>Доспех Огнемета</name2>
 			<id>55088</id>
 			<special>0</special>
 			<scroll>0</scroll>
@@ -12247,7 +12268,7 @@
 		</item>
 		<item>
 			<name>Rare Bone Scale Mail</name>
-			<name2>Пластинчатая Подкира Черной Жемчужины</name2>
+			<name2>Пластинчатый Доспех Черной Жемчужины</name2>
 			<id>55121</id>
 			<special>0</special>
 			<scroll>0</scroll>
@@ -12302,7 +12323,7 @@
 		</item>
 		<item>
 			<name>Bad Bone Chain Mail</name>
-			<name2>Подкира Валькирии</name2>
+			<name2>Доспех Валькирии</name2>
 			<id>55216</id>
 			<special>0</special>
 			<scroll>0</scroll>
@@ -12323,7 +12344,7 @@
 		</item>
 		<item>
 			<name>Good Bone Scale Mail</name>
-			<name2>Подкира из Красного Дракона</name2>
+			<name2>Доспех из Красного Дракона</name2>
 			<id>55249</id>
 			<special>0</special>
 			<scroll>0</scroll>
@@ -12628,7 +12649,7 @@
 		</item>
 		<item>
 			<name>Common Bone Chain Gauntlets</name>
-			<name2>Перчи Черной Вдовы</name2>
+			<name2>Перчатки Черной Вдовы</name2>
 			<id>55833</id>
 			<special>0</special>
 			<scroll>0</scroll>
@@ -12649,7 +12670,7 @@
 		</item>
 		<item>
 			<name>Uncommon Bone Scale Gauntlets</name>
-			<name2>Перчи Огнемета</name2>
+			<name2>Перчатки Огнемета</name2>
 			<id>55866</id>
 			<special>0</special>
 			<scroll>0</scroll>
@@ -12670,7 +12691,7 @@
 		</item>
 		<item>
 			<name>Rare Bone Scale Gauntlets</name>
-			<name2>Пластинчатые Перчи Черной Жемчужины</name2>
+			<name2>Пластинчатые Перчатки Черной Жемчужины</name2>
 			<id>55898</id>
 			<special>0</special>
 			<scroll>0</scroll>
@@ -12725,7 +12746,7 @@
 		</item>
 		<item>
 			<name>Bad Bone Scale Gauntlets</name>
-			<name2>Перчи Валькирии</name2>
+			<name2>Перчатки Валькирии</name2>
 			<id>55994</id>
 			<special>0</special>
 			<scroll>0</scroll>
@@ -12746,7 +12767,7 @@
 		</item>
 		<item>
 			<name>Good Bone Scale Gauntlets</name>
-			<name2>Перчи из Красного Кристалла</name2>
+			<name2>Перчатки из Красного Кристалла</name2>
 			<id>56026</id>
 			<special>0</special>
 			<scroll>0</scroll>
@@ -13145,6 +13166,39 @@
 			</modifiers>
 		</item>
 		<item>
+			<name>Very Rare Crystal Crossbow</name>
+			<name2>Кристаллический Арбалет</name2>
+			<id>57718</id>
+			<special>0</special>
+			<scroll>0</scroll>
+			<usableByMage>0</usableByMage>
+			<usableByWarrior>1</usableByWarrior>
+			<modifiers>
+				<count>5</count>
+				<item_version>0</item_version>
+				<item>
+					<first>price</first>
+					<second>2</second>
+				</item>
+				<item>
+					<first>damageMin</first>
+					<second>27</second>
+				</item>
+				<item>
+					<first>damageMax</first>
+					<second>27</second>
+				</item>
+				<item>
+					<first>toHit</first>
+					<second>10</second>
+				</item>
+				<item>
+					<first>itemLore</first>
+					<second>6</second>
+				</item>
+			</modifiers>
+		</item>
+		<item>
 			<name>Elven Crystal Staff</name>
 			<name2>BFG9000</name2>
 			<id>57741</id>
@@ -13263,6 +13317,48 @@
 			</modifiers>
 		</item>
 		<item>
+			<name>Very Rare Crystal Chain Helm</name>
+			<name2>Кристаллический Кольчужный Шлем</name2>
+			<id>58984</id>
+			<special>0</special>
+			<scroll>0</scroll>
+			<usableByMage>0</usableByMage>
+			<usableByWarrior>1</usableByWarrior>
+			<modifiers>
+				<count>2</count>
+				<item_version>0</item_version>
+				<item>
+					<first>price</first>
+					<second>2</second>
+				</item>
+				<item>
+					<first>defence</first>
+					<second>30</second>
+				</item>
+			</modifiers>
+		</item>
+		<item>
+			<name>Very Rare Crystal Full Helm</name>
+			<name2>Кристаллический Закрытый Шлем</name2>
+			<id>58985</id>
+			<special>0</special>
+			<scroll>0</scroll>
+			<usableByMage>0</usableByMage>
+			<usableByWarrior>1</usableByWarrior>
+			<modifiers>
+				<count>2</count>
+				<item_version>0</item_version>
+				<item>
+					<first>price</first>
+					<second>2</second>
+				</item>
+				<item>
+					<first>defence</first>
+					<second>34</second>
+				</item>
+			</modifiers>
+		</item>
+		<item>
 			<name>Very Rare Crystal Plate Helm</name>
 			<name2>Кристаллический Полный Шлем</name2>
 			<id>58986</id>
@@ -13305,6 +13401,27 @@
 			</modifiers>
 		</item>
 		<item>
+			<name>Very Rare Crystal Scale Mail</name>
+			<name2>Кристаллический Пластинчатый Доспех</name2>
+			<id>59249</id>
+			<special>0</special>
+			<scroll>0</scroll>
+			<usableByMage>0</usableByMage>
+			<usableByWarrior>1</usableByWarrior>
+			<modifiers>
+				<count>2</count>
+				<item_version>0</item_version>
+				<item>
+					<first>price</first>
+					<second>2</second>
+				</item>
+				<item>
+					<first>defence</first>
+					<second>41</second>
+				</item>
+			</modifiers>
+		</item>
+		<item>
 			<name>Elven Crystal Dress</name>
 			<name2>Костюм Нео</name2>
 			<id>59278</id>
@@ -13318,6 +13435,56 @@
 				<item>
 					<first>price</first>
 					<second>2</second>
+				</item>
+			</modifiers>
+		</item>
+		<item>
+			<name>Rare Crystal Cuirass</name>
+			<name2>Кристаллическая Сапфирная Кираса</name2>
+			<id>59474</id>
+			<special>0</special>
+			<scroll>0</scroll>
+			<usableByMage>0</usableByMage>
+			<usableByWarrior>1</usableByWarrior>
+			<modifiers>
+				<count>3</count>
+				<item_version>0</item_version>
+				<item>
+					<first>price</first>
+					<second>2</second>
+				</item>
+				<item>
+					<first>defence</first>
+					<second>44</second>
+				</item>
+				<item>
+					<first>absorbtion</first>
+					<second>2</second>
+				</item>
+			</modifiers>
+		</item>
+		<item>
+			<name>Rare Crystal Plate Cuirass</name>
+			<name2>Кристаллическая Прочная Кираса</name2>
+			<id>59475</id>
+			<special>0</special>
+			<scroll>0</scroll>
+			<usableByMage>0</usableByMage>
+			<usableByWarrior>1</usableByWarrior>
+			<modifiers>
+				<count>3</count>
+				<item_version>0</item_version>
+				<item>
+					<first>price</first>
+					<second>2</second>
+				</item>
+				<item>
+					<first>defence</first>
+					<second>49</second>
+				</item>
+				<item>
+					<first>absorbtion</first>
+					<second>4</second>
 				</item>
 			</modifiers>
 		</item>
@@ -13389,6 +13556,52 @@
 			</modifiers>
 		</item>
 		<item>
+			<name>Rare Crystal Plate Bracers</name>
+			<name2>Кристаллические Наручи</name2>
+			<id>59734</id>
+			<special>0</special>
+			<scroll>0</scroll>
+			<usableByMage>0</usableByMage>
+			<usableByWarrior>1</usableByWarrior>
+			<modifiers>
+				<count>3</count>
+				<item_version>0</item_version>
+				<item>
+					<first>price</first>
+					<second>2</second>
+				</item>
+				<item>
+					<first>defence</first>
+					<second>21</second>
+				</item>
+				<item>
+					<first>absorbtion</first>
+					<second>2</second>
+				</item>
+			</modifiers>
+		</item>
+		<item>
+			<name>Very Rare Crystal Bracers</name>
+			<name2>Кристаллические Прочные Наручи</name2>
+			<id>59764</id>
+			<special>0</special>
+			<scroll>0</scroll>
+			<usableByMage>0</usableByMage>
+			<usableByWarrior>1</usableByWarrior>
+			<modifiers>
+				<count>2</count>
+				<item_version>0</item_version>
+				<item>
+					<first>price</first>
+					<second>2</second>
+				</item>
+				<item>
+					<first>defence</first>
+					<second>23</second>
+				</item>
+			</modifiers>
+		</item>
+		<item>
 			<name>Very Rare Crystal Plate Bracers</name>
 			<name2>Кристаллические Полные Наручи</name2>
 			<id>59766</id>
@@ -13410,6 +13623,27 @@
 				<item>
 					<first>absorbtion</first>
 					<second>2</second>
+				</item>
+			</modifiers>
+		</item>
+		<item>
+			<name>Rare Crystal Scale Gauntlets</name>
+			<name2>Кристаллические Перчатки</name2>
+			<id>59994</id>
+			<special>0</special>
+			<scroll>0</scroll>
+			<usableByMage>0</usableByMage>
+			<usableByWarrior>1</usableByWarrior>
+			<modifiers>
+				<count>2</count>
+				<item_version>0</item_version>
+				<item>
+					<first>price</first>
+					<second>2</second>
+				</item>
+				<item>
+					<first>defence</first>
+					<second>14</second>
 				</item>
 			</modifiers>
 		</item>
@@ -13447,6 +13681,31 @@
 				<item_version>0</item_version>
 				<item>
 					<first>price</first>
+					<second>2</second>
+				</item>
+			</modifiers>
+		</item>
+		<item>
+			<name>Rare Crystal Plate Boots</name>
+			<name2>Кристаллические Прочные Поножи</name2>
+			<id>60510</id>
+			<special>0</special>
+			<scroll>0</scroll>
+			<usableByMage>0</usableByMage>
+			<usableByWarrior>1</usableByWarrior>
+			<modifiers>
+				<count>3</count>
+				<item_version>0</item_version>
+				<item>
+					<first>price</first>
+					<second>2</second>
+				</item>
+				<item>
+					<first>defence</first>
+					<second>30</second>
+				</item>
+				<item>
+					<first>absorbtion</first>
 					<second>2</second>
 				</item>
 			</modifiers>

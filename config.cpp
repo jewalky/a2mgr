@@ -47,7 +47,7 @@ unsigned char sha1_world_res[20];
 unsigned char sha1_graphics_res[20];
 unsigned char sha1_uuid[20];
 
-bool z_softcore = false;
+int z_softcore = 0;
 
 using namespace std;
 

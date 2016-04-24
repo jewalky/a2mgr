@@ -93,19 +93,41 @@ void _stdcall IImage_Display(int arg1, int arg2, int arg3, int arg4, int arg5)
 	}
 }
 
+struct IImageUse
+{
+	void* ptr;
+	int ref;
+	std::string filename;
+};
+
+std::vector<IImageUse> IImages;
+
 void _stdcall IImage_Destruct(unsigned long final)
 {
+	return;
+	/*
 	char* c = NULL;
 	__asm mov c, ecx;
 	Image* image = *(Image**)(c+4);
-	if(image) delete image;
-	delete[] c;
+	if (image) delete image;
+	delete[] c;*/
 }
 
 void* _stdcall IImage_Construct(std::string filename = "")
 {
+	for (std::vector<IImageUse>::iterator it = IImages.begin();
+		 it != IImages.end(); ++it)
+	{
+		IImageUse& use = (*it);
+		if (use.filename == filename)
+		{
+			use.ref++;
+			return use.ptr;
+		}
+	}
+
 	static unsigned long* vtable = NULL;
-	if(!vtable)
+	if (!vtable)
 	{
 		vtable = new unsigned long[17];
 		memset(vtable, 0, sizeof(unsigned long)*17);
@@ -119,14 +141,21 @@ void* _stdcall IImage_Construct(std::string filename = "")
 	*(unsigned long**)(c) = vtable;
 	Image* image = (filename.length() > 0) ? new Image(filename) : NULL;
 	*(Image**)(c+4) = image;
+
+	IImageUse use;
+	use.ptr = c;
+	use.ref = 1;
+	use.filename = filename;
+	IImages.push_back(use);
+
 	return c;
 }
 
 void* _stdcall ITEMPNG_doLoadPngChar(const char* location, const char* character)
 {
 	int chrN = *(int*)(character+0x28);
-	std::string img = Format("%s%d.png", location, chrN);
-	std::string oimg = Format("%s%d.256", location, chrN);
+	std::string img = Format("data\\%s%d.png", location, chrN);
+	std::string oimg = Format("data\\%s%d.256", location, chrN);
 
 	void* v = NULL;
 
@@ -136,6 +165,17 @@ void* _stdcall ITEMPNG_doLoadPngChar(const char* location, const char* character
 	}
 	else
 	{
+		for (std::vector<IImageUse>::iterator it = IImages.begin();
+			 it != IImages.end(); ++it)
+		{
+			IImageUse& use = (*it);
+			if (use.filename == oimg)
+			{
+				use.ref++;
+				return use.ptr;
+			}
+		}
+
 		const char* coimg = oimg.c_str();
 		__asm
 		{
@@ -154,6 +194,12 @@ void* _stdcall ITEMPNG_doLoadPngChar(const char* location, const char* character
 			mov		edx, 0x00426BE0
 			call	edx
 		}
+
+		IImageUse use;
+		use.ptr = v;
+		use.ref = 1;
+		use.filename = oimg;
+		IImages.push_back(use);
 	}
 
 	return v;
@@ -161,11 +207,11 @@ void* _stdcall ITEMPNG_doLoadPngChar(const char* location, const char* character
 
 void _stdcall ITEMPNG_doLoadPng(const char* character, int i, const char* str_primary, const char* str_secondary)
 {
-	std::string i_pr = std::string(str_primary) + ".png";
-	std::string i_sc = std::string(str_secondary) + ".png";
+	std::string i_pr = "data\\" + std::string(str_primary) + ".png";
+	std::string i_sc = "data\\" + std::string(str_secondary) + ".png";
 
-	std::string oi_pr = std::string(str_primary) + ".256";
-	std::string oi_sc = std::string(str_secondary) + ".256";
+	std::string oi_pr = "data\\" + std::string(str_primary) + ".256";
+	std::string oi_sc = "data\\" + std::string(str_secondary) + ".256";
 
 	ipng_out_primary = NULL;
 	ipng_out_secondary = NULL;
@@ -177,24 +223,45 @@ void _stdcall ITEMPNG_doLoadPng(const char* character, int i, const char* str_pr
 	}
 	else
 	{
-		const char* coi_pr = oi_pr.c_str();
-		//log_format("loading original for \"%s\"...\n", coi_pr);
-		__asm
+		for (std::vector<IImageUse>::iterator it = IImages.begin();
+			 it != IImages.end(); ++it)
 		{
-			push	0x24
-			mov		edx, 0x00401840
-			call	edx
-			push	[coi_pr]
-			mov		ecx, eax
-			mov		edx, 0x00426DA9
-			call	edx
-			mov		[ipng_out_primary], eax
-			push	0
-			push	1
-			push	1
-			mov		ecx, eax
-			mov		edx, 0x00426BE0
-			call	edx
+			IImageUse& use = (*it);
+			if (use.filename == oi_pr)
+			{
+				use.ref++;
+				ipng_out_primary = use.ptr;
+				break;
+			}
+		}
+
+		if (!ipng_out_primary)
+		{
+			const char* coi_pr = oi_pr.c_str();
+			//log_format("loading original for \"%s\"...\n", coi_pr);
+			__asm
+			{
+				push	0x24
+				mov		edx, 0x00401840
+				call	edx
+				push	[coi_pr]
+				mov		ecx, eax
+				mov		edx, 0x00426DA9
+				call	edx
+				mov		[ipng_out_primary], eax
+				push	0
+				push	1
+				push	1
+				mov		ecx, eax
+				mov		edx, 0x00426BE0
+				call	edx
+			}
+
+			IImageUse use;
+			use.ptr = ipng_out_primary;
+			use.ref = 1;
+			use.filename = oi_pr;
+			IImages.push_back(use);
 		}
 	}
 	
@@ -207,30 +274,54 @@ void _stdcall ITEMPNG_doLoadPng(const char* character, int i, const char* str_pr
 		}
 		else
 		{
-			const char* coi_sc = oi_sc.c_str();
-			//log_format("loading original for \"%s\"...\n", coi_sc);
-			__asm
+			for (std::vector<IImageUse>::iterator it = IImages.begin();
+				 it != IImages.end(); ++it)
 			{
-				push	0x24
-				mov		edx, 0x00401840
-				call	edx
-				push	[coi_sc]
-				mov		ecx, eax
-				mov		edx, 0x00426DA9
-				call	edx
-				mov		[ipng_out_secondary], eax
-				push	0
-				push	1
-				push	1
-				mov		ecx, eax
-				mov		edx, 0x00426BE0
-				call	edx
+				IImageUse& use = (*it);
+				if (use.filename == oi_sc)
+				{
+					use.ref++;
+					ipng_out_secondary = use.ptr;
+					break;
+				}
+			}
+
+			if (!ipng_out_secondary)
+			{
+				const char* coi_sc = oi_sc.c_str();
+				//log_format("loading original for \"%s\"...\n", coi_sc);
+				__asm
+				{
+					push	0x24
+					mov		edx, 0x00401840
+					call	edx
+					push	[coi_sc]
+					mov		ecx, eax
+					mov		edx, 0x00426DA9
+					call	edx
+					mov		[ipng_out_secondary], eax
+					push	0
+					push	1
+					push	1
+					mov		ecx, eax
+					mov		edx, 0x00426BE0
+					call	edx
+				}
+
+				IImageUse use;
+				use.ptr = ipng_out_secondary;
+				use.ref = 1;
+				use.filename = oi_sc;
+				IImages.push_back(use);
 			}
 		}
 	}
 
-	if(ipng_out_primary == NULL) ipng_out_primary = IImage_Construct();
-	if(ipng_out_secondary == NULL) ipng_out_secondary = IImage_Construct();
+	static void* iimg_null = NULL;
+	if (!iimg_null) iimg_null = IImage_Construct();
+
+	if(ipng_out_primary == NULL) ipng_out_primary = iimg_null;
+	if(ipng_out_secondary == NULL) ipng_out_secondary = iimg_null;
 
 	//log_format("spawned item: %08X %08X\n", ipng_out_primary, ipng_out_secondary);
 }
@@ -299,5 +390,47 @@ void __declspec(naked) ITEMPNG_loadPngChar()
 
 		mov		edx, 0x0046E21B
 		jmp		edx
+	}
+}
+
+bool _stdcall ITEMPNG_doCachePng(void* ptr)
+{
+	for (std::vector<IImageUse>::iterator it = IImages.begin();
+		 it != IImages.end(); ++it)
+	{
+		IImageUse& use = (*it);
+		if (use.ptr == ptr)
+			return true;
+	}
+
+	return false;
+}
+
+// -> 42AAC0
+void __declspec(naked) ITEMPNG_cachePng()
+{
+	__asm
+	{
+		push	ebp
+		mov		ebp, esp
+		push	ecx
+		mov		[ebp-0x04], ecx
+
+		push	ecx
+		call	ITEMPNG_doCachePng
+		test	eax, eax
+		jnz		do_nothing
+
+		mov		ecx, [ebp-0x04]
+		mov		edx, 0x0042AAF0
+		call	edx
+
+		mov		edx, 0x0042AACF
+		jmp		edx
+
+do_nothing:
+		mov		esp, ebp
+		pop		ebp
+		retn	0x0004
 	}
 }

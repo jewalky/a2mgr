@@ -48,8 +48,89 @@ int GetEncoderClsid(const WCHAR* format, CLSID* pClsid)
    return -1;  // Failure
 }
 
+#include "lib/lodepng.h"
+#include "lib/stdint.h"
+
+void SCREENSHOT_takeManual()
+{
+	RECT* rcSrc2 = (RECT*)(0x0062B5D8);
+
+	int siWidth = rcSrc2->right - rcSrc2->left;
+	int siHeight = rcSrc2->bottom - rcSrc2->top;
+
+	uint16_t* siData = new uint16_t[siWidth*siHeight];
+
+	uint8_t* Data = (uint8_t*)siData;
+	uint8_t* SData = *(uint8_t**)(0x0062571C);
+	uint32_t SPitch = *(int32_t*)(0x00625708);
+
+	for (int y = 0; y < siHeight; y++)
+	{
+		uint8_t* SDataT = SData + y * SPitch;
+		for (int x = 0; x < siWidth; x++)
+		{
+			*Data++ = *SDataT++;
+			*Data++ = *SDataT++;
+		}
+	}
+
+	uint32_t* ndata = new uint32_t[siWidth*siHeight];
+	uint32_t* ndatap = ndata;
+
+	uint16_t* orp = siData;
+	bool siFlip = false;
+
+	for (int y = siFlip ? siHeight-1 : 0; siFlip ? (y >= 0) : (y < siHeight); siFlip ? y-- : y++)
+	{
+		uint32_t* rowp = ndatap + y * siWidth;
+		for (int x = 0; x < siWidth; x++)
+		{
+			uint16_t a = *orp++;
+			unsigned long r = (a & 0xF800)>>11;
+			unsigned long g = (a & 0x07E0)>>5;
+			unsigned long b = (a & 0x001F);
+			r = r * 255 / 31;
+			g = g * 255 / 63;
+			b = b * 255 / 31;
+			uint32_t col = 0xFF000000 | (b << 16) | (g << 8) | r;
+			*rowp++ = col;
+		}
+	}
+
+	delete[] siData;
+
+	std::string post_reply = "";
+
+	unsigned char* buf = NULL;
+	size_t size = 0;
+	unsigned int ov = lodepng_encode32(&buf, &size, (const unsigned char*)ndata, siWidth, siHeight);
+	delete[] ndata;
+
+	// buf and size is the screenshot
+	string str = "screenshot";
+	time_t t = time(NULL);
+	struct tm *tm = localtime(&t);
+	if(tm)
+	{
+		str = Format("screenshot_%02u-%02u-%04u_%02u-%02u-%02u", tm->tm_mday, tm->tm_mon + 1, tm->tm_year + 1900, tm->tm_hour, tm->tm_min, tm->tm_sec);
+		if(z_screendir) str = "screenshots\\" + str;
+	}
+
+	str += ".png";
+
+	FILE* outf = fopen(str.c_str(), "wb");
+	fwrite(buf, size, 1, outf);
+	fclose(outf);
+
+	char* strc = zxmgr::GetPatchString(226);
+	zxmgr::WriteChat(strc, str.c_str());
+}
+
 void SCREENSHOT_take()
 {
+	SCREENSHOT_takeManual();
+	return;
+
 	RECT rcSrc2(*(RECT*)(0x0062B5D8));
 
 	string strtype;

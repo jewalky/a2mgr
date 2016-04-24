@@ -3,7 +3,7 @@
 <boost_serialization signature="serialization::archive" version="5">
 <itemname class_id="0" tracking_level="0" version="0">
 	<items class_id="1" tracking_level="0" version="0">
-		<count>606</count>
+		<count>617</count>
 		<item_version>0</item_version>
 		<item class_id="2" tracking_level="0" version="0">
 			<name>Common Iron Dagger</name>
@@ -9120,7 +9120,7 @@
 				</item>
 				<item>
 					<first>damageMax</first>
-					<second>49</second>
+					<second>24</second>
 				</item>
 				<item>
 					<first>defence</first>
@@ -11336,6 +11336,27 @@
 			</modifiers>
 		</item>
 		<item>
+			<name>Very Rare Dragon Leather Scale Mail</name>
+			<name2>Dragon Hard Leather Mail</name2>
+			<id>51057</id>
+			<special>0</special>
+			<scroll>0</scroll>
+			<usableByMage>0</usableByMage>
+			<usableByWarrior>1</usableByWarrior>
+			<modifiers>
+				<count>2</count>
+				<item_version>0</item_version>
+				<item>
+					<first>price</first>
+					<second>2</second>
+				</item>
+				<item>
+					<first>defence</first>
+					<second>40</second>
+				</item>
+			</modifiers>
+		</item>
+		<item>
 			<name>Elven Dragon Leather Dress</name>
 			<name2>Sea Witcher Dress</name2>
 			<id>51086</id>
@@ -13144,6 +13165,39 @@
 			</modifiers>
 		</item>
 		<item>
+			<name>Very Rare Crystal Crossbow</name>
+			<name2>Crystal Crossbow</name2>
+			<id>57718</id>
+			<special>0</special>
+			<scroll>0</scroll>
+			<usableByMage>0</usableByMage>
+			<usableByWarrior>1</usableByWarrior>
+			<modifiers>
+				<count>5</count>
+				<item_version>0</item_version>
+				<item>
+					<first>price</first>
+					<second>2</second>
+				</item>
+				<item>
+					<first>damageMin</first>
+					<second>27</second>
+				</item>
+				<item>
+					<first>damageMax</first>
+					<second>27</second>
+				</item>
+				<item>
+					<first>toHit</first>
+					<second>10</second>
+				</item>
+				<item>
+					<first>itemLore</first>
+					<second>6</second>
+				</item>
+			</modifiers>
+		</item>
+		<item>
 			<name>Elven Crystal Staff</name>
 			<name2>BFG9000</name2>
 			<id>57741</id>
@@ -13262,6 +13316,48 @@
 			</modifiers>
 		</item>
 		<item>
+			<name>Very Rare Crystal Chain Helm</name>
+			<name2>Crystal Chain Helm</name2>
+			<id>58984</id>
+			<special>0</special>
+			<scroll>0</scroll>
+			<usableByMage>0</usableByMage>
+			<usableByWarrior>1</usableByWarrior>
+			<modifiers>
+				<count>2</count>
+				<item_version>0</item_version>
+				<item>
+					<first>price</first>
+					<second>2</second>
+				</item>
+				<item>
+					<first>defence</first>
+					<second>30</second>
+				</item>
+			</modifiers>
+		</item>
+		<item>
+			<name>Very Rare Crystal Full Helm</name>
+			<name2>Crystal Full Helm</name2>
+			<id>58985</id>
+			<special>0</special>
+			<scroll>0</scroll>
+			<usableByMage>0</usableByMage>
+			<usableByWarrior>1</usableByWarrior>
+			<modifiers>
+				<count>2</count>
+				<item_version>0</item_version>
+				<item>
+					<first>price</first>
+					<second>2</second>
+				</item>
+				<item>
+					<first>defence</first>
+					<second>34</second>
+				</item>
+			</modifiers>
+		</item>
+		<item>
 			<name>Very Rare Crystal Plate Helm</name>
 			<name2>Crystal Plate Helm</name2>
 			<id>58986</id>
@@ -13304,6 +13400,27 @@
 			</modifiers>
 		</item>
 		<item>
+			<name>Very Rare Crystal Scale Mail</name>
+			<name2>Crystal Scale Mail</name2>
+			<id>59249</id>
+			<special>0</special>
+			<scroll>0</scroll>
+			<usableByMage>0</usableByMage>
+			<usableByWarrior>1</usableByWarrior>
+			<modifiers>
+				<count>2</count>
+				<item_version>0</item_version>
+				<item>
+					<first>price</first>
+					<second>2</second>
+				</item>
+				<item>
+					<first>defence</first>
+					<second>41</second>
+				</item>
+			</modifiers>
+		</item>
+		<item>
 			<name>Elven Crystal Dress</name>
 			<name2>Neo Suit</name2>
 			<id>59278</id>
@@ -13317,6 +13434,56 @@
 				<item>
 					<first>price</first>
 					<second>2</second>
+				</item>
+			</modifiers>
+		</item>
+		<item>
+			<name>Rare Crystal Cuirass</name>
+			<name2>Crystal Sapphire Cuirass</name2>
+			<id>59474</id>
+			<special>0</special>
+			<scroll>0</scroll>
+			<usableByMage>0</usableByMage>
+			<usableByWarrior>1</usableByWarrior>
+			<modifiers>
+				<count>3</count>
+				<item_version>0</item_version>
+				<item>
+					<first>price</first>
+					<second>2</second>
+				</item>
+				<item>
+					<first>defence</first>
+					<second>44</second>
+				</item>
+				<item>
+					<first>absorbtion</first>
+					<second>2</second>
+				</item>
+			</modifiers>
+		</item>
+		<item>
+			<name>Rare Crystal Plate Cuirass</name>
+			<name2>Crystal Hard Plated Cuirass</name2>
+			<id>59475</id>
+			<special>0</special>
+			<scroll>0</scroll>
+			<usableByMage>0</usableByMage>
+			<usableByWarrior>1</usableByWarrior>
+			<modifiers>
+				<count>3</count>
+				<item_version>0</item_version>
+				<item>
+					<first>price</first>
+					<second>2</second>
+				</item>
+				<item>
+					<first>defence</first>
+					<second>49</second>
+				</item>
+				<item>
+					<first>absorbtion</first>
+					<second>4</second>
 				</item>
 			</modifiers>
 		</item>
@@ -13388,6 +13555,52 @@
 			</modifiers>
 		</item>
 		<item>
+			<name>Rare Crystal Plate Bracers</name>
+			<name2>Crystal Bracers</name2>
+			<id>59734</id>
+			<special>0</special>
+			<scroll>0</scroll>
+			<usableByMage>0</usableByMage>
+			<usableByWarrior>1</usableByWarrior>
+			<modifiers>
+				<count>3</count>
+				<item_version>0</item_version>
+				<item>
+					<first>price</first>
+					<second>2</second>
+				</item>
+				<item>
+					<first>defence</first>
+					<second>21</second>
+				</item>
+				<item>
+					<first>absorbtion</first>
+					<second>2</second>
+				</item>
+			</modifiers>
+		</item>
+		<item>
+			<name>Very Rare Crystal Bracers</name>
+			<name2>Crystal Hard Bracers</name2>
+			<id>59764</id>
+			<special>0</special>
+			<scroll>0</scroll>
+			<usableByMage>0</usableByMage>
+			<usableByWarrior>1</usableByWarrior>
+			<modifiers>
+				<count>2</count>
+				<item_version>0</item_version>
+				<item>
+					<first>price</first>
+					<second>2</second>
+				</item>
+				<item>
+					<first>defence</first>
+					<second>23</second>
+				</item>
+			</modifiers>
+		</item>
+		<item>
 			<name>Very Rare Crystal Plate Bracers</name>
 			<name2>Crystal Plate Bracers</name2>
 			<id>59766</id>
@@ -13409,6 +13622,27 @@
 				<item>
 					<first>absorbtion</first>
 					<second>2</second>
+				</item>
+			</modifiers>
+		</item>
+		<item>
+			<name>Rare Crystal Scale Gauntlets</name>
+			<name2>Crystal Gauntlets</name2>
+			<id>59994</id>
+			<special>0</special>
+			<scroll>0</scroll>
+			<usableByMage>0</usableByMage>
+			<usableByWarrior>1</usableByWarrior>
+			<modifiers>
+				<count>2</count>
+				<item_version>0</item_version>
+				<item>
+					<first>price</first>
+					<second>2</second>
+				</item>
+				<item>
+					<first>defence</first>
+					<second>14</second>
 				</item>
 			</modifiers>
 		</item>
@@ -13446,6 +13680,31 @@
 				<item_version>0</item_version>
 				<item>
 					<first>price</first>
+					<second>2</second>
+				</item>
+			</modifiers>
+		</item>
+		<item>
+			<name>Rare Crystal Plate Boots</name>
+			<name2>Crystal Hard Plated Boots</name2>
+			<id>60510</id>
+			<special>0</special>
+			<scroll>0</scroll>
+			<usableByMage>0</usableByMage>
+			<usableByWarrior>1</usableByWarrior>
+			<modifiers>
+				<count>3</count>
+				<item_version>0</item_version>
+				<item>
+					<first>price</first>
+					<second>2</second>
+				</item>
+				<item>
+					<first>defence</first>
+					<second>30</second>
+				</item>
+				<item>
+					<first>absorbtion</first>
 					<second>2</second>
 				</item>
 			</modifiers>

@@ -228,9 +228,9 @@ void __declspec(naked) TILES_loadTiles()
 
 void _stdcall P_DisplayTileNative(uint16_t tile, int32_t x1, int32_t x2, int32_t h1, int32_t h2, int32_t h3, int32_t h4, uint32_t unk1, uint32_t unk2, uint32_t unk3, uint32_t unk4)
 {
-	log_format("tile = %04X; x1 = %d, x2 = %d, h1 = %d, h2 = %d, h3 = %d, h4 = %d;\n", tile, x1, x2, h1, h2, h3, h4);
-	log_format("             unk1 = %u, unk2 = %u, unk3 = %u, unk4 = %u;\n", unk1, unk2, unk3, unk4);
-	//P_DisplayTile(tile, x1, h1, x2, h2, x1, h3, x2, h4);
+	//log_format("tile = %04X; x1 = %d, x2 = %d, h1 = %d, h2 = %d, h3 = %d, h4 = %d;\n", tile, x1, x2, h1, h2, h3, h4);
+	//log_format("             unk1 = %u, unk2 = %u, unk3 = %u, unk4 = %u;\n", unk1, unk2, unk3, unk4);
+	P_DisplayTile(tile, x1, h1, x2, h2, x1, h3, x2, h4);
 }
 
 void __declspec(naked) TILES_displayTile1()

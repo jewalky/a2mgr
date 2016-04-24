@@ -158,10 +158,25 @@ bool _stdcall DllMain_Init(HINSTANCE hModule, DWORD ul_reason_for_call, LPVOID l
 	if(SDL_Init(SDL_INIT_VIDEO) == -1) return false;
 	if(IMG_Init(IMG_INIT_JPG | IMG_INIT_PNG | IMG_INIT_TIF) !=
 		(IMG_INIT_JPG | IMG_INIT_PNG | IMG_INIT_TIF)) return false;
-
+/*
 	Archives.Open("./graphics.res", "graphics");
 	Archives.Open("./main.res", "main");
-	Archives.Open("./patch.res", "patch");
+	Archives.Open("./patch.res", "patch");*/
+
+	char* commandline_raw = GetCommandLineA();
+	vector<string> parms = ParseCommandLine(commandline_raw);
+
+	for (size_t i = 0; i < parms.size(); i++)
+	{
+		log_format("arg: %s\n", parms[i].c_str());
+		if (parms[i] == "-delay" &&
+			i+1 < parms.size())
+		{
+			int delay = StrToInt(parms[i+1]);
+			if (delay)
+				Sleep(delay); // before we try to initialize video mode, etc. to not make the old allods be like wtf.
+		}
+	}
 
 	return true;
 }

@@ -105,6 +105,21 @@ GUI_softcoreSwitch					@104 NONAME
 GUI_softcoreResetSwitch				@105 NONAME
 GUI_softcoreSaveSwitch				@106 NONAME
 GUI_softcoreEnter					@107 NONAME
+RES_noLoad							@108 NONAME
+imp_MakeScreenshotNet				@109 NONAME
+GUI_sandboxSwitch					@110 NONAME
+GUI_removeServerList				@111 NONAME
+ITEMPNG_cachePng					@112 NONAME
+
+; main menu stuff 24.04.2016 for gog
+MENU_load			@113 NONAME
+MENU_draw			@114 NONAME
+MENU_click			@115 NONAME
+MENU_hover1			@116 NONAME
+MENU_hover2			@117 NONAME
+MENU_hover3			@118 NONAME
+
+; nosingle
 
 DBG_load256		@300
 DBG_disp256		@301

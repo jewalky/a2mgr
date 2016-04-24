@@ -226,3 +226,4 @@ private
 shout
 Screenshot saved into "%s"
 Downloading version information...
+Sandbox
