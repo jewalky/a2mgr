@@ -5,9 +5,12 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "a2mgr", "a2mgr.vcproj", "{4
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
 		Release|Win32 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{404E5A7B-4EB4-4305-8705-CBF5BAADC889}.Debug|Win32.ActiveCfg = Release|Win32
+		{404E5A7B-4EB4-4305-8705-CBF5BAADC889}.Debug|Win32.Build.0 = Release|Win32
 		{404E5A7B-4EB4-4305-8705-CBF5BAADC889}.Release|Win32.ActiveCfg = Release|Win32
 		{404E5A7B-4EB4-4305-8705-CBF5BAADC889}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection

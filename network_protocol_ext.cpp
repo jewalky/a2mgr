@@ -631,13 +631,15 @@ int NETPROTO_updater(UpdaterInfo* updater)
 	{
 		if (have_update)
 		{
-			MoveFile("allods2.exe", "allods2.exe.old"); // can't delete
+			MoveFileEx("allods2.exe", "allods2.exe.old", MOVEFILE_REPLACE_EXISTING|MOVEFILE_WRITE_THROUGH); // can't delete
+			//rename("allods2.exe", "allods2.exe.old");
 			CopyFile("data/allods2.exe", "allods2.exe", FALSE);
 		}
 
 		if (have_dll)
 		{
-			MoveFile("a2mgr.dll", "a2mgr.dll.old");
+			MoveFileEx("a2mgr.dll", "a2mgr.dll.old", MOVEFILE_REPLACE_EXISTING|MOVEFILE_WRITE_THROUGH);
+			//rename("a2mgr.dll", "a2mgr.dll.old");
 			CopyFile("data/a2mgr.dll", "a2mgr.dll", FALSE);
 		}
 
