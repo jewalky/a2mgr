@@ -19,3 +19,6 @@
 Release
 postbuild/release
 postbuild/final
+
+postbuild/log.txt
+postbuild/a2mgr.map
