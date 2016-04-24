@@ -137,23 +137,30 @@ void _stdcall DoMenuHover(byte* menu, int x, int y, unsigned int buttons)
 	// 0 = 5
 	// 1 = 3
 	// 2 = 7
-	switch (buttonclick)
+	if (buttonclick == buttonhover)
 	{
-	case 0:
-		*(uint32_t*)(menu + 0xF0) = 5;
-		break;
+		switch (buttonclick)
+		{
+		case 0:
+			*(uint32_t*)(menu + 0xF0) = 5;
+			break;
 
-	case 1:
-		*(uint32_t*)(menu + 0xF0) = 3;
-		break;
+		case 1:
+			*(uint32_t*)(menu + 0xF0) = 3;
+			break;
 
-	case 2:
-		*(uint32_t*)(menu + 0xF0) = 7;
-		break;
+		case 2:
+			*(uint32_t*)(menu + 0xF0) = 7;
+			break;
 
-	default:
+		default:
+			*(uint32_t*)(menu + 0xF0) = -1;
+			break;
+		}
+	}
+	else
+	{
 		*(uint32_t*)(menu + 0xF0) = -1;
-		break;
 	}
 }
 
