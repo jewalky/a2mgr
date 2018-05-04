@@ -64,7 +64,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="SDL.lib SDL_image.lib"
+				AdditionalDependencies="SDL.lib SDL_image.lib SDL_ttf.lib"
 				ShowProgress="0"
 				OutputFile="$(ProjectDir)/postbuild/a2mgr.dll"
 				LinkIncremental="1"
@@ -205,6 +205,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\menulib.cpp"
+				>
+			</File>
+			<File
 				RelativePath=".\misc.cpp"
 				>
 			</File>
@@ -334,14 +338,6 @@
 					</FileConfiguration>
 				</File>
 			</Filter>
-			<Filter
-				Name="updater"
-				>
-				<File
-					RelativePath=".\updater\Allods2EuUpdater.cpp"
-					>
-				</File>
-			</Filter>
 		</Filter>
 		<Filter
 			Name="Header Files"
@@ -394,6 +390,10 @@
 			</File>
 			<File
 				RelativePath=".\language.h"
+				>
+			</File>
+			<File
+				RelativePath=".\menulib.h"
 				>
 			</File>
 			<File
@@ -473,14 +473,6 @@
 				</File>
 				<File
 					RelativePath=".\lib\utils.hpp"
-					>
-				</File>
-			</Filter>
-			<Filter
-				Name="updater"
-				>
-				<File
-					RelativePath=".\updater\Allods2EuUpdater.h"
 					>
 				</File>
 			</Filter>

@@ -186,6 +186,25 @@ namespace zxmgr
 		va_end(va);
 	}
 
+	void __declspec(naked) DrawLine(int x1, int y1, int x2, int y2, unsigned long color)
+	{
+		__asm
+		{
+			push	ebp
+			mov		ebp, esp
+			push	[ebp+0x18]
+			push	[ebp+0x14]
+			push	[ebp+0x10]
+			push	[ebp+0x0C]
+			push	[ebp+0x08]
+			mov		edx, 0x0045BA0C
+			call	edx
+			mov		esp, ebp
+			pop		ebp
+			retn
+		}
+	}
+
 	void __declspec(naked) FillRect(int left, int top, int right, int bottom, unsigned long color)
 	{
 		__asm
@@ -285,7 +304,7 @@ namespace zxmgr
 		return hWnd;
 	}
 
-	void DoMessageLoop()
+	void _stdcall DoMessageLoop()
 	{
 		MSG msg;
 		while(PeekMessage(&msg, 0, 0, 0, 1))

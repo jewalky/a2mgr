@@ -1,6 +1,0 @@
-intro
-teleport
-stars
-crown
-knights
-druids

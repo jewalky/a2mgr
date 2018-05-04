@@ -12,14 +12,14 @@
 ;General
 
   ;Name and file
-  Name "Rage of Mages II"
+  Name "Allods2.eu Online Client"
   OutFile "final\a2inst${VER}_en.exe"
 
   ;Default installation folder
   InstallDir "C:\ROM2"
   
   ;Get installation folder from registry if available
-  InstallDirRegKey HKLM "Software\1C\Allods 2" "INSTALLDIR"
+  InstallDirRegKey HKLM "Software\1C\Allods2.eu" "INSTALLDIR"
 
   ;Request application privileges for Windows Vista
   RequestExecutionLevel admin ; главным образом из-за записи в HKLM
@@ -67,7 +67,7 @@ FunctionEnd
   
   ;Start Menu Folder Page Configuration
   !define MUI_STARTMENUPAGE_REGISTRY_ROOT "HKLM" 
-  !define MUI_STARTMENUPAGE_REGISTRY_KEY "Software\1C\Allods 2"
+  !define MUI_STARTMENUPAGE_REGISTRY_KEY "Software\1C\Allods2.eu"
   !define MUI_STARTMENUPAGE_REGISTRY_VALUENAME "Start Menu Folder"
   
   !insertmacro MUI_PAGE_STARTMENU Application $StartMenuFolder
@@ -92,7 +92,7 @@ FunctionEnd
 ;--------------------------------
 ;Installer Sections
 
-Section "Rage of Mages II: Necromancer (version ${VER})" SecDummy
+Section "Allods2.eu Online Client (version ${VER})" SecDummy
 
   SetOutPath "$INSTDIR"
   
@@ -105,7 +105,7 @@ Section "Rage of Mages II: Necromancer (version ${VER})" SecDummy
   CreateDirectory "$INSTDIR\screenshots"
   
   ;Store installation folder
-  WriteRegStr HKLM "Software\1C\Allods 2" "INSTALLDIR" $INSTDIR
+  WriteRegStr HKLM "Software\1C\Allods2.eu" "INSTALLDIR" $INSTDIR
 
  ;Store compatibility mode
   WriteRegStr HKCU "Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers" "$INSTDIR\allods2.exe" ""
@@ -133,7 +133,7 @@ SectionEnd
 ;Descriptions
 
   ;Language strings
-  LangString DESC_SecDummy ${LANG_ENGLISH} "Rage of Mages II: Necromancer installer (version ${VER})"
+  LangString DESC_SecDummy ${LANG_ENGLISH} "Allods2.eu Online Client setup (version ${VER})"
 
   ;Assign language strings to sections
   !insertmacro MUI_FUNCTION_DESCRIPTION_BEGIN
@@ -161,6 +161,6 @@ Section "Uninstall"
     Delete "$DESKTOP\Play at Allods2.eu (1024x768).lnk"
     Delete "$DESKTOP\Play at Allods2.eu (800x600).lnk"
 
-    DeleteRegKey /ifempty HKLM "Software\1C\Allods 2"
+    DeleteRegKey /ifempty HKLM "Software\1C\Allods2.eu"
 
 SectionEnd

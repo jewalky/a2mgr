@@ -89,6 +89,8 @@ void Image::Display(int16_t x, int16_t y)
 	DisplayEx(x, y, 0, 0, myWidth, myHeight, false);
 }
 
+#define SCALENUM(NUM, ACTUAL, MAX) (NUM ? (NUM * ACTUAL / MAX) : 0)
+
 void Image::DisplayEx(int16_t x, int16_t y, int16_t inX, int16_t inY, int16_t w, int16_t h, bool no_alpha)
 {
 	if(!myPixels) return;
@@ -152,7 +154,11 @@ void Image::DisplayEx(int16_t x, int16_t y, int16_t inX, int16_t inY, int16_t w,
 				else src_a = 0;
 			}
 
-			if(!src_a) continue;
+			if(!src_a)
+			{
+				pPixels++;
+				continue;
+			}
 
 			uint16_t dst_color = *pPixels;
 			uint8_t dst_r = (dst_color & 0xF800) >> 11;
@@ -167,14 +173,22 @@ void Image::DisplayEx(int16_t x, int16_t y, int16_t inX, int16_t inY, int16_t w,
 
 			if(src_a != 255)
 			{
+				//int alpha5 = src_a * 31 / 255;
+				//int alpha6 = src_a * 63 / 255;
+				
 				float alpha = (float)(src_a) / 255.0;
 				float Fout_r = (src_r * alpha) + (dst_r * (1.0-alpha));
 				float Fout_g = (src_g * alpha) + (dst_g * (1.0-alpha));
 				float Fout_b = (src_b * alpha) + (dst_b * (1.0-alpha));
 
-				out_r = min((uint8_t)Fout_r, 0x1F);
-				out_g = min((uint8_t)Fout_g, 0x3F);
-				out_b = min((uint8_t)Fout_b, 0x1F);
+				
+				//out_r = min(SCALENUM(src_r, alpha5, 0x1F)+SCALENUM(dst_r, 31-alpha5, 0x1F), 0x1F);
+				//out_g = min(SCALENUM(src_g, alpha6, 0x3F)+SCALENUM(dst_g, 63-alpha6, 0x3F), 0x3F);
+				//out_b = min(SCALENUM(src_b, alpha5, 0x1F)+SCALENUM(dst_b, 31-alpha5, 0x1F), 0x1F);
+
+				out_r = min(Fout_r, 0x1F);
+				out_g = min(Fout_g, 0x3F);
+				out_b = min(Fout_b, 0x1F);
 			}
 			else
 			{
@@ -214,4 +228,85 @@ uint32_t Image::GetPixelAt(int32_t x, int32_t y)
 uint32_t* Image::GetPixels()
 {
 	return myPixels;
+}
+
+Image* Image::RenderText(TTF_Font* font, std::string text, int r, int g, int b)
+{
+	Uint16* utext = new Uint16[text.length()+1];
+	utext[text.length()] = 0;
+	for (int i = 0; i < text.size(); i++)
+	{
+		unsigned long ch = (unsigned char)text[i];
+		if (ch >= 0x80 && ch <= 0xAF)
+			ch += 0x390;
+		else if (ch >= 0xE0 && ch <= 0xEF)
+			ch += 0x360;
+		else if (ch == 0xF0)
+			ch = 0x401;
+		else if (ch == 0xF1)
+			ch = 0x451;
+		utext[i] = ch; // for now. note: do unicode translate later
+	}
+
+	SDL_Color c = {255,255,255}; SDL_Color bgc = {0,0,0};
+	//SDL_Surface* srf = TTF_RenderUNICODE_Blended(font, utext, c);
+	SDL_Surface* srf = TTF_RenderUNICODE_Shaded(font, utext, c, bgc);
+	//SDL_Surface* srf = TTF_RenderUNICODE_Solid(font, utext, c);
+	delete[] utext;
+	
+	if (!srf) return NULL;
+	// copy data. srf->pixels should have rgba in it.
+	Image* img = new Image();
+	img->myWidth = srf->w;
+	img->myHeight = srf->h;
+	img->myPixels = new uint32_t[srf->w*srf->h];
+	//memcpy(img->myPixels, srf->pixels, srf->w*srf->h*4);
+
+	int cnt = srf->w*srf->h;
+	uint8_t* pixels = (uint8_t*)img->myPixels;
+	for (int y = 0; y < srf->h; y++)
+	{
+		uint8_t* opixels = ((uint8_t*)srf->pixels) + y * srf->pitch;
+		for (int x = 0; x < srf->w; x++)
+		{
+			int cb = b;
+			int cg = g;
+			int cr = r;
+			//int ca = !*opixels++?0:255;
+			int ca = *opixels++;
+			*pixels++ = ca;
+			*pixels++ = cb;
+			*pixels++ = cg;
+			*pixels++ = cr;
+		}
+	}
+
+	SDL_FreeSurface(srf);
+	return img;
+}
+
+int Image::RenderTextWidth(TTF_Font* font, std::string text)
+{
+	//int TTF_SizeUNICODE(TTF_Font *font, const Unit16 *text, int *w, int *h)
+	Uint16* utext = new Uint16[text.length()+1];
+	utext[text.length()] = 0;
+	for (int i = 0; i < text.size(); i++)
+	{
+		unsigned long ch = (unsigned char)text[i];
+		if (ch >= 0x80 && ch <= 0xAF)
+			ch += 0x390;
+		else if (ch >= 0xE0 && ch <= 0xEF)
+			ch += 0x360;
+		else if (ch == 0xF0)
+			ch = 0x401;
+		else if (ch == 0xF1)
+			ch = 0x451;
+		utext[i] = ch; // for now. note: do unicode translate later
+	}
+
+	int w;
+	int h;
+	TTF_SizeUNICODE(font, utext, &w, &h);
+	delete[] utext;
+	return w;
 }

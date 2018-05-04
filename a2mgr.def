@@ -119,6 +119,12 @@ MENU_hover1			@116 NONAME
 MENU_hover2			@117 NONAME
 MENU_hover3			@118 NONAME
 
+REG_allods2eu		@119 NONAME
+
+MENU_wmdirect		@120 NONAME
+MENU_noauth			@121 NONAME
+NETPROTO_loginFinished @122 NONAME
+
 ; nosingle
 
 DBG_load256		@300

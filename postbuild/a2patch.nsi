@@ -12,14 +12,14 @@
 ;General
 
   ;Name and file
-  Name "Аллоды II"
+  Name "Онлайн-клиент Allods2.eu"
   OutFile "final\a2inst${VER}_ru.exe"
 
   ;Default installation folder
-  InstallDir "C:\Allods 2"
+  InstallDir "C:\Allods2"
   
   ;Get installation folder from registry if available
-  InstallDirRegKey HKLM "Software\1C\Allods 2" "INSTALLDIR"
+  InstallDirRegKey HKLM "Software\1C\Allods2.eu" "INSTALLDIR"
 
   ;Request application privileges for Windows Vista
   RequestExecutionLevel admin ; главным образом из-за записи в HKLM
@@ -67,7 +67,7 @@ FunctionEnd
   
   ;Start Menu Folder Page Configuration
   !define MUI_STARTMENUPAGE_REGISTRY_ROOT "HKLM" 
-  !define MUI_STARTMENUPAGE_REGISTRY_KEY "Software\1C\Allods 2"
+  !define MUI_STARTMENUPAGE_REGISTRY_KEY "Software\1C\Allods2.eu"
   !define MUI_STARTMENUPAGE_REGISTRY_VALUENAME "Start Menu Folder"
   
   !insertmacro MUI_PAGE_STARTMENU Application $StartMenuFolder
@@ -92,7 +92,7 @@ FunctionEnd
 ;--------------------------------
 ;Installer Sections
 
-Section "Аллоды II: Повелитель Душ (версия ${VER})" SecDummy
+Section "Онлайн-клиент Allods2.eu (версия ${VER})" SecDummy
 
   SetOutPath "$INSTDIR"
   
@@ -105,7 +105,7 @@ Section "Аллоды II: Повелитель Душ (версия ${VER})" SecDummy
   CreateDirectory "$INSTDIR\screenshots"
   
   ;Store installation folder
-  WriteRegStr HKLM "Software\1C\Allods 2" "INSTALLDIR" $INSTDIR
+  WriteRegStr HKLM "Software\1C\Allods2.eu" "INSTALLDIR" $INSTDIR
 
  ;Store compatibility mode
   WriteRegStr HKCU "Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers" "$INSTDIR\allods2.exe" ""
@@ -133,7 +133,7 @@ SectionEnd
 ;Descriptions
 
   ;Language strings
-  LangString DESC_SecDummy ${LANG_RUSSIAN} "Установщик игры Аллоды II: Повелитель Душ (версия ${VER})"
+  LangString DESC_SecDummy ${LANG_RUSSIAN} "Установщик онлайн-клиента Allods2.eu (версия ${VER})"
 
   ;Assign language strings to sections
   !insertmacro MUI_FUNCTION_DESCRIPTION_BEGIN
@@ -161,6 +161,6 @@ Section "Uninstall"
     Delete "$DESKTOP\Играть на Allods2.eu (1024x768).lnk"
     Delete "$DESKTOP\Играть на Allods2.eu (800x600).lnk"
 
-    DeleteRegKey /ifempty HKLM "Software\1C\Allods 2"
+    DeleteRegKey /ifempty HKLM "Software\1C\Allods2.eu"
 
 SectionEnd

@@ -113,9 +113,15 @@
 0 113 4AEDF5 // : MENU_load
 0 114 4AF2C8 // : MENU_draw
 0 115 4AF93F // : MENU_click
-0 116 4AF8E6 // : MENU_hover1
-0 117 4AF8C3 // : MENU_hover2
-0 118 4AFA5B // : MENU_hover3
+0 116 4AF8E6 // : MENU_hover1 // click
+0 117 4AF8C3 // : MENU_hover2 // move
+0 118 4AFA5B // : MENU_hover3 // unclick
+
+0 119 4863F6 // : REG_allods2eu
+
+0 120 4AF457 // : MENU_wmdirect
+0 121 48A969 // : MENU_noauth
+0 122 4952ED // : NETPROTO_loginFinished
 
 //0 300 426DA9
 //0 301 427014
