@@ -126,6 +126,60 @@ Rune of Earth
 Rune of Fire
 Rune of Water
 Ring
+Assorted Metal Parts
+Iron Fragments
+Skeleton's Bone Part
+Steel Medallion
+Silver Essence
+Silver Coin
+Snake's Spine Part
+Silver Medallion
+Mithrill Essence
+Mithrill Reagent
+Orc's Eye
+Mithrill Medallion
+Gold Essence
+Gold Reagent
+Gold Nugget
+Golden Medallion
+Adamantium Essence
+Adamantium Reagent
+Adamantium Broken Gem
+Adamantium Medallion
+Meteoric Essence
+Meteoric Reagent
+Meteoric Medallion
+Diamond Medallion
+Crystal Essence
+Crystal Reagent
+Green Dragon Leather
+Crystal Medallion
+Red Crystal Essence
+Red Crystal Reagent
+Red Dragon Leather
+Red Crystal Medallion
+Black Pearl Essence
+Black Pearl Reagent
+Book of Damned
+Black Pearl Medallion
+Demonic Essence
+Demonic Reagent
+Demonic Fire
+Demonic Medallion
+Topaz Nugget
+Magic Pergament
+Ruby
+Magic Tome
+Amethyst
+Elven Wings
+Topaz
+Scarabey Medallion
+Prismatic Gem
+Prismatic Reagent
+Necro's Medallion
+Necro's Heart
+Emerald
+Elven Medallion
 Bronze Dagger
 Bronze Short Sword
 Bronze Long Sword
