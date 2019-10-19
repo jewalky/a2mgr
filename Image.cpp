@@ -1,3 +1,4 @@
+#include "a2mgr.h"
 #include "Image.h"
 #include <SDL/SDL.h>
 #include <SDL/SDL_image.h>
@@ -8,6 +9,8 @@
 
 Image::Image(std::string filename)
 {
+	TryInitSDL();
+
 	myPixels = NULL;
 	myWidth = 0;
 	myHeight = 0;
@@ -32,11 +35,14 @@ Image::Image(std::string filename)
 	if(!img || !img->w || !img->h)
 	{
 		if(img) SDL_FreeSurface(img);
+		SDL_RWclose(rw);
 		delete[] buffer;
 		MessageBoxA(zxmgr::GetHWND(), Format("FATAL ERROR: can't load %s", filename.c_str()).c_str(),
 			"Allods2", MB_ICONWARNING | MB_OK);
 		zxmgr::AfxAbort();
 	}
+
+	SDL_RWclose(rw);
 
 	SDL_PixelFormat pfd;
 	pfd.palette = NULL;
@@ -66,6 +72,8 @@ Image::Image(std::string filename)
 			"Allods2", MB_ICONWARNING | MB_OK);
 		zxmgr::AfxAbort();
 	}
+
+	SDL_FreeSurface(img);
 
 	myWidth = img_r->w;
 	myHeight = img_r->h;
@@ -232,6 +240,8 @@ uint32_t* Image::GetPixels()
 
 Image* Image::RenderText(TTF_Font* font, std::string text, int r, int g, int b)
 {
+	TryInitSDL();
+
 	Uint16* utext = new Uint16[text.length()+1];
 	utext[text.length()] = 0;
 	for (int i = 0; i < text.size(); i++)
@@ -287,6 +297,8 @@ Image* Image::RenderText(TTF_Font* font, std::string text, int r, int g, int b)
 
 int Image::RenderTextWidth(TTF_Font* font, std::string text)
 {
+	TryInitSDL();
+
 	//int TTF_SizeUNICODE(TTF_Font *font, const Unit16 *text, int *w, int *h)
 	Uint16* utext = new Uint16[text.length()+1];
 	utext[text.length()] = 0;

@@ -61,6 +61,41 @@ string DumpSHA(unsigned char buf[])
 	return string2;
 }
 
+bool SDLInitialized = false;
+HANDLE SDLInitMutex = NULL;
+bool InitSDL()
+{
+	if (SDL_Init(SDL_INIT_VIDEO) == -1) {
+		log_format("ERROR: Failed to initialize SDL video (%s)\n", SDL_GetError());
+		return false;
+	}
+	if (IMG_Init(IMG_INIT_JPG | IMG_INIT_PNG | IMG_INIT_TIF) !=
+				(IMG_INIT_JPG | IMG_INIT_PNG | IMG_INIT_TIF)) {
+		log_format("ERROR: Failed to initialize SDL image (%s)\n", IMG_GetError());
+		return false;
+	}
+	if (TTF_Init() == -1) {
+		log_format("ERROR: Failed to initialize SDL-ttf (%s)\n", TTF_GetError());
+		return false;
+	}
+	return true;
+}
+
+void TryInitSDL()
+{
+	if (!SDLInitialized)
+	{
+		if (!SDLInitMutex) SDLInitMutex = CreateMutex(NULL, TRUE, NULL);
+		else WaitForSingleObject(SDLInitMutex, INFINITE);
+		if (!SDLInitialized)
+		{
+			InitSDL();
+			SDLInitialized = true;
+		}
+		ReleaseMutex(SDLInitMutex);
+	}
+}
+
 bool _stdcall DllMain_Init(HINSTANCE hModule, DWORD ul_reason_for_call, LPVOID lpReserved)
 {
 	//__network_ext_Initialize();
@@ -156,10 +191,6 @@ bool _stdcall DllMain_Init(HINSTANCE hModule, DWORD ul_reason_for_call, LPVOID l
 
 	PSCRL_InitializeInjection();
 
-	if (SDL_Init(SDL_INIT_VIDEO) == -1) return false;
-	if (IMG_Init(IMG_INIT_JPG | IMG_INIT_PNG | IMG_INIT_TIF) !=
-		(IMG_INIT_JPG | IMG_INIT_PNG | IMG_INIT_TIF)) return false;
-	if (TTF_Init() == -1) return false;
 /*
 	Archives.Open("./graphics.res", "graphics");
 	Archives.Open("./main.res", "main");
