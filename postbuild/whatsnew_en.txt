@@ -2,9 +2,14 @@
 Rage of Mages II: Necromancer
       Important Notes
 -----------------------------
-Version from Jan 22, 2015
+Version from Oct 19, 2019
 
 ATTENTION! This patch contains all previous updates.
+
+Update 27 (version 3.2)
+-----------------------
+1. Improved compatibility with Windows 10.
+2. Updated game resources to the latest version.
 
 Update 26 (version 3.1)
 -----------------------

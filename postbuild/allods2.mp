@@ -121,7 +121,11 @@
 
 0 120 4AF457 // : MENU_wmdirect
 0 121 48A969 // : MENU_noauth
-0 122 4952ED // : NETPROTO_loginFinished
+
+0 122 43BCE4 // : ITEM_changeItemName // used for adding stars in front of rare items
+0 123 43C501 // : ITEM_checkRemoveMagic // removes "magic" caption if no stats were displayed
+
+0 124 5B44BA // : imp_InitSDL
 
 //0 300 426DA9
 //0 301 427014

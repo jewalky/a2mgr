@@ -211,7 +211,7 @@ Game scores
 Game over (frag limit hit)
 Game over (time limit hit)
 Game over (the map was changed)
-Softcore (PvE)
+Classic softcore (c81/c84)
 We have a planned maintenance outage. The functionality of the server will be restored soon.
 Initiating download...
 Failed downloading update.
@@ -235,7 +235,7 @@ Downloading version information...
 Receiving resource updates...
 file
 %d/%d files done
-Sandbox
+Classic hardcore (c81/c84)
 Play
 Authors
 Quit

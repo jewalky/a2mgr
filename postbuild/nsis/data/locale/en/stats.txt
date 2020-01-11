@@ -37,7 +37,7 @@ Air Skill
 Earth Skill
 Astral Skill
 Range
-Magic Lore
+
 Creature Lore
 of ...
 casts ...

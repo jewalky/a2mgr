@@ -1064,27 +1064,3 @@ void __declspec(naked) imp_MakeScreenshotNet()
 		jmp		ecx
 	}
 }
-
-void _stdcall MENU_close(int message);
-void __declspec(naked) NETPROTO_loginFinished()
-{
-	__asm
-	{ // 4952ED
-		// if eax is 1, close menu
-		test	eax, eax
-		jnz		loginfinishedok
-
-loginfinishedret:
-		mov		ecx, [ebp-0x0C]
-		mov		fs:[0], ecx
-		mov		esp, ebp
-		pop		ebp
-		retn
-
-loginfinishedok:
-		push	0x488
-		call	MENU_close
-		mov		eax, 1
-		jmp		loginfinishedret
-	}
-}

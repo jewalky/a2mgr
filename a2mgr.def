@@ -123,7 +123,11 @@ REG_allods2eu		@119 NONAME
 
 MENU_wmdirect		@120 NONAME
 MENU_noauth			@121 NONAME
-NETPROTO_loginFinished @122 NONAME
+
+ITEM_changeItemName @122 NONAME
+ITEM_checkRemoveMagic @123 NONAME
+
+imp_InitSDL			@124 NONAME
 
 ; nosingle
 

@@ -37,7 +37,7 @@ unused_value_0
 Навык в сфере земли
 Навык в сфере астрала
 Дистанция
-Magic Lore
+
 Creature Lore
 Spell Inside
 С заклинанием

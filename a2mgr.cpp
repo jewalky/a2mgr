@@ -133,7 +133,7 @@ bool _stdcall DllMain_Init(HINSTANCE hModule, DWORD ul_reason_for_call, LPVOID l
 		else wherelog = "logs\\allods2";
 	}
 
-	u_pid = GetProcessId(GetCurrentProcess());
+	u_pid = GetCurrentProcessId();
 
 	char procnamet[MAX_PATH];
 	GetModuleFileName(0, procnamet, MAX_PATH);

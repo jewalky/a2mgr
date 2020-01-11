@@ -80,6 +80,12 @@ void _declspec(naked) CHAT_convWinToDos(void)
 	{
 		xor		edx, edx
 		mov		dl, [ebp + 8]
+		cmp		edx, 0x80
+		jnz		w2d_n0
+		mov		edx, 0x80
+		mov		[ebp + 8], dl
+		jmp w2d_skip
+w2d_n0:
 		cmp		edx, 0xA8
 		jnz		w2d_n1
 		mov		edx, 0xF0
@@ -106,6 +112,12 @@ void _declspec(naked) CHAT_convDosToIdx(void)
 	{
 		xor		eax, eax
 		mov		al, [ebp + 8]
+		cmp		eax, 0xC1
+		jnz		d2a_n0
+		mov		eax, 0x80
+		mov		[ebp + 8], al
+		jmp		d2a_skip
+d2a_n0:
 		cmp		eax, 0xF0
 		jnz		d2a_n1
 		mov		eax, 192+32

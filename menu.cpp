@@ -6,26 +6,25 @@
 
 #include "menulib.h"
 
-MMainMenu* BaseWidget = NULL;
-Image* img_MenuBG = NULL;
-Image* img_MenuLogo = NULL;
+static MMainMenu* BaseWidget = NULL;
+static Image* img_MenuBG = NULL;
+static Image* img_MenuLogo = NULL;
 
-MTextField* m_Login = NULL;
-MTextField* m_Password = NULL;
+static MTextField* m_Login = NULL;
+static MTextField* m_Password = NULL;
 
-MRadioList* m_RadioGamemode = NULL;
+static MRadioList* m_RadioGamemode = NULL;
 
-MEnterButton* m_Submit = NULL;
+static MEnterButton* m_Submit = NULL;
 
-MCheckBox* m_CheckRemember = NULL;
+static MCheckBox* m_CheckRemember = NULL;
 
-MIconButton* m_Authors = NULL;
-MIconButton* m_Exit = NULL;
+static MIconButton* m_Authors = NULL;
+static MIconButton* m_Exit = NULL;
 
-byte* MenuCurrent = NULL;
-bool MenuVisible = false;
+static byte* MenuCurrent = NULL;
 
-int MenuCursor = 0;
+static int MenuCursor = 0;
 
 static void SetCString(const char** cstr, const char* text)
 {
@@ -56,10 +55,25 @@ void _stdcall MENU_close(int message)
 {
 	__asm
 	{
-		//mov		ecx, MenuCurrent
-		//mov		edx, [ecx]
-		//call	[edx+0x34]
+		mov		ecx, MenuCurrent
+		mov		edx, [ecx]
+		call	[edx+0x34]
 		//0x488
+
+		// send regular message
+		push	0
+		push	0
+		push	message
+		mov		edx, 0x00401870
+		call	edx
+		mov		ecx, eax
+		mov		edx, 0x00420960
+		call	edx
+
+		// close menu
+		// ?
+
+		// send magic ROM2 message
 		push	message
 		mov		ecx, MenuCurrent
 		mov		edx, [ecx]
@@ -82,42 +96,34 @@ void _stdcall MENU_Connect()
 	// send message 1160 ? 0x416 + 114 in order to start connecting
 	unsigned long mwnd = zxmgr::AfxGetMainWnd();
 	*(unsigned long*)(mwnd + 0x3C8) = m_RadioGamemode->GetSelection(); // game type
-	/*		// 0. PvP (hardcore) // was 0
-	// 1. PvE (softcore) // was 2
-	// 2. Sandbox		 // new
+	/*		// 0. Hardcore // was 0
+	// 1. Classic Softcore // was 2
+	// 2. Classic Hardcore	 // new
 	// 3. Arena          // was 1*/
 	switch (m_RadioGamemode->GetSelection())
 	{
 	case 0:
 		*(unsigned long*)(mwnd + 0x3C8) = 0;
 		break;
-	case 1:
+	case 2:
 		*(unsigned long*)(mwnd + 0x3C8) = 2;
 		break;
-	case 2:
+	case 1:
 		*(unsigned long*)(mwnd + 0x3C8) = 4;
 		break;
 	case 3:
 		*(unsigned long*)(mwnd + 0x3C8) = 3;
 		break;
 	}
-	//*(const char**)(mwnd + 0x3C4) = m_Password->GetText().c_str();
-	//*(const char**)(mwnd + 0x3C0) = m_Login->GetText().c_str();
+
 	SetCString((const char**)(mwnd + 0x3C0), m_Login->GetText().c_str());
 	SetCString((const char**)(mwnd + 0x3C4), m_Password->GetText().c_str());
 	SetCString((const char**)(mwnd + 0x3B8), "hat.allods2.eu");
 	*(unsigned long*)(mwnd + 0x3D0) = m_CheckRemember->IsChecked()?1:0;
-	//*(const char**)(mwnd + 0x478) = "hat.allods2.eu";
 	*(unsigned long*)(mwnd + 0x3F4) = 1;
-	PostMessageA(zxmgr::GetHWND(), 1160, 0, 0);
-	zxmgr::DoMessageLoop();
 	
-	// todo close menu
-	// ok, the problem is that the menu should be closed after SUCCEEDING at login, not before opening the form.
-	// otherwise it will bug out after getting a login error.
-
-	zxmgr::DoMessageLoop();
-	//MenuVisible = false;
+	// close menu, start connecting
+	MENU_close(1160);
 }
 
 bool MMainMenu::OnChildMessage(MWidget* sender, int id, unsigned long d1, unsigned long d2)
@@ -129,18 +135,12 @@ bool MMainMenu::OnChildMessage(MWidget* sender, int id, unsigned long d1, unsign
 	}
 	else if (sender == m_Exit)
 	{
-		PostMessageA(zxmgr::GetHWND(), 16, 0, 0);
-		zxmgr::DoMessageLoop();
 		MENU_close(16);
-		zxmgr::DoMessageLoop();
 		return true;
 	}
 	else if (sender == m_Authors)
 	{
-		PostMessageA(zxmgr::GetHWND(), 1064, 0, 0);
-		zxmgr::DoMessageLoop();
 		MENU_close(1064);
-		zxmgr::DoMessageLoop();
 		return true;
 	}
 
@@ -149,7 +149,6 @@ bool MMainMenu::OnChildMessage(MWidget* sender, int id, unsigned long d1, unsign
 
 void _stdcall DoMenuLoad(byte* menu)
 {
-	//MenuVisible = true;
 	MenuCurrent = menu;
 
 	if (!BaseWidget)
@@ -181,10 +180,10 @@ void _stdcall DoMenuLoad(byte* menu)
 		m_Password->SetMasked(true);
 
 		m_RadioGamemode = new MRadioList(BaseWidget);
-		m_RadioGamemode->SetRect(MRect::FromXYWH(264, 248, 108, 80));
-		m_RadioGamemode->AddOption(zxmgr::GetPatchString(104)); // softcore
-		m_RadioGamemode->AddOption(zxmgr::GetPatchString(213)); // hardcore
-		m_RadioGamemode->AddOption(zxmgr::GetPatchString(237)); // sandbox
+		m_RadioGamemode->SetRect(MRect::FromXYWH(224, 248, 108, 80));
+		m_RadioGamemode->AddOption(zxmgr::GetPatchString(104)); // hardcore
+		m_RadioGamemode->AddOption(zxmgr::GetPatchString(237)); // classic hardcore
+		m_RadioGamemode->AddOption(zxmgr::GetPatchString(213)); // classic softcore
 		m_RadioGamemode->AddOption(zxmgr::GetPatchString(109)); // arena
 		m_RadioGamemode->SetSelection(0);
 
@@ -210,7 +209,7 @@ void _stdcall DoMenuLoad(byte* menu)
 		m_Authors->SetIcon(new Image("data/locale/ru/graphics/mainmenu/mb_authors.png"),
 						   new Image("data/locale/ru/graphics/mainmenu/mb_authors_on.png"),
 						   new Image("data/locale/ru/graphics/mainmenu/mb_authors_off.png"));
-		m_Authors->SetEnabled(false);
+		//m_Authors->SetEnabled(false);
 
 		// get current login and password, if this is the first run
 		HKEY hKey;

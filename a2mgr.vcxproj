@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Release|Win32">
       <Configuration>Release</Configuration>
@@ -10,10 +10,12 @@
     <ProjectGuid>{404E5A7B-4EB4-4305-8705-CBF5BAADC889}</ProjectGuid>
     <RootNamespace>a2mgr</RootNamespace>
     <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>NotSet</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
@@ -25,30 +27,33 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
-    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Release\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Release\</IntDir>
-    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
-    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</GenerateManifest>
-    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
-    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
-    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <_ProjectFileVersion>14.0.25431.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>postbuild\</OutDir>
+    <IntDir>Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <GenerateManifest>true</GenerateManifest>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules />
+    <CodeAnalysisRuleAssemblies />
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>curl\include; sdl\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>$(ProjectDir); curl\include; sdl\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;A2MGR_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-      <PrecompiledHeader>
-      </PrecompiledHeader>
-      <AssemblerOutput>
-      </AssemblerOutput>
+      <PrecompiledHeader />
+      <AssemblerOutput />
       <AssemblerListingLocation>a2mgr.asm</AssemblerListingLocation>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>SDL.lib;SDL_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL.lib;SDL_image.lib;SDL_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ShowProgress>NotSet</ShowProgress>
       <OutputFile>$(ProjectDir)/postbuild/a2mgr.dll</OutputFile>
       <AdditionalLibraryDirectories>curl\lib\Release; sdl\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
@@ -88,26 +93,9 @@
     <ClCompile Include="itempng.cpp" />
     <ClCompile Include="landscape_renderer.cpp" />
     <ClCompile Include="language.cpp" />
-    <ClCompile Include="map_location.cpp" />
-    <ClCompile Include="misc.cpp" />
-    <ClCompile Include="net_shared.cpp" />
-    <ClCompile Include="network_crypt.cpp" />
-    <ClCompile Include="network_hat_enter.cpp" />
-    <ClCompile Include="network_protocol.cpp" />
-    <ClCompile Include="network_protocol_ext.cpp" />
-    <ClCompile Include="pack_scrolling.cpp" />
-    <ClCompile Include="resource_control.cpp" />
-    <ClCompile Include="resource_files_replace.cpp" />
-    <ClCompile Include="scanrange.cpp" />
-    <ClCompile Include="screenshot.cpp" />
-    <ClCompile Include="scrolling.cpp" />
-    <ClCompile Include="serialize.cpp" />
-    <ClCompile Include="utils.cpp" />
-    <ClCompile Include="video_init.cpp" />
-    <ClCompile Include="zxmgr.cpp" />
-    <ClCompile Include="zxmgr_gui.cpp" />
     <ClCompile Include="lib\happyhttp.cpp" />
     <ClCompile Include="lib\hat2.cpp" />
+    <ClCompile Include="lib\lodepng.cpp" />
     <ClCompile Include="lib\packet.cpp" />
     <ClCompile Include="lib\ScanrangeCalc.cpp" />
     <ClCompile Include="lib\serialize.cpp">
@@ -120,6 +108,27 @@
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
       <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
     </ClCompile>
+    <ClCompile Include="map_location.cpp" />
+    <ClCompile Include="menu.cpp" />
+    <ClCompile Include="menulib.cpp" />
+    <ClCompile Include="misc.cpp" />
+    <ClCompile Include="network_crypt.cpp" />
+    <ClCompile Include="network_hat_enter.cpp" />
+    <ClCompile Include="network_protocol.cpp" />
+    <ClCompile Include="network_protocol_ext.cpp" />
+    <ClCompile Include="net_shared.cpp" />
+    <ClCompile Include="nosingle.cpp" />
+    <ClCompile Include="pack_scrolling.cpp" />
+    <ClCompile Include="resource_control.cpp" />
+    <ClCompile Include="resource_files_replace.cpp" />
+    <ClCompile Include="scanrange.cpp" />
+    <ClCompile Include="screenshot.cpp" />
+    <ClCompile Include="scrolling.cpp" />
+    <ClCompile Include="serialize.cpp" />
+    <ClCompile Include="utils.cpp" />
+    <ClCompile Include="video_init.cpp" />
+    <ClCompile Include="zxmgr.cpp" />
+    <ClCompile Include="zxmgr_gui.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="a2mgr.h" />
@@ -134,17 +143,9 @@
     <ClInclude Include="Image.h" />
     <ClInclude Include="landscape_renderer.h" />
     <ClInclude Include="language.h" />
-    <ClInclude Include="net_shared.h" />
-    <ClInclude Include="network_crypt.h" />
-    <ClInclude Include="network_protocol_ext.h" />
-    <ClInclude Include="pack_scrolling.h" />
-    <ClInclude Include="serialize.h" />
-    <ClInclude Include="stdint.h" />
-    <ClInclude Include="utils.h" />
-    <ClInclude Include="zxmgr.h" />
-    <ClInclude Include="zxmgr_gui.h" />
     <ClInclude Include="lib\happyhttp.h" />
     <ClInclude Include="lib\hat2.hpp" />
+    <ClInclude Include="lib\lodepng.h" />
     <ClInclude Include="lib\packet.hpp" />
     <ClInclude Include="lib\ScanrangeCalc.hpp" />
     <ClInclude Include="lib\serialize.hpp" />
@@ -152,11 +153,23 @@
     <ClInclude Include="lib\socket.hpp" />
     <ClInclude Include="lib\stdint.h" />
     <ClInclude Include="lib\utils.hpp" />
+    <ClInclude Include="menulib.h" />
+    <ClInclude Include="network_crypt.h" />
+    <ClInclude Include="network_protocol_ext.h" />
+    <ClInclude Include="net_shared.h" />
+    <ClInclude Include="pack_scrolling.h" />
+    <ClInclude Include="serialize.h" />
+    <ClInclude Include="stdint.h" />
+    <ClInclude Include="utils.h" />
+    <ClInclude Include="zxmgr.h" />
+    <ClInclude Include="zxmgr_gui.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="a2mgr.def" />
     <None Include="postbuild\allods2.mp" />
-    <None Include="postbuild\list.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="postbuild\list.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
