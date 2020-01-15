@@ -81,6 +81,7 @@
     <ClCompile Include="class_extend.cpp" />
     <ClCompile Include="class_mapobject.cpp" />
     <ClCompile Include="client_cmd.cpp" />
+    <ClCompile Include="colorful_text.cpp" />
     <ClCompile Include="config.cpp" />
     <ClCompile Include="crash.cpp" />
     <ClCompile Include="CRC_32.cpp" />

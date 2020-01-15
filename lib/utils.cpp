@@ -18,3 +18,17 @@ bool StrToBool(const string& what)
 		return true;
 	return false;
 }
+
+unsigned long HexToInt(const string& what)
+{
+	unsigned int retval;
+	sscanf(what.c_str(), "%X", &retval);
+	return retval;
+}
+
+bool CheckHex(const string& what)
+{
+	for (size_t i = 0; i < what.length(); i++)
+		if ((what[i] < 0x30 || 0x39 < what[i]) && !(what[i] >= 'A' && what[i] <= 'F') && !(what[i] >= 'a' && what[i] <= 'f')) return false;
+	return true;
+}

@@ -25,11 +25,17 @@ void __declspec(naked) REG_allods2eu()
 void __stdcall PreprocessItemName(unsigned char* item, const char* name)
 {
 	char* target = (char*)0x00624FB0;
+
+	unsigned short itemId = *(unsigned short*)(item + 6);
+	bool isSpecial = ((itemId & 0xFE00) == 0xE00);
+
 	target[0] = 0;
 	int magiclore = 0;
 	// add stars
 	unsigned char cnt = *(unsigned char*)(item + 0x09);
 	unsigned char* stats = *(unsigned char**)(item + 0x0C);
+	bool isMagic = false;
+	bool price2 = false;
 	for (int i = 0; i < cnt; i++)
 	{
 		int effect1 = *stats++;
@@ -64,13 +70,71 @@ void __stdcall PreprocessItemName(unsigned char* item, const char* name)
 		{
 			magiclore = value1;
 		}
+		else if (effect1 == 0x33)
+		{
+			isMagic = true;
+		}
+		else if (effect1 == 1)
+		{
+			if (value1 == 2)
+				price2 = true;
+		}
 	}
+
 	if (magiclore < 0)
 		magiclore = 0;
+
+	int cr = -1;
+	int cg = -1;
+	int cb = -1;
+
+	std::string colorstr = "";
+
+	// logic:
+	// has magic = 58 135 173
+	// has magic and price 2 = 192 152 83
+	// magiclore=1 = 185 74 72
+	// magiclore=2 = 50 205 50
+	// magiclore=3 = 255 0 255
+	if (!isSpecial && isMagic)
+	{
+		if (magiclore == 1)
+		{
+			cr = 215; cg = 43; cb = 43;
+		}
+		else if (magiclore == 2)
+		{
+			cr = 50; cg = 205; cb = 50;
+		}
+		else if (magiclore >= 3)
+		{
+			cr = 255; cg = 0; cb = 255;
+		}
+		else if (price2)
+		{
+			cr = 84; cg = 82; cb = 255;
+		}
+		else
+		{
+			cr = 192; cg = 152; cb = 83;
+		}
+	}
+
+	if (cr >= 0 && cg >= 0 && cb >= 0)
+	{
+		colorstr = Format("%%[%d,%d,%d]", cr, cg, cb);
+	}
+
+	strcat(target, colorstr.c_str());
+
 	for (int i = 0; i < magiclore; i++)
-		target[i] = 0xC1;
-	target[magiclore] = 0;
+		target[i+colorstr.length()] = 0xC1;
+
+	target[magiclore+colorstr.length()] = 0;
+
 	strcat(target, name);
+
+	strcat(target, "%[*]");
 }
 
 // idea: don't display "magic:" label if all stats were hidden (i.e. all item has is magiclore)
