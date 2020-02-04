@@ -90,33 +90,27 @@ void __stdcall PreprocessItemName(unsigned char* item, const char* name)
 
 	std::string colorstr = "";
 
-	// logic:
-	// has magic = 58 135 173
-	// has magic and price 2 = 192 152 83
-	// magiclore=1 = 185 74 72
-	// magiclore=2 = 50 205 50
-	// magiclore=3 = 255 0 255
 	if (!isSpecial && isMagic)
 	{
 		if (magiclore == 1)
 		{
-			cr = 215; cg = 43; cb = 43;
+			cr = 0xEA; cg = 0x66; cb = 0x66;
 		}
 		else if (magiclore == 2)
 		{
-			cr = 50; cg = 205; cb = 50;
+			cr = 0x4F; cg = 0xDE; cb = 0x5D;
 		}
 		else if (magiclore >= 3)
 		{
-			cr = 255; cg = 0; cb = 255;
+			cr = 0xCF; cg = 0x35; cb = 0xC4;
 		}
 		else if (price2)
 		{
-			cr = 84; cg = 82; cb = 255;
+			cr = 0xD8; cg = 0xBF; cb = 0x00;
 		}
 		else
 		{
-			cr = 192; cg = 152; cb = 83;
+			cr = 0x9E; cg = 0x9E; cb = 0xD9;
 		}
 	}
 

@@ -96,22 +96,19 @@ void _stdcall MENU_Connect()
 	// send message 1160 ? 0x416 + 114 in order to start connecting
 	unsigned long mwnd = zxmgr::AfxGetMainWnd();
 	*(unsigned long*)(mwnd + 0x3C8) = m_RadioGamemode->GetSelection(); // game type
-	/*		// 0. Hardcore // was 0
-	// 1. Classic Softcore // was 2
-	// 2. Classic Hardcore	 // new
-	// 3. Arena          // was 1*/
+	/*
+	// 0. Classic Softcore // was 2
+	// 1. Classic Hardcore	 // new
+	// 2. Arena          // was 1*/
 	switch (m_RadioGamemode->GetSelection())
 	{
-	case 0:
-		*(unsigned long*)(mwnd + 0x3C8) = 0;
-		break;
-	case 2:
+	case 1:
 		*(unsigned long*)(mwnd + 0x3C8) = 2;
 		break;
-	case 1:
+	case 0:
 		*(unsigned long*)(mwnd + 0x3C8) = 4;
 		break;
-	case 3:
+	case 2:
 		*(unsigned long*)(mwnd + 0x3C8) = 3;
 		break;
 	}
@@ -180,8 +177,7 @@ void _stdcall DoMenuLoad(byte* menu)
 		m_Password->SetMasked(true);
 
 		m_RadioGamemode = new MRadioList(BaseWidget);
-		m_RadioGamemode->SetRect(MRect::FromXYWH(224, 248, 108, 80));
-		m_RadioGamemode->AddOption(zxmgr::GetPatchString(104)); // hardcore
+		m_RadioGamemode->SetRect(MRect::FromXYWH(264, 248, 108, 80));
 		m_RadioGamemode->AddOption(zxmgr::GetPatchString(237)); // classic hardcore
 		m_RadioGamemode->AddOption(zxmgr::GetPatchString(213)); // classic softcore
 		m_RadioGamemode->AddOption(zxmgr::GetPatchString(109)); // arena
@@ -232,17 +228,14 @@ void _stdcall DoMenuLoad(byte* menu)
 			{
 				switch (cdm)
 				{
-				case 0:
-					m_RadioGamemode->SetSelection(0);
-					break;
 				case 2:
 					m_RadioGamemode->SetSelection(1);
 					break;
 				case 3:
-					m_RadioGamemode->SetSelection(3);
+					m_RadioGamemode->SetSelection(2);
 					break;
 				case 4:
-					m_RadioGamemode->SetSelection(2);
+					m_RadioGamemode->SetSelection(0);
 					break;
 				}
 			}
