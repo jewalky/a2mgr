@@ -9,50 +9,44 @@
 #include "zxmgr.h"
 
 // for text
-#include <SDL/SDL_ttf.h>
-static TTF_Font* MFont5VeryBig = NULL;
-static TTF_Font* MFont5Big = NULL;
-static TTF_Font* MFont5 = NULL;
-static TTF_Font* MFont5Small = NULL;
-static TTF_Font* MFont5VerySmall = NULL;
+static ROMFont* MFont5VeryBig = NULL;
+static ROMFont* MFont5Big = NULL;
+static ROMFont* MFont5 = NULL;
+static ROMFont* MFont5Small = NULL;
+static ROMFont* MFont5VerySmall = NULL;
 
-static TTF_Font* M_GetVeryBigFont()
+static ROMFont* M_GetVeryBigFont()
 {
 	if (!MFont5VeryBig)
-		MFont5VeryBig = TTF_OpenFont("data/graphics/font5/font5.ttf", 14);
-	TTF_SetFontHinting(MFont5VeryBig, TTF_HINTING_LIGHT);
+		MFont5VeryBig = new ROMFont("data/graphics/font5/font5.ttf", 14);
 	return MFont5VeryBig;
 }
 
-static TTF_Font* M_GetBigFont()
+static ROMFont* M_GetBigFont()
 {
 	if (!MFont5Big)
-		MFont5Big = TTF_OpenFont("data/graphics/font5/font5.ttf", 13);
-	TTF_SetFontHinting(MFont5Big, TTF_HINTING_LIGHT);
+		MFont5Big = new ROMFont("data/graphics/font5/font5.ttf", 13);
 	return MFont5Big;
 }
 
-static TTF_Font* M_GetFont()
+static ROMFont* M_GetFont()
 {
 	if (!MFont5)
-		MFont5 = TTF_OpenFont("data/graphics/font5/font5.ttf", 14);
-	TTF_SetFontHinting(MFont5, TTF_HINTING_LIGHT);
+		MFont5 = new ROMFont("data/graphics/font5/font5.ttf", 14);
 	return MFont5;
 }
 
-static TTF_Font* M_GetSmallFont()
+static ROMFont* M_GetSmallFont()
 {
 	if (!MFont5Small)
-		MFont5Small = TTF_OpenFont("data/graphics/font5/font5.ttf", 12);
-	TTF_SetFontHinting(MFont5Small, TTF_HINTING_LIGHT);
+		MFont5Small = new ROMFont("data/graphics/font5/font5.ttf", 12);
 	return MFont5Small;
 }
 
-static TTF_Font* M_GetVerySmallFont()
+static ROMFont* M_GetVerySmallFont()
 {
 	if (!MFont5VerySmall)
-		MFont5VerySmall = TTF_OpenFont("data/graphics/font5/font5.ttf", 10);
-	TTF_SetFontHinting(MFont5VerySmall, TTF_HINTING_LIGHT);
+		MFont5VerySmall = new ROMFont("data/graphics/font5/font5.ttf", 10);
 	return MFont5VerySmall;
 }
 
@@ -82,13 +76,14 @@ void MLabel::Display()
 void MLabel::UpdateImage()
 {
 	if (m_TextImage) delete m_TextImage;
-	int flagsc = TTF_GetFontStyle(M_GetBigFont());
-	int flagsn = 0;
-	if (m_Bold) flagsn |= TTF_STYLE_BOLD;
-	if (m_Italic) flagsn |= TTF_STYLE_ITALIC;
-	TTF_SetFontStyle(M_GetBigFont(), flagsn);
-	m_TextImage = Image::RenderText(M_GetBigFont(), m_Text, 255, 255, 255);
-	TTF_SetFontStyle(M_GetBigFont(), flagsc);
+	ROMFont* fnt = M_GetBigFont();
+	bool wasBold = fnt->IsBold();
+	bool wasItalic = fnt->IsItalic();
+	fnt->SetBold(m_Bold);
+	fnt->SetItalic(m_Italic);
+	m_TextImage = Image::RenderText(fnt, m_Text, 255, 255, 255);
+	fnt->SetBold(wasBold);
+	fnt->SetItalic(wasItalic);
 }
 
 static Image* img_MTextFieldBGUnfocused = NULL;
@@ -126,7 +121,7 @@ void MTextField::Display()
 	if (!IsFocused() && !mtext.length() && m_PlaceholderImage)
 	{
 		m_PlaceholderImage->Display(absRect.Left+absRect.GetWidth()/2-m_PlaceholderImage->GetWidth()/2,
-									absRect.Top+absRect.GetHeight()/2-m_PlaceholderImage->GetHeight()/2+1);
+									absRect.Top+absRect.GetHeight()/2-m_PlaceholderImage->GetHeight()/2+2);
 	}
 
 	int mtextx = absRect.Left+absRect.GetWidth()/2;
@@ -148,7 +143,7 @@ void MTextField::Display()
 		}
 
 		m_TextImage->Display(mtextx,
-							 mtexty+1);
+							 mtexty);
 	}
 
 	// display the cursor (m_Selection2)
@@ -391,12 +386,12 @@ MRadioList::~MRadioList()
 
 void MRadioList::AddOption(std::string text)
 {
-	int flagsc = TTF_GetFontStyle(M_GetVerySmallFont());
-	int flagsn = TTF_STYLE_BOLD;
-	TTF_SetFontStyle(M_GetVerySmallFont(), flagsn);
-	Image* optionimg = Image::RenderText(M_GetVerySmallFont(), text, 218, 202, 136); // unhovered
-	Image* optionimghovered = Image::RenderText(M_GetVerySmallFont(), text, 255, 255, 255); // unhovered
-	TTF_SetFontStyle(M_GetVerySmallFont(), flagsc);
+	ROMFont* fnt = M_GetVerySmallFont();
+	bool wasBold = fnt->IsBold();
+	fnt->SetBold(true);
+	Image* optionimg = Image::RenderText(fnt, text, 218, 202, 136); // unhovered
+	Image* optionimghovered = Image::RenderText(fnt, text, 255, 255, 255); // unhovered
+	fnt->SetBold(wasBold);
 	m_Options.push_back(optionimg);
 	m_OptionsHovered.push_back(optionimghovered);
 }
@@ -508,12 +503,12 @@ void MEnterButton::UpdateText()
 {
 	if (m_TextImage) delete m_TextImage;
 	if (m_TextImageHovered) delete m_TextImageHovered;
-	int flagsc = TTF_GetFontStyle(M_GetFont());
-	int flagsn = TTF_STYLE_BOLD;
-	TTF_SetFontStyle(M_GetFont(), flagsn);
-	m_TextImage = Image::RenderText(M_GetFont(), m_Text, 218, 202, 136); // unhovered
-	m_TextImageHovered = Image::RenderText(M_GetFont(), m_Text, 255, 255, 255); // unhovered
-	TTF_SetFontStyle(M_GetFont(), flagsc);
+	ROMFont* fnt = M_GetFont();
+	bool wasBold = fnt->IsBold();
+	fnt->SetBold(true);
+	m_TextImage = Image::RenderText(fnt, m_Text, 218, 202, 136); // unhovered
+	m_TextImageHovered = Image::RenderText(fnt, m_Text, 255, 255, 255); // unhovered
+	fnt->SetBold(wasBold);
 }
 
 void MEnterButton::Display()
@@ -623,12 +618,12 @@ void MCheckBox::UpdateText()
 {
 	if (m_TextImage) delete m_TextImage;
 	if (m_TextImageHovered) delete m_TextImageHovered;
-	int flagsc = TTF_GetFontStyle(M_GetVerySmallFont());
-	int flagsn = TTF_STYLE_BOLD;
-	TTF_SetFontStyle(M_GetVerySmallFont(), flagsn);
-	m_TextImage = Image::RenderText(M_GetVerySmallFont(), m_Text, 218, 202, 136); // unhovered
-	m_TextImageHovered = Image::RenderText(M_GetVerySmallFont(), m_Text, 255, 255, 255); // unhovered
-	TTF_SetFontStyle(M_GetVerySmallFont(), flagsc);
+	ROMFont* fnt = M_GetVerySmallFont();
+	bool wasBold = fnt->IsBold();
+	fnt->SetBold(true);
+	m_TextImage = Image::RenderText(fnt, m_Text, 218, 202, 136); // unhovered
+	m_TextImageHovered = Image::RenderText(fnt, m_Text, 255, 255, 255); // unhovered
+	fnt->SetBold(wasBold);
 }
 
 void MCheckBox::Display()
@@ -741,12 +736,12 @@ void MIconButton::UpdateText()
 {
 	if (m_TextImage) delete m_TextImage;
 	if (m_TextImageHovered) delete m_TextImageHovered;
-	int flagsc = TTF_GetFontStyle(M_GetSmallFont());
-	int flagsn = 0;//TTF_STYLE_BOLD;
-	TTF_SetFontStyle(M_GetSmallFont(), flagsn);
+	ROMFont* fnt = M_GetSmallFont();
+	bool wasBold = fnt->IsBold();
+	fnt->SetBold(false);
 	if (m_Enabled)
-		m_TextImage = Image::RenderText(M_GetSmallFont(), m_Text, 218, 202, 136); // unhovered
-	else m_TextImage = Image::RenderText(M_GetSmallFont(), m_Text, 132, 132, 132); // unhovered, disabled
-	m_TextImageHovered = Image::RenderText(M_GetSmallFont(), m_Text, 255, 255, 255); // hovered
-	TTF_SetFontStyle(M_GetSmallFont(), flagsc);
+		m_TextImage = Image::RenderText(fnt, m_Text, 218, 202, 136); // unhovered
+	else m_TextImage = Image::RenderText(fnt, m_Text, 132, 132, 132); // unhovered, disabled
+	m_TextImageHovered = Image::RenderText(fnt, m_Text, 255, 255, 255); // hovered
+	fnt->SetBold(wasBold);
 }

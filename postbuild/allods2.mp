@@ -92,7 +92,7 @@
 0 93 00403D47 // : CalcVisMapCLIENT
 //0 94 0047B899 // : TILES_loadTiles
 //0 95 00405189 // : TILES_displayTile1
-//0 96 0041D158
+//0 96 0041D158 // : TILES_debug
 0 97 00589260 // : recv_
 0 98 0048A0F7 // : CHAT_fixEscape
 //0 99 004913EB // : CHAT_dbg

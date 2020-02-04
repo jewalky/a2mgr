@@ -1,9 +1,25 @@
 #pragma once
 
-#include <SDL/SDL.h>
-#include <SDL/SDL_ttf.h>
 #include <string>
 #include <stdint.h>
+
+// opaque struct. backend-agnostic. currently uses GDI+
+class ROMFont
+{
+public:
+	ROMFont(std::string filename, int size);
+	~ROMFont();
+
+	void SetBold(bool bold);
+	void SetItalic(bool italic);
+
+	bool IsBold();
+	bool IsItalic();
+
+private:
+	friend class Image;
+	void* myData;
+};
 
 class Image
 {
@@ -17,8 +33,8 @@ public:
 	uint32_t GetHeight();
 	uint32_t GetPixelAt(int32_t x, int32_t y);
 
-	static Image* RenderText(TTF_Font* font, std::string text, int r, int g, int b);
-	static int Image::RenderTextWidth(TTF_Font* font, std::string text);
+	static Image* RenderText(ROMFont* font, std::string text, int r, int g, int b);
+	static int Image::RenderTextWidth(ROMFont* font, std::string text);
 
 private:
 	Image()

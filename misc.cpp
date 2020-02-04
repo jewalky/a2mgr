@@ -233,7 +233,7 @@ icrm_skipAdd:
 
 void _stdcall InitSDL()
 {
-	TryInitSDL();
+	TryInitGraphics();
 }
 
 void __declspec(naked) imp_InitSDL()

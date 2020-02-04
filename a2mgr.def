@@ -91,9 +91,6 @@ MAP_CFileOpen1						@90 NONAME
 MAP_CFileOpen2						@91 NONAME
 GUI_gmEnter							@92 NONAME
 CalcVisMapCLIENT					@93 NONAME
-TILES_loadTiles						@94 NONAME
-TILES_displayTile1					@95 NONAME
-TILES_debug							@96 NONAME
 recv_								@97 NONAME
 CHAT_fixEscape						@98 NONAME
 CHAT_dbg							@99 NONAME

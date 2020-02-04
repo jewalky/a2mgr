@@ -2,7 +2,6 @@
 
 #include <vector>
 #include <string>
-#include <SDL/SDL.h>
 #include "Image.h"
 
 // widgets
@@ -43,34 +42,6 @@ struct MRect
 		Right = right;
 		Top = top;
 		Bottom = bottom;
-	}
-
-	SDL_Rect ToSDLRect()
-	{
-		SDL_Rect r;
-		if (Left < Right)
-		{
-			r.x = Left;
-			r.w = Right-Left;
-		}
-		else
-		{
-			r.x = Right;
-			r.w = Left-Right;
-		}
-
-		if (Top < Bottom)
-		{
-			r.y = Top;
-			r.h = Bottom-Top;
-		}
-		else
-		{
-			r.y = Bottom;
-			r.y = Top-Bottom;
-		}
-
-		return r;
 	}
 
 	MRect Normalized()

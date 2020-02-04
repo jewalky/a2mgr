@@ -78,9 +78,6 @@
     <ClCompile Include="itempng.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="landscape_renderer.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="language.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -207,9 +204,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Image.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="landscape_renderer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="language.h">

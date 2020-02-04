@@ -1,15 +1,17 @@
 #include "a2mgr.h"
 #include "Image.h"
-#include <SDL/SDL.h>
-#include <SDL/SDL_image.h>
 #include <windows.h>
 #include "zxmgr.h"
 #include "lib\utils.hpp"
 #include "File.h"
 
+#include <atlbase.h>
+#include <gdiplus.h>
+
 Image::Image(std::string filename)
 {
-	TryInitSDL();
+
+	TryInitGraphics();
 
 	myPixels = NULL;
 	myWidth = 0;
@@ -19,69 +21,63 @@ Image::Image(std::string filename)
 	if(!fil.Open(filename))
 	{
 		// produce system error
-		MessageBoxA(zxmgr::GetHWND(), Format("FATAL ERROR: can't load %s", filename.c_str()).c_str(),
+		MessageBoxA(zxmgr::GetHWND(), Format("FATAL ERROR: can't load %s (not found)", filename.c_str()).c_str(),
 			"Allods2", MB_ICONWARNING | MB_OK);
 		zxmgr::AfxAbort();
+		return;
 	}
 
-	uint8_t* buffer = new uint8_t[fil.GetLength()];
-	memset(buffer, 0, fil.GetLength());
+	std::vector<uint8_t> buffer;
+	buffer.resize(fil.GetLength());
 	fil.Seek(0);
-	uint32_t count_read = fil.Read(buffer, fil.GetLength());
-	SDL_RWops* rw = SDL_RWFromMem(buffer, fil.GetLength());
+	uint32_t count_read = fil.Read(buffer.data(), buffer.size());
 	fil.Close();
 
-	SDL_Surface* img = IMG_Load_RW(rw, false);
-	if(!img || !img->w || !img->h)
+	IStream* stream = SHCreateMemStream(buffer.data(), buffer.size());
+	Gdiplus::Bitmap* image = Gdiplus::Bitmap::FromStream(stream);
+	
+	stream->Release();
+
+	if (!image || image->GetWidth() <= 0 || image->GetHeight() <= 0)
 	{
-		if(img) SDL_FreeSurface(img);
-		SDL_RWclose(rw);
-		delete[] buffer;
-		MessageBoxA(zxmgr::GetHWND(), Format("FATAL ERROR: can't load %s", filename.c_str()).c_str(),
+		MessageBoxA(zxmgr::GetHWND(), Format("FATAL ERROR: can't load %s (GDI failed)", filename.c_str()).c_str(),
 			"Allods2", MB_ICONWARNING | MB_OK);
 		zxmgr::AfxAbort();
+		return;
 	}
 
-	SDL_RWclose(rw);
+	myWidth = image->GetWidth();
+	myHeight = image->GetHeight();
+	myPixels = new uint32_t[myWidth * myHeight];
 
-	SDL_PixelFormat pfd;
-	pfd.palette = NULL;
-	pfd.BitsPerPixel = 32;
-	pfd.BytesPerPixel = 4;
-	pfd.Rmask = 0xFF000000;
-	pfd.Gmask = 0x00FF0000;
-	pfd.Bmask = 0x0000FF00;
-	pfd.Amask = 0x000000FF;
-	pfd.Rshift = 24;
-	pfd.Gshift = 16;
-	pfd.Bshift = 8;
-	pfd.Ashift = 0;
-	pfd.Rloss = 0;
-	pfd.Gloss = 0;
-	pfd.Bloss = 0;
-	pfd.Aloss = 0;
-	pfd.alpha = 255;
-	pfd.colorkey = 0;
-
-	SDL_Surface* img_r = SDL_ConvertSurface(img, &pfd, 0);
-	if(!img_r)
+	Gdiplus::BitmapData bitmapData;
+	memset(&bitmapData, 0, sizeof(bitmapData));
+	Gdiplus::Rect bitmapRect;
+	bitmapRect.X = bitmapRect.Y = 0;
+	bitmapRect.Width = myWidth;
+	bitmapRect.Height = myHeight;
+	if (image->LockBits(&bitmapRect, Gdiplus::ImageLockModeRead, PixelFormat32bppARGB, &bitmapData) != Gdiplus::Ok)
 	{
-		SDL_FreeSurface(img);
-		delete[] buffer;
-		MessageBoxA(zxmgr::GetHWND(), Format("FATAL ERROR: can't load %s", filename.c_str()).c_str(),
+		MessageBoxA(zxmgr::GetHWND(), Format("FATAL ERROR: can't load %s (LockBits failed)", filename.c_str()).c_str(),
 			"Allods2", MB_ICONWARNING | MB_OK);
 		zxmgr::AfxAbort();
+		return;
 	}
 
-	SDL_FreeSurface(img);
+	// now the problem here is that bitmapData is not guaranteed to be in the format we want (orientation, stride)
+	// as such, we convert line by line and Y-flip
+	uint32_t* myptr = myPixels;
+	BYTE* gdiptr = (BYTE*)bitmapData.Scan0;
+	for (int y = 0; y < myHeight; y++)
+	{
+		memcpy(myptr, gdiptr, sizeof(uint32_t) * myWidth);
+		myptr += myWidth;
+		gdiptr += bitmapData.Stride;
+	}
 
-	myWidth = img_r->w;
-	myHeight = img_r->h;
-	myPixels = new uint32_t[myWidth*myHeight];
+	image->UnlockBits(&bitmapData);
+	delete image;
 
-	memcpy(myPixels, img_r->pixels, myWidth*myHeight*4);
-	SDL_FreeSurface(img_r);
-	delete[] buffer;
 }
 
 Image::~Image()
@@ -152,10 +148,16 @@ void Image::DisplayEx(int16_t x, int16_t y, int16_t inX, int16_t inY, int16_t w,
 		for(int x = 0; x < w; x++)
 		{
 			uint32_t src_color = *rPixels++;
-			uint8_t src_r = (src_color & 0xFF000000) >> 27;
-			uint8_t src_g = (src_color & 0x00FF0000) >> 18;
-			uint8_t src_b = (src_color & 0x0000FF00) >> 11;
-			uint8_t src_a = (src_color & 0x000000FF);
+			uint8_t src_a = (src_color & 0xFF000000) >> 24;
+			uint8_t src_r = (src_color & 0x00FF0000) >> 16;
+			uint8_t src_g = (src_color & 0x0000FF00) >> 8;
+			uint8_t src_b = (src_color & 0x000000FF);
+			
+			// preprocess for 16bit
+			src_r >>= 3;
+			src_b >>= 3;
+			src_g >>= 2;
+
 			if(no_alpha)
 			{
 				if(src_a > 127) src_a = 255;
@@ -238,87 +240,199 @@ uint32_t* Image::GetPixels()
 	return myPixels;
 }
 
-Image* Image::RenderText(TTF_Font* font, std::string text, int r, int g, int b)
+// this is the private struct used in ROMFont
+struct ROMFontData
 {
-	TryInitSDL();
 
-	Uint16* utext = new Uint16[text.length()+1];
-	utext[text.length()] = 0;
-	for (int i = 0; i < text.size(); i++)
-	{
-		unsigned long ch = (unsigned char)text[i];
-		if (ch >= 0x80 && ch <= 0xAF)
-			ch += 0x390;
-		else if (ch >= 0xE0 && ch <= 0xEF)
-			ch += 0x360;
-		else if (ch == 0xF0)
-			ch = 0x401;
-		else if (ch == 0xF1)
-			ch = 0x451;
-		utext[i] = ch; // for now. note: do unicode translate later
-	}
+	Gdiplus::PrivateFontCollection* fontCollection;
+	Gdiplus::FontFamily family;
+	Gdiplus::Font* font;
 
-	SDL_Color c = {255,255,255}; SDL_Color bgc = {0,0,0};
-	//SDL_Surface* srf = TTF_RenderUNICODE_Blended(font, utext, c);
-	SDL_Surface* srf = TTF_RenderUNICODE_Shaded(font, utext, c, bgc);
-	//SDL_Surface* srf = TTF_RenderUNICODE_Solid(font, utext, c);
-	delete[] utext;
+	int fontSize;
+
+	bool wasBold;
+	bool wasItalic;
 	
-	if (!srf) return NULL;
-	// copy data. srf->pixels should have rgba in it.
-	Image* img = new Image();
-	img->myWidth = srf->w;
-	img->myHeight = srf->h;
-	img->myPixels = new uint32_t[srf->w*srf->h];
-	//memcpy(img->myPixels, srf->pixels, srf->w*srf->h*4);
+	bool isBold;
+	bool isItalic;
 
-	int cnt = srf->w*srf->h;
-	uint8_t* pixels = (uint8_t*)img->myPixels;
-	for (int y = 0; y < srf->h; y++)
+	Gdiplus::Font* GetFont()
 	{
-		uint8_t* opixels = ((uint8_t*)srf->pixels) + y * srf->pitch;
-		for (int x = 0; x < srf->w; x++)
+		if (!font || isBold != wasBold || isItalic != wasItalic)
 		{
-			int cb = b;
-			int cg = g;
-			int cr = r;
-			//int ca = !*opixels++?0:255;
-			int ca = *opixels++;
-			*pixels++ = ca;
-			*pixels++ = cb;
-			*pixels++ = cg;
-			*pixels++ = cr;
+			if (font) delete font;
+			int fs = 0;
+			if (isBold) fs |= Gdiplus::FontStyleBold;
+			if (isItalic) fs |= Gdiplus::FontStyleItalic;
+			font = new Gdiplus::Font(&family, fontSize, fs, Gdiplus::UnitPixel);
 		}
+
+		return font;
 	}
 
-	SDL_FreeSurface(srf);
-	return img;
+};
+
+static std::vector<wchar_t> InternalStringToWCHAR(std::string s)
+{
+	std::vector<wchar_t> ws;
+	ws.resize(s.length() + 1);
+	ws[s.length()] = 0;
+	MultiByteToWideChar(866, MB_PRECOMPOSED, s.data(), -1, ws.data(), ws.size());
+	return ws;
 }
 
-int Image::RenderTextWidth(TTF_Font* font, std::string text)
+ROMFont::ROMFont(std::string filename, int size)
 {
-	TryInitSDL();
 
-	//int TTF_SizeUNICODE(TTF_Font *font, const Unit16 *text, int *w, int *h)
-	Uint16* utext = new Uint16[text.length()+1];
-	utext[text.length()] = 0;
-	for (int i = 0; i < text.size(); i++)
+	TryInitGraphics();
+
+	std::vector<wchar_t> ws = InternalStringToWCHAR(filename);
+
+	ROMFontData* data = new ROMFontData();
+	data->fontCollection = new Gdiplus::PrivateFontCollection();
+	if (data->fontCollection->AddFontFile(ws.data()) != Gdiplus::Ok)
 	{
-		unsigned long ch = (unsigned char)text[i];
-		if (ch >= 0x80 && ch <= 0xAF)
-			ch += 0x390;
-		else if (ch >= 0xE0 && ch <= 0xEF)
-			ch += 0x360;
-		else if (ch == 0xF0)
-			ch = 0x401;
-		else if (ch == 0xF1)
-			ch = 0x451;
-		utext[i] = ch; // for now. note: do unicode translate later
+		delete data;
+		MessageBoxA(zxmgr::GetHWND(), Format("FATAL ERROR: can't load %s (AddFontFile failed)", filename.c_str()).c_str(),
+			"Allods2", MB_ICONWARNING | MB_OK);
+		zxmgr::AfxAbort();
+		return;
 	}
 
-	int w;
-	int h;
-	TTF_SizeUNICODE(font, utext, &w, &h);
-	delete[] utext;
-	return w;
+	// read one font family.
+	int totalFamilies;
+	if (data->fontCollection->GetFamilies(1, &data->family, &totalFamilies) != Gdiplus::Ok)
+	{
+		delete data;
+		MessageBoxA(zxmgr::GetHWND(), Format("FATAL ERROR: can't load %s (GetFamilies failed)", filename.c_str()).c_str(),
+			"Allods2", MB_ICONWARNING | MB_OK);
+		zxmgr::AfxAbort();
+		return;
+	}
+
+	data->fontSize = size;
+	data->font = NULL;
+	data->wasBold = data->isBold = false;
+	data->wasItalic = data->isItalic = false;
+
+	myData = data;
+
+}
+
+bool ROMFont::IsBold()
+{
+	ROMFontData* data = static_cast<ROMFontData*>(myData);
+	if (!data) return false;
+	return data->isBold;
+}
+
+bool ROMFont::IsItalic()
+{
+	ROMFontData* data = static_cast<ROMFontData*>(myData);
+	if (!data) return false;
+	return data->isItalic;
+}
+
+void ROMFont::SetBold(bool bold)
+{
+	ROMFontData* data = static_cast<ROMFontData*>(myData);
+	if (!data) return;
+	data->isBold = bold;
+}
+
+void ROMFont::SetItalic(bool italic)
+{
+	ROMFontData* data = static_cast<ROMFontData*>(myData);
+	if (!data) return;
+	data->isItalic = italic;
+}
+
+ROMFont::~ROMFont()
+{
+	if (myData)
+	{
+		ROMFontData* data = static_cast<ROMFontData*>(myData);
+		delete data;
+		myData = NULL;
+	}
+}
+
+Image* Image::RenderText(ROMFont* font, std::string text, int r, int g, int b)
+{
+
+	// get graphics for HWND. we will not use this for drawing
+	Gdiplus::Graphics graphicsHWND(zxmgr::GetHWND());
+
+	// so the problem is that we don't know the exact dimensions of this text.
+	// we need to first guess this
+	ROMFontData* data = static_cast<ROMFontData*>(font->myData);
+	Gdiplus::Font* gdifont = data->GetFont();
+	
+	std::vector<wchar_t> ws = InternalStringToWCHAR(text);
+	Gdiplus::RectF measuredSize;
+	if (graphicsHWND.MeasureString(ws.data(), ws.size(), gdifont, Gdiplus::PointF(0, 0), &measuredSize) != Gdiplus::Ok)
+		return NULL;
+
+	int outputWidth = ceil(measuredSize.Width);
+	int outputHeight = ceil(measuredSize.Height);
+	if (outputWidth < 1)
+		outputWidth = 1;
+	if (outputHeight < 1)
+		outputHeight = 1;
+
+	Gdiplus::Bitmap bmp(outputWidth, outputHeight);
+	Gdiplus::Graphics graphics(&bmp);
+
+	graphics.SetTextRenderingHint(Gdiplus::TextRenderingHintAntiAlias);
+
+	Gdiplus::SolidBrush brush(Gdiplus::Color(255, r, g, b));
+	if (graphics.DrawString(ws.data(), ws.size(), gdifont, Gdiplus::PointF(0, 0), &brush) != Gdiplus::Ok)
+		return NULL;
+
+	// convert image from bitmap
+	Gdiplus::BitmapData bitmapData;
+	Gdiplus::Rect bitmapRect(0, 0, outputWidth, outputHeight);
+	if (bmp.LockBits(&bitmapRect, Gdiplus::ImageLockModeRead, PixelFormat32bppARGB, &bitmapData) != Gdiplus::Ok)
+		return NULL;
+
+	Image* img = new Image();
+	img->myWidth = outputWidth;
+	img->myHeight = outputHeight;
+	img->myPixels = new uint32_t[outputWidth * outputHeight];
+	
+	BYTE* gdiptr = (BYTE*)bitmapData.Scan0;
+	uint32_t* myptr = img->myPixels;
+
+	for (int y = 0; y < outputHeight; y++)
+	{
+		memcpy(myptr, gdiptr, sizeof(uint32_t) * outputWidth);
+		myptr += outputWidth;
+		gdiptr += bitmapData.Stride;
+	}
+
+	bmp.UnlockBits(&bitmapData);
+	return img;
+
+}
+
+int Image::RenderTextWidth(ROMFont* font, std::string text)
+{
+	
+	// get graphics for HWND. we will not use this for drawing
+	Gdiplus::Graphics graphicsHWND(zxmgr::GetHWND());
+
+	ROMFontData* data = static_cast<ROMFontData*>(font->myData);
+	Gdiplus::Font* gdifont = data->GetFont();
+
+	std::vector<wchar_t> ws = InternalStringToWCHAR(text);
+	Gdiplus::RectF measuredSize;
+	if (graphicsHWND.MeasureString(ws.data(), ws.size(), gdifont, Gdiplus::PointF(0, 0), &measuredSize) != Gdiplus::Ok)
+		return 0;
+
+	int outputWidth = ceil(measuredSize.Width);
+	if (outputWidth < 1)
+		outputWidth = 1;
+	
+	return outputWidth-3;
+
 }

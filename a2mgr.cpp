@@ -17,9 +17,7 @@
 
 #include "network_protocol_ext.h"
 
-#include <SDL/SDL.h>
-#include <SDL/SDL_image.h>
-#include <SDL/SDL_ttf.h>
+#include <gdiplus.h>
 
 using namespace std;
 
@@ -61,38 +59,28 @@ string DumpSHA(unsigned char buf[])
 	return string2;
 }
 
-bool SDLInitialized = false;
-HANDLE SDLInitMutex = NULL;
-bool InitSDL()
+HANDLE GraphicsInitMutex = NULL;
+bool GDIPInitialized = false;
+ULONG_PTR GDIPToken = NULL;
+
+bool InitGDIP()
 {
-	if (SDL_Init(SDL_INIT_VIDEO) == -1) {
-		log_format("ERROR: Failed to initialize SDL video (%s)\n", SDL_GetError());
-		return false;
-	}
-	if (IMG_Init(IMG_INIT_JPG | IMG_INIT_PNG | IMG_INIT_TIF) !=
-				(IMG_INIT_JPG | IMG_INIT_PNG | IMG_INIT_TIF)) {
-		log_format("ERROR: Failed to initialize SDL image (%s)\n", IMG_GetError());
-		return false;
-	}
-	if (TTF_Init() == -1) {
-		log_format("ERROR: Failed to initialize SDL-ttf (%s)\n", TTF_GetError());
-		return false;
-	}
-	return true;
+	Gdiplus::GdiplusStartupInput gdiplusStartupInput;
+	return (Gdiplus::GdiplusStartup(&GDIPToken, &gdiplusStartupInput, NULL) == Gdiplus::Ok);
 }
 
-void TryInitSDL()
+void TryInitGraphics()
 {
-	if (!SDLInitialized)
+	if (!GDIPInitialized)
 	{
-		if (!SDLInitMutex) SDLInitMutex = CreateMutex(NULL, TRUE, NULL);
-		else WaitForSingleObject(SDLInitMutex, INFINITE);
-		if (!SDLInitialized)
+		if (!GraphicsInitMutex) GraphicsInitMutex = CreateMutex(NULL, TRUE, NULL);
+		else WaitForSingleObject(GraphicsInitMutex, INFINITE);
+		if (!GDIPInitialized)
 		{
-			InitSDL();
-			SDLInitialized = true;
+			InitGDIP();
+			GDIPInitialized = true;
 		}
-		ReleaseMutex(SDLInitMutex);
+		ReleaseMutex(GraphicsInitMutex);
 	}
 }
 

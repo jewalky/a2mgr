@@ -43,7 +43,7 @@
       <Optimization>Full</Optimization>
       <InlineFunctionExpansion>Default</InlineFunctionExpansion>
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
-      <AdditionalIncludeDirectories>$(ProjectDir); curl\include; sdl\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir); curl\include; %(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;A2MGR_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <PrecompiledHeader />
@@ -53,10 +53,10 @@
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>SDL.lib;SDL_image.lib;SDL_ttf.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
       <ShowProgress>NotSet</ShowProgress>
       <OutputFile>$(ProjectDir)/postbuild/a2mgr.dll</OutputFile>
-      <AdditionalLibraryDirectories>curl\lib\Release; sdl\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>curl\lib\Release; %(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ModuleDefinitionFile>a2mgr.def</ModuleDefinitionFile>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <GenerateMapFile>true</GenerateMapFile>
@@ -92,7 +92,6 @@
     <ClCompile Include="gui_replace.cpp" />
     <ClCompile Include="Image.cpp" />
     <ClCompile Include="itempng.cpp" />
-    <ClCompile Include="landscape_renderer.cpp" />
     <ClCompile Include="language.cpp" />
     <ClCompile Include="lib\happyhttp.cpp" />
     <ClCompile Include="lib\hat2.cpp" />
@@ -142,7 +141,6 @@
     <ClInclude Include="File.h" />
     <ClInclude Include="gl.h" />
     <ClInclude Include="Image.h" />
-    <ClInclude Include="landscape_renderer.h" />
     <ClInclude Include="language.h" />
     <ClInclude Include="lib\happyhttp.h" />
     <ClInclude Include="lib\hat2.hpp" />
