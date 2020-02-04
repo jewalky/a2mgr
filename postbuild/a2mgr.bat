@@ -1,6 +1,6 @@
 @echo off
 
-set VER=27
+set VER=28
 
 if not exist final mkdir final >nul
 if not exist nsis mkdir nsis >nul

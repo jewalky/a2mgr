@@ -2,9 +2,15 @@
 Rage of Mages II: Necromancer
       Important Notes
 -----------------------------
-Version from Oct 19, 2019
+Version from Feb 4, 2020
 
 ATTENTION! This patch contains all previous updates.
+
+Update 28 (version 3.3)
+-----------------------
+1. Improved compatibility with Windows XP, 7, 8.
+2. Removed dependency on SDL.
+3. Names of magical items are now highlighted with different color depending on item level.
 
 Update 27 (version 3.2)
 -----------------------

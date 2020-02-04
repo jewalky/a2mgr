@@ -45,10 +45,16 @@ void _stdcall IImage_Display(int arg1, int arg2, int arg3, int arg4, int arg5)
 	for(uint32_t i = 0; i < 160*240; i++)
 	{
 		uint32_t src_color = px[i];
-		uint8_t src_r = (src_color & 0xFF000000) >> 27;
-		uint8_t src_g = (src_color & 0x00FF0000) >> 18;
-		uint8_t src_b = (src_color & 0x0000FF00) >> 11;
-		uint8_t src_a = (src_color & 0x000000FF);
+		uint8_t src_a = (src_color & 0xFF000000) >> 24;
+		uint8_t src_r = (src_color & 0x00FF0000) >> 16;
+		uint8_t src_g = (src_color & 0x0000FF00) >> 8;
+		uint8_t src_b = (src_color & 0x000000FF);
+
+		// preprocess for 16bit
+		src_r >>= 3;
+		src_b >>= 3;
+		src_g >>= 2;
+
 		if(no_alpha)
 		{
 			if(src_a > 127) src_a = 255;

@@ -272,13 +272,94 @@ struct ROMFontData
 
 };
 
-static std::vector<wchar_t> InternalStringToWCHAR(std::string s)
+static std::vector<wchar_t> InternalStringToWCHAR(std::string s, bool winenc = true)
 {
 	std::vector<wchar_t> ws;
 	ws.resize(s.length() + 1);
 	ws[s.length()] = 0;
-	MultiByteToWideChar(866, MB_PRECOMPOSED, s.data(), -1, ws.data(), ws.size());
+	MultiByteToWideChar(winenc?866:CP_ACP, MB_PRECOMPOSED, s.data(), -1, ws.data(), ws.size());
 	return ws;
+}
+
+static std::string getGdiplusStatusMessage(Gdiplus::Status status)
+{
+	std::string msg = "";
+
+	switch (status)
+	{
+	case Gdiplus::Ok:
+		msg = "Ok: Indicates that the method call was successful.";
+		break;
+	case Gdiplus::GenericError:
+		msg = "GenericError: Indicates that there was an error on the method call, which is identified as something other than those defined by the other elements of this enumeration.";
+		break;
+	case Gdiplus::InvalidParameter:
+		msg = "InvalidParameter: Indicates that one of the arguments passed to the method was not valid.";
+		break;
+	case Gdiplus::OutOfMemory:
+		msg = "OutOfMemory: Indicates that the operating system is out of memory and could not allocate memory to process the method call.";
+		break;
+	case Gdiplus::ObjectBusy:
+		msg = "ObjectBusy: Indicates that one of the arguments specified in the API call is already in use in another thread.";
+		break;
+	case Gdiplus::InsufficientBuffer:
+		msg = "InsufficientBuffer: Indicates that a buffer specified as an argument in the API call is not large enough to hold the data to be received.";
+		break;
+	case Gdiplus::NotImplemented:
+		msg = "NotImplemented: Indicates that the method is not implemented.";
+		break;
+	case Gdiplus::Win32Error:
+		msg = "Win32Error: Indicates that the method generated a Win32 error.";
+		break;
+	case Gdiplus::WrongState:
+		msg = "WrongState: Indicates that the object is in an invalid state to satisfy the API call. For example, calling Pen::GetColor from a pen that is not a single, solid color results in a WrongState status.";
+		break;
+	case Gdiplus::Aborted:
+		msg = "Aborted: Indicates that the method was aborted.";
+		break;
+	case Gdiplus::FileNotFound:
+		msg = "FileNotFound: Indicates that the specified image file or metafile cannot be found.";
+		break;
+	case Gdiplus::ValueOverflow:
+		msg = "ValueOverflow: Indicates that the method performed an arithmetic operation that produced a numeric overflow.";
+		break;
+	case Gdiplus::AccessDenied:
+		msg = "AccessDenied: Indicates that a write operation is not allowed on the specified file.";
+		break;
+	case Gdiplus::UnknownImageFormat:
+		msg = "UnknownImageFormat: Indicates that the specified image file format is not known.";
+		break;
+	case Gdiplus::FontFamilyNotFound:
+		msg = "FontFamilyNotFound: Indicates that the specified font family cannot be found. Either the font family name is incorrect or the font family is not installed.";
+		break;
+	case Gdiplus::FontStyleNotFound:
+		msg = "FontStyleNotFound: Indicates that the specified style is not available for the specified font family.";
+		break;
+	case Gdiplus::NotTrueTypeFont:
+		msg = "NotTrueTypeFont: Indicates that the font retrieved from an HDC or LOGFONT is not a TrueType font and cannot be used with GDI+.";
+		break;
+	case Gdiplus::UnsupportedGdiplusVersion:
+		msg = "UnsupportedGdiplusVersion: Indicates that the version of GDI+ that is installed on the system is incompatible with the version with which the application was compiled.";
+		break;
+	case Gdiplus::GdiplusNotInitialized:
+		msg = "GdiplusNotInitialized: Indicates that the GDI+ API is not in an initialized state. To function, all GDI+ objects require that GDI+ be in an initialized state. Initialize GDI+ by calling GdiplusStartup.";
+		break;
+	case Gdiplus::PropertyNotFound:
+		msg = "PropertyNotFound: Indicates that the specified property does not exist in the image.";
+		break;
+	case Gdiplus::PropertyNotSupported:
+		msg = "PropertyNotSupported: Indicates that the specified property is not supported by the format of the image and, therefore, cannot be set.";
+		break;
+#if (GDIPVER >= 0x0110)
+	case Gdiplus::ProfileNotFound:
+		msg = "ProfileNotFound: Indicates that the color profile required to save an image in CMYK format was not found.";
+		break;
+#endif //(GDIPVER >= 0x0110)
+	default:
+		msg = "Invalid status: Indicates an unknown status was returned.";
+		break;
+	}
+	return msg;
 }
 
 ROMFont::ROMFont(std::string filename, int size)
@@ -286,14 +367,30 @@ ROMFont::ROMFont(std::string filename, int size)
 
 	TryInitGraphics();
 
-	std::vector<wchar_t> ws = InternalStringToWCHAR(filename);
+	File fil;
+	if (!fil.Open(filename))
+	{
+		// produce system error
+		MessageBoxA(zxmgr::GetHWND(), Format("FATAL ERROR: can't load %s (not found)", filename.c_str()).c_str(),
+			"Allods2", MB_ICONWARNING | MB_OK);
+		zxmgr::AfxAbort();
+		return;
+	}
+
+	std::vector<uint8_t> buffer;
+	buffer.resize(fil.GetLength());
+	fil.Seek(0);
+	uint32_t count_read = fil.Read(buffer.data(), buffer.size());
+	fil.Close();
+
 
 	ROMFontData* data = new ROMFontData();
 	data->fontCollection = new Gdiplus::PrivateFontCollection();
-	if (data->fontCollection->AddFontFile(ws.data()) != Gdiplus::Ok)
+	Gdiplus::Status st;
+	if ((st = data->fontCollection->AddMemoryFont(buffer.data(), buffer.size())) != Gdiplus::Ok)
 	{
 		delete data;
-		MessageBoxA(zxmgr::GetHWND(), Format("FATAL ERROR: can't load %s (AddFontFile failed)", filename.c_str()).c_str(),
+		MessageBoxA(zxmgr::GetHWND(), Format("FATAL ERROR: can't load %s (AddFontFile: %s)", filename.c_str(), getGdiplusStatusMessage(st).c_str()).c_str(),
 			"Allods2", MB_ICONWARNING | MB_OK);
 		zxmgr::AfxAbort();
 		return;
@@ -304,7 +401,7 @@ ROMFont::ROMFont(std::string filename, int size)
 	if (data->fontCollection->GetFamilies(1, &data->family, &totalFamilies) != Gdiplus::Ok)
 	{
 		delete data;
-		MessageBoxA(zxmgr::GetHWND(), Format("FATAL ERROR: can't load %s (GetFamilies failed)", filename.c_str()).c_str(),
+		MessageBoxA(zxmgr::GetHWND(), Format("FATAL ERROR: can't load %s (GetFamilies: %s)", filename.c_str(), getGdiplusStatusMessage(st).c_str()).c_str(),
 			"Allods2", MB_ICONWARNING | MB_OK);
 		zxmgr::AfxAbort();
 		return;
