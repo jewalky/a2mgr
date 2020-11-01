@@ -129,6 +129,8 @@ imp_InitSDL			@124 NONAME
 TEXTCOLO_allocMoreSpace @125 NONAME
 TEXTCOLO_preCharDraw	@126 NONAME
 
+ITEM_renameStat		@127 NONAME
+
 ; nosingle
 
 DBG_load256		@300

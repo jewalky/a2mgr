@@ -130,6 +130,8 @@
 0 125 4637F1 // : TEXTCOLO_allocMoreSpace
 0 126 4638B1 // : TEXTCOLO_preCharDraw
 
+0 127 43BD6C // : ITEM_renameStat
+
 //0 300 426DA9
 //0 301 427014
 //0 302 427140

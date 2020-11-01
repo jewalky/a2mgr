@@ -21,7 +21,7 @@ void _stdcall IImage_CopyTo(int arg1, int arg2, int arg3, int arg4)
 	for(uint32_t i = 0; i < 160*240; i++)
 	{
 		uint32_t src_color = px[i];
-		uint8_t src_a = (src_color & 0x000000FF);
+		uint8_t src_a = (src_color & 0xFF000000) >> 24;
 
 		if(src_a < 127) continue;
 

@@ -259,3 +259,47 @@ void __declspec(naked) imp_InitSDL()
 		ret
 	}
 }
+
+bool _stdcall PreprocessItemStat(byte*& read_ptr)
+{
+	read_ptr--;
+	char* output = (char*)(0x00624FB0);
+	int parameter = *read_ptr++;
+	if (parameter == 26)
+	{
+		int value = *read_ptr++;
+		const char* stat_name = zxmgr::GetTranslationString(TRANS_STATS, parameter);
+		std::string stat_format = Format("#%s +%d%%", stat_name, value);
+		strcat(output, stat_format.c_str());
+		return true;
+	}
+	return false;
+}
+
+void __declspec(naked) ITEM_renameStat()
+{
+	// @ 43BD6C
+	__asm
+	{
+		push	[ebp-0x10]
+		lea		ecx, [ebp-0x10]
+		push	ecx
+		call	PreprocessItemStat
+		test	al, al
+		jz		no_rename
+
+		pop		ecx
+		// next stat
+		mov		edx, 0x0043BD21
+		jmp		edx
+
+no_rename:
+		pop		ecx
+		mov		[ebp-0x10], ecx
+		mov		ecx, [ebp-0xE0]
+		sub		ecx, 1
+		mov		[ebp-0xE0], ecx
+		mov		edx, 0x0043BD7B
+		jmp		edx
+	}
+}

@@ -21,6 +21,9 @@
 #define FONT_ALIGN_CENTER 2
 #define FONT_ALIGN_LEFT 0
 
+#define TRANS_PATCH 0x0062BA40
+#define TRANS_STATS 0x0062B608
+
 namespace zxmgr
 {
 	unsigned long AfxGetMainWnd();
@@ -46,7 +49,8 @@ namespace zxmgr
 	void LockBuffer();
 	void UnlockBuffer();
 
-	char* GetPatchString(unsigned long idx);
+	const char* GetPatchString(unsigned long idx);
+	const char* GetTranslationString(unsigned long trans_id, unsigned long idx);
 
 	void WriteChatRaw(const char*);
 	void WriteChat(const char*, ...);

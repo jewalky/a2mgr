@@ -234,18 +234,23 @@ namespace zxmgr
 		}
 	}
 
-	char* GetPatchString(unsigned long idx)
+	const char* GetTranslationString(unsigned long trans_id, unsigned long idx)
 	{
 		char* retv;
 		__asm
 		{
 			push	[idx]
-			mov		ecx, 0x0062BA40
+			mov		ecx, [trans_id]
 			mov		edx, 0x00479BA3
 			call	edx
 			mov		retv, eax
 		}
 		return retv;
+	}
+
+	const char* GetPatchString(unsigned long idx)
+	{
+		return GetTranslationString(TRANS_PATCH, idx);
 	}
 
 	void LockBuffer()

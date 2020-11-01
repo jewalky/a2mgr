@@ -183,7 +183,7 @@ char * _stdcall chatAddStringCpp(char *msg, int type)
 		if (type == 1)
 		{
 			// аля
-			char* str_type = zxmgr::GetPatchString(223);
+			const char* str_type = zxmgr::GetPatchString(223);
 			static char chatB2[128];
 			chatB2[127] = 0;
 			_snprintf(chatB2, 127, "[%s] ", str_type);
@@ -194,7 +194,7 @@ char * _stdcall chatAddStringCpp(char *msg, int type)
 		else if (type == 2)
 		{
 			// приват
-			char* str_type = zxmgr::GetPatchString(224);
+			const char* str_type = zxmgr::GetPatchString(224);
 			static char chatB2[128];
 			chatB2[127] = 0;
 			_snprintf(chatB2, 127, "[%s] ", str_type);
@@ -205,7 +205,7 @@ char * _stdcall chatAddStringCpp(char *msg, int type)
 		else if (type == 3)
 		{
 			// вопль
-			char* str_type = zxmgr::GetPatchString(225);
+			const char* str_type = zxmgr::GetPatchString(225);
 			static char chatB2[128];
 			chatB2[127] = 0;
 			_snprintf(chatB2, 127, "[%s] ", str_type);

@@ -122,7 +122,7 @@ void SCREENSHOT_takeManual()
 	fwrite(buf, size, 1, outf);
 	fclose(outf);
 
-	char* strc = zxmgr::GetPatchString(226);
+	const char* strc = zxmgr::GetPatchString(226);
 	zxmgr::WriteChat(strc, str.c_str());
 }
 
@@ -206,6 +206,6 @@ void SCREENSHOT_take()
 	}
 	GdiplusShutdown(gdiplusToken);
 
-	char* strc = zxmgr::GetPatchString(226);
+	const char* strc = zxmgr::GetPatchString(226);
 	zxmgr::WriteChat(strc, str.c_str());
 }
