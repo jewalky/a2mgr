@@ -6,6 +6,10 @@ Version from Feb 4, 2020
 
 ATTENTION! This patch contains all previous updates.
 
+Update 29 (version 3.4)
+-----------------------
+1. Added new item effect: Damage Bonus +%.
+
 Update 28 (version 3.3)
 -----------------------
 1. Improved compatibility with Windows XP, 7, 8.

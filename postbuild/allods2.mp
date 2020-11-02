@@ -132,6 +132,21 @@
 
 0 127 43BD6C // : ITEM_renameStat
 
+0 128 4CECDB // : HIRES_fixSpellbook
+0 129 40A919 // : HIRES_fixTextback
+0 130 4889E9 // : HIRES_fixTextback2
+//0 131 4887ED // : HIRES_extendMap
+1 132 4865E0 // : CURSOR_preventHide
+1 132 4865FA // : CURSOR_preventHide
+1 132 48A03C // : CURSOR_preventHide
+1 132 48A056 // : CURSOR_preventHide
+1 132 5B96E7 // : CURSOR_preventHide
+1 132 5B970F // : CURSOR_preventHide
+1 132 5BDE11 // : CURSOR_preventHide
+0 132 5A4D48 // : CURSOR_preventHide
+0 133 428BD1 // : CURSOR_display
+0 133 428B92 // : CURSOR_display
+
 //0 300 426DA9
 //0 301 427014
 //0 302 427140

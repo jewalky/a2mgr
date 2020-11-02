@@ -90,6 +90,7 @@
     <ClCompile Include="grid.cpp" />
     <ClCompile Include="gui_bugfix.cpp" />
     <ClCompile Include="gui_replace.cpp" />
+    <ClCompile Include="highres.cpp" />
     <ClCompile Include="Image.cpp" />
     <ClCompile Include="itempng.cpp" />
     <ClCompile Include="language.cpp" />
@@ -112,6 +113,7 @@
     <ClCompile Include="menu.cpp" />
     <ClCompile Include="menulib.cpp" />
     <ClCompile Include="misc.cpp" />
+    <ClCompile Include="mouse_fix.cpp" />
     <ClCompile Include="network_crypt.cpp" />
     <ClCompile Include="network_hat_enter.cpp" />
     <ClCompile Include="network_protocol.cpp" />

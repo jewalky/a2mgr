@@ -24,7 +24,7 @@ Protection from Water
 Protection from Air
 Protection from Earth
 Protection from Astral
-(unused)
+Damage Bonus
 Blade Skill
 Axe Skill
 Bludgeon Skill

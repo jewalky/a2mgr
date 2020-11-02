@@ -1,5 +1,5 @@
-a2mgr.dll aa4a19e951ad40373d4eb40a45f839f948f0020c
-allods2.exe 1f090586aba3d1135f1dab646112321b1aeda99d
+a2mgr.dll d6d03258218853bec283d2f5b1b95409c27576f5
+allods2.exe a285ee3c7373a8ec037ef6d653bc32dc9a09a23f
 graphics/backpack/sprites.256 9eb4f15f0b57b735b48d2986a17386918a89732e
 graphics/backpack/spritesb.256 cb86bf291ff8ce54916695bfef65034c3bf64424
 graphics/cursors/attack.256 f4c42bd1c44a8f6a797ba201833a9817fdfebe12
@@ -4153,7 +4153,7 @@ locale/en/quest.txt 2c3b169156b7229877882bdfa7b0f08fb5453962
 locale/en/sites.txt dc7ec0e98f9af4deddc50096879c3b180e884143
 locale/en/spell.txt f7adffe1b963266acb96efaaed3c082c51d5de3b
 locale/en/spells.txt 05b73bab67058136da395886afbc9562e51a54ed
-locale/en/stats.txt a12d702cd905df2f69b75c7245d5531debdc705d
+locale/en/stats.txt 880cffd27eec171529cc81bb4912e33a0b77c7ef
 locale/en/town.txt 2c205dc23f06c75934e96ddc47a3d27b145a6c3f
 locale/en/tunes.txt f2a5a908111447aaadacddc40c2d9eab95cdb253
 locale/en/unitname.txt f0357b4d3f577b75667876d25ed59b57465f2cad
@@ -4184,7 +4184,7 @@ locale/ru/quest.txt a75867165bb3602b18744413e45717a9f9864b3e
 locale/ru/sites.txt afef0e87f9991cc201106bdf86a8c2756972e2e8
 locale/ru/spell.txt f78737332fdffc182fb12b665d213a20e25c2a41
 locale/ru/spells.txt 136fb56a0487aad7aab5d59af31ba3879f0132cc
-locale/ru/stats.txt e8057f0abaa9a2b9ea5bdf5fe93ea88cf2a056de
+locale/ru/stats.txt 4867625060d659127addf9b183b3c03c7b22b905
 locale/ru/town.txt 00fbdd8269cdf33e523adac52952843e98a4d04c
 locale/ru/tunes.txt cf0e88b198fb99f5ca4d7cef2aeb47e666aa4d0e
 locale/ru/unitname.txt de95a7b06158b9c45aea0f1a6f35595f89b56a7b
@@ -4944,13 +4944,3 @@ world/data/itemex.txt 5bd34265fb3888243c4d16fc3647ac413eee697d
 world/data/itemname.bin 3e40fbd295309aff1c63985da08365c4f7309932
 world/data/itemname.pkt 8d2e6c5deca95156eeb1652ba1594e040fba4b6b
 world/data/map.reg 6385c55e71ff21f2ab7b84d9e68691145ed47a7e
-a2mgr.dll aa4a19e951ad40373d4eb40a45f839f948f0020c
-allods2.exe 1f090586aba3d1135f1dab646112321b1aeda99d
-graphics/font1/font1.16 dfa0dbb21f0360685b70e2341b12bef31ef64d19
-graphics/font2/font2.16 1e7ed9b617f40235cbe35b0c3b8c50e030abd96e
-graphics/font2/font2.dat b6087d3ee4a4dd6b9998287a2cf0f66c03e090a5
-graphics/font5/font5.ttf 4aa81b333a73b211f9074bbc71a288504a004b78
-locale/en/patch.txt 75924849b6e908a88ecba189417efc9dce937bd5
-locale/en/stats.txt a12d702cd905df2f69b75c7245d5531debdc705d
-locale/ru/patch.txt 3da4f5e649e211f70ec95a2ce400550225755894
-locale/ru/stats.txt e8057f0abaa9a2b9ea5bdf5fe93ea88cf2a056de

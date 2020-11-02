@@ -131,6 +131,13 @@ TEXTCOLO_preCharDraw	@126 NONAME
 
 ITEM_renameStat		@127 NONAME
 
+HIRES_fixSpellbook	@128 NONAME
+HIRES_fixTextback	@129 NONAME
+HIRES_fixTextback2	@130 NONAME
+HIRES_extendMap		@131 NONAME
+CURSOR_preventHide	@132 NONAME
+CURSOR_display		@133 NONAME
+
 ; nosingle
 
 DBG_load256		@300

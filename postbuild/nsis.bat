@@ -1,6 +1,6 @@
 @echo off
 
-set VER=28
+set VER=29
 
 set PATH=%PATH%;c:\Program Files (x86)\NSIS
 
