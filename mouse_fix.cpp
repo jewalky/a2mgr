@@ -30,6 +30,42 @@ inline static void SpriteAddIXIY(int& ix, int& iy, int w, int add)
 	iy = y;
 }
 
+HBITMAP _CreateWin7CompatibleBitmap(int w, int h, uint32_t* pixels)
+{
+
+	HBITMAP hBitmap = NULL;
+	BITMAPINFOHEADER bmih;
+	bmih.biSize = sizeof(BITMAPINFOHEADER);
+	bmih.biWidth = w;
+	bmih.biHeight = h;
+	bmih.biPlanes = 1;
+	bmih.biBitCount = 32;
+	bmih.biCompression = BI_RGB;
+	bmih.biSizeImage = 0;
+	bmih.biXPelsPerMeter = 10;
+	bmih.biYPelsPerMeter = 10;
+	bmih.biClrUsed = 0;
+	bmih.biClrImportant = 0;
+
+	BITMAPINFO dbmi;
+	ZeroMemory(&dbmi, sizeof(dbmi));
+	dbmi.bmiHeader = bmih;
+	dbmi.bmiColors->rgbBlue = 0;
+	dbmi.bmiColors->rgbGreen = 0;
+	dbmi.bmiColors->rgbRed = 0;
+	dbmi.bmiColors->rgbReserved = 0;
+	void* bits = nullptr;
+	
+	HDC dc = GetDC(zxmgr::GetHWND());
+	hBitmap = CreateDIBSection(dc, &dbmi, DIB_RGB_COLORS, &bits, NULL, 0);
+	ReleaseDC(zxmgr::GetHWND(), dc);
+
+	memcpy(bits, pixels, w*h*4);
+
+	return hBitmap;
+
+}
+
 std::vector<HBITMAP> _stdcall A16ToBitmap(byte* a16)
 {
 	std::vector<HBITMAP> bitmaps;
@@ -81,15 +117,16 @@ std::vector<HBITMAP> _stdcall A16ToBitmap(byte* a16)
 					idx &= 0xFF;
 					alpha &= 0xFF;
 					uint32_t color32 = palette[idx] & 0xFFFFFF;
-					pixels[iy * frame_w + ix] = color32 | (alpha << 24);
+					pixels[(frame_h-iy-1) * frame_w + ix] = color32 | (alpha << 24);
 					SpriteAddIXIY(ix, iy, frame_w, 1);
 				}
 				ids -= ipx * 2;
 			}
 		}
-		HBITMAP bmp = CreateBitmap(frame_w, frame_h, 1, 32, pixels);
+		//HBITMAP hbmp = CreateBitmap(frame_w, frame_h, 1, 32, pixels);
+		HBITMAP hbmp = _CreateWin7CompatibleBitmap(frame_w, frame_h, pixels);
 		delete[] pixels;
-		bitmaps.push_back(bmp);
+		bitmaps.push_back(hbmp);
 	}
 	
 	return bitmaps;
@@ -142,9 +179,7 @@ void _stdcall ReplaceCursor(byte* source)
 		for (int i = 0; i < bitmaps.size(); i++)
 		{
 			ICONINFO inf;
-			BITMAP bm;
-			GetObject(bitmaps[i], sizeof(BITMAP), &bm);
-			inf.hbmMask = CreateBitmap(bm.bmWidth, bm.bmHeight, 1, 1, nullptr);
+			inf.hbmMask = bitmaps[i];
 			inf.hbmColor = bitmaps[i];
 			inf.fIcon = false;
 			inf.xHotspot = offset_x;
