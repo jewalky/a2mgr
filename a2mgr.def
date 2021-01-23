@@ -136,7 +136,9 @@ HIRES_fixTextback	@129 NONAME
 HIRES_fixTextback2	@130 NONAME
 HIRES_extendMap		@131 NONAME
 CURSOR_preventHide	@132 NONAME
-CURSOR_display		@133 NONAME
+CURSOR_display1		@133 NONAME
+CURSOR_display2		@134 NONAME
+CURSOR_display3		@135 NONAME
 
 ; nosingle
 

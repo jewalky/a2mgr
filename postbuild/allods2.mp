@@ -144,8 +144,9 @@
 1 132 5B970F // : CURSOR_preventHide
 1 132 5BDE11 // : CURSOR_preventHide
 0 132 5A4D48 // : CURSOR_preventHide
-0 133 428BD1 // : CURSOR_display
-0 133 428B92 // : CURSOR_display
+0 133 428BD1 // : CURSOR_display1
+0 134 428B92 // : CURSOR_display2
+0 135 4297FE // : CURSOR_display3
 
 //0 300 426DA9
 //0 301 427014

@@ -209,15 +209,25 @@ void __declspec(naked) CURSOR_preventHide()
 	}
 }
 
-void __declspec(naked) CURSOR_display()
+// functions that display tooltip:
+//  1. sub_42A1E9
+//  2. sub_466ECA
+//  3. sub_46A757
+
+// functions with +32 off mousecursor:
+//  1. sub_428BD1
+//  2. sub_428B92
+
+void __declspec(naked) CURSOR_display1()
 {
-	// 1. sub_428BD1
-	// 2. sub_428B92
+	// @ 428BD1
 
 	__asm
 	{
 		push	ebp
 		mov		ebp, esp
+
+		inc		[ecx+0x20]
 
 		// *this = cursor to display
 		push	ecx
@@ -226,5 +236,37 @@ void __declspec(naked) CURSOR_display()
 		mov		esp, ebp
 		pop		ebp
 		retn
+	}
+}
+
+void __declspec(naked) CURSOR_display2()
+{
+	// @ 428B92
+
+	__asm
+	{
+		push	ebp
+		mov		ebp, esp
+
+		dec		[ecx+0x20]
+
+		// *this = cursor to display
+		push	ecx
+		call	ReplaceCursor
+
+		mov		esp, ebp
+		pop		ebp
+		retn
+	}
+}
+
+void __declspec(naked) CURSOR_display3()
+{
+	// @ 4297FE
+
+	__asm
+	{
+		mov		edx, 0x00429834
+		jmp		edx
 	}
 }
